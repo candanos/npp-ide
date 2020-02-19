@@ -7,7 +7,7 @@
         </Macro>
     </Macros>
     <UserDefinedCommands>
-        <Command name="exec-this" Ctrl="yes" Alt="no" Shift="yes" Key="69">&quot;C:\Cloud\OneDrive - candanos\Master\Dashboard\exec-this.bat&quot; &quot;$(CURRENT_DIRECTORY)&quot; $(FILE_NAME)</Command>
+        <Command name="exec-this" Ctrl="yes" Alt="no" Shift="yes" Key="69">&quot;C:\Cloud\github\npp-ide\Dashboard\exec-this.bat&quot; &quot;$(CURRENT_DIRECTORY)&quot; $(FILE_NAME)</Command>
     </UserDefinedCommands>
     <PluginCommands />
     <ScintillaKeys />
