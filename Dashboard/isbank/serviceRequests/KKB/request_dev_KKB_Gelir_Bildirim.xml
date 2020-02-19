@@ -1,0 +1,52 @@
+<!-- #endpoint#http://localhost:9080/loan-fx-notification-web-v1/LoanFxNotificationServiceV1#endpoint# -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://isbank.com/OpSvcs/ProdSpecificOperations/Loan/LoanFxNotification/Service/V1">
+	<soapenv:Header>
+		<wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:BinarySecurityToken wsu:Id="SecurityToken-e280294f-20fa-4486-873d-eec5c6007a52" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="wsst:LTPA" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsst="http://www.ibm.com/websphere/appserver/tokentype/5.0.2">LtpaToken</wsse:BinarySecurityToken>
+		</wsse:Security>
+		<p:consumerContext xsi:type="p:BranchContextType" xmlns:p="http://isbank.com/Technical/EA/Header/Schema/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<lang>tr</lang>
+			<consumerCode>ID</consumerCode>
+			<channelCode>branch</channelCode>
+			<customerContext>   
+				<customer>
+					<customerNumber>601</customerNumber>
+					<citizenId>13171212356</citizenId>
+					<name>SEMİHA</name>
+					<surname>GÜÇASY</surname>
+					<taxId>4120127573</taxId>
+				</customer>
+			</customerContext>
+			<ipAddress>10.20.12.182</ipAddress>
+			<workstationName>1095X002</workstationName>
+			<organizationUnitCode>1095</organizationUnitCode>
+		</p:consumerContext>
+	</soapenv:Header>	
+	<soapenv:Body>
+		<v1:AddDocument>
+			<v1:customerInfo>
+				<v1:customerNumber>161239618</v1:customerNumber>
+				<v1:customerTaxId>2020348871</v1:customerTaxId>
+				<v1:customerTitle>CANSEV ENERJİ ELEKTRİK ÜRETİM A.Ş</v1:customerTitle>
+			</v1:customerInfo>
+			<v1:documentInfo>
+				<v1:documentKey>
+					<v1:efayId>100 3 ICM8 icmnlsdb20 T010420151011307610659 26 A1001001A19E17B55607J0569618 A19E17B55607J056961 14 4996</v1:efayId>
+					<v1:documentType>DVZ_GELIR_BELGE</v1:documentType>
+				</v1:documentKey>
+				<v1:customerNumber>161239618</v1:customerNumber>
+				<v1:amount>100</v1:amount>
+				<v1:currency>TRY</v1:currency>
+				<v1:dispensationFlag>false</v1:dispensationFlag>
+				<v1:createUser>13642</v1:createUser>
+			</v1:documentInfo>
+			<v1:incomeInfo>
+				<v1:term>201804</v1:term>
+				<v1:amount>100</v1:amount>
+				<v1:addDocIncomeType>3</v1:addDocIncomeType>
+				<v1:addDocVkn>2020348871</v1:addDocVkn>
+			</v1:incomeInfo>
+		</v1:AddDocument>
+	</soapenv:Body>
+</soapenv:Envelope>
+

@@ -1,0 +1,30 @@
+<!-- #endpoint#http://eaesbgateway.gm.isbank.com.tr/OpSvcs/ProdSpecificOperations/CommercialLoan/LoanCashFlowCompositionListServiceV1#endpoint# -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="soapenv">
+<soapenv:Header>
+		<wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:BinarySecurityToken wsu:Id="SecurityToken-e280294f-20fa-4486-873d-eec5c6007a52" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="wsst:LTPA" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsst="http://www.ibm.com/websphere/appserver/tokentype/5.0.2">BJstX4H8GpM6I/y9Pn3pTTQYUtWqz+xkCe3kk1+YiiN5K4NrAkoh3RbkfbKhzJJRWi0t/WWU+JHV+P7uyvRbjOWyZhvCX9Ei4wEgKOlqmFqP1tsNnQOedZgwfnccIIQ1JRcJ/f9HJkpgH7FI4X5KZRehqGGpM1/f7S11Nw4qMJOHiSb9XJ7sQCyYD+S78S8Y5QG5KjNwnvckDk9FQxiZgNAcNmMvGLJvlwDyKm3BVVNiaQC+vESc0t8hxpYirQTtvTW3OVyDw+hM5fnSDyXXDiMdCNIIDRWsi/YEEq7po7Cy8JPVn8PqziNC8hfM2FoAJnSnAlhOtsFmnaNRby1wugRn+IaBoJPnbcnhRfEghBebpHiKbJWd4/XJ/h54B5vRZIvekpjrEarCOEdIf4AIFwADtLVcfzu0Z1Zki3nwTw9gjfjixOkcfkptAmPxrTyAh0lifdEnJ7sd1OyledsXFtpMJukrk3TPLtPybaoa5DJKlLgcQ3iwTEpbtMOlXbXqPX9rR4baRFoaWURLQD9v7np0PPgB3BtzqEg1L9ugpg8tX0B4PDgQd9fnpdMYQbkHj0fObskLnREjSSDGKMFp+MpQNn8qrA+d8zmsq3xGNMrLmEzvSBhqqZpFsgN7BuBEzvEqv7aFYdvXh3iRLfKet6Av80u/0L/GRNClfXo46sycgDz/yKlzQAFc3EsmfU2G</wsse:BinarySecurityToken>
+		</wsse:Security>
+		<p:consumerContext xsi:type="p:BranchContextType" xmlns:p="http://isbank.com/Technical/EA/Header/Schema/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<lang>tr</lang>
+			<consumerCode>ID</consumerCode>
+			<channelCode>branch</channelCode>
+			<customerContext>   
+				<customer>
+					<customerNumber>601</customerNumber>
+					<citizenId>13171212356</citizenId>
+					<name>SEMİHA</name>
+					<surname>GÜÇASY</surname>
+					<taxId>4120127573</taxId>
+				</customer>
+			</customerContext>
+			<ipAddress>10.20.12.182</ipAddress>
+			<workstationName>1835X113</workstationName>
+			<organizationUnitCode>1835</organizationUnitCode>
+		</p:consumerContext>
+	</soapenv:Header>
+   <soap:Body>
+      <createCashFlowWithDetailRequest xmlns="http://isbank.com/OpSvcs/ProdSpecificOperations/CommercialLoan/LoanCashFlowCompositionList/Service/V1">
+         <cashFlowId>95850</cashFlowId>
+      </createCashFlowWithDetailRequest>
+   </soap:Body>
+</soap:Envelope>

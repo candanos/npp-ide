@@ -1,0 +1,36 @@
+﻿<!-- #endpoint#http://eaesbgateway.gm.isbank.com.tr/OpSvcs/ProdSpecificOperations/CommercialLoan/LoanCashFlowCompositionListServiceV1#endpoint# -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="soapenv">
+   <soap:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:BinarySecurityToken wsu:Id="SecurityToken-7ebf1627-45a2-4a56-af75-81ab471da995" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="wsst:LTPA" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsst="http://www.ibm.com/websphere/appserver/tokentype/5.0.2">ux5FT3293KWdbiCvSk06MzK2gEyydi6JSz8mF2k6x80kjpBeNjib6xmReZ6Iw5As/l8mmruwgbAp14nvM5vyvS/Fj3Uw11UqplXjJCdh2O6E5xzFbQu+mRO4OG5DxjjHiuziX3O035otR8WUpdb7/wG281E5PypjeoH6XJx9dv3SG2Bg6PsctyPRRPI9XU6FKCM/sMYaba6sNx4GViCVESDIu1PSaSFzd/LiKFxKiScWx/uUQqy9RbksujuQy84PVQnZHrC7ICgdrcy1AzJtdqx7BydMx2dfcMOBCWJZ//hFWc3qGOGvgxGgzU8CBGyE5k/q7JqRVMk=</wsse:BinarySecurityToken>
+      </wsse:Security>
+      <p:consumerContext xsi:type="p:BranchContextType" xmlns:p="http://isbank.com/Technical/EA/Header/Schema/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <lang>tr</lang>
+         <consumerCode>Tane.KUM</consumerCode>
+         <channelCode>branch</channelCode>
+         <ipAddress>10.20.129.214</ipAddress>
+         <workstationName>1255X042</workstationName>
+         <organizationUnitCode>1255</organizationUnitCode>
+      </p:consumerContext>
+      <headerv1:serviceInvocationInfo xmlns:headerv1="http://isbank.com/Technical/EA/Header/Schema/V1">
+         <serviceInvocationUUID>BRA-TAN-0149X042-140622121011-8HCG2</serviceInvocationUUID>
+         <requestTimestamp>2014-06-22T12:10:11+03:00</requestTimestamp>
+         <serviceNamespace>http://isbank.com/OpSvcs/ProdSpecificOperations/CommercialLoan/LoanCashFlowCompositionList/Service/V1</serviceNamespace>
+         <serviceName>LoanCashFlowCompositionListServiceV1x11</serviceName>
+         <operationName>createCashFlowWithDetail</operationName>
+      </headerv1:serviceInvocationInfo>
+      <headerv1:IMSBranchLegacyContext xmlns:headerv1="http://isbank.com/Technical/EA/Header/Schema/V1">
+         <tellerId>42</tellerId>
+         <sequenceNo>1</sequenceNo>
+         <postingDate>2014-06-23</postingDate>
+         <valueDate>2014-06-24</valueDate>
+         <branchPassword>9410</branchPassword>
+         <seqNoIncrementCount>1</seqNoIncrementCount>
+      </headerv1:IMSBranchLegacyContext>
+   </soap:Header>
+   <soap:Body>
+      <createCashFlowWithDetailRequest xmlns="http://isbank.com/OpSvcs/ProdSpecificOperations/CommercialLoan/LoanCashFlowCompositionList/Service/V1">
+         <cashFlowId>95850</cashFlowId>
+      </createCashFlowWithDetailRequest>
+   </soap:Body>
+</soap:Envelope>

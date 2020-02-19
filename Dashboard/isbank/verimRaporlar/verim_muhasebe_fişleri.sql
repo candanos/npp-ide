@@ -1,0 +1,1 @@
+select * from smuhas.gl_fah_journal where sube=1299 and muhkd='010' and muhasebe_tarihi=date'2019-10-25'

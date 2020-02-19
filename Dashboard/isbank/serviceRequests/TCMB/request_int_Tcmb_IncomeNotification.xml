@@ -1,0 +1,44 @@
+<!-- #endpoint#http://eacrossproductservicessit.gm.isbank.com.tr/loan-fx-tcmb-web-v1/LoanFxTcmbServiceV1#endpoint# -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://isbank.com/OpSvcs/ProdSpecificOperations/Loan/LoanFxTcmb/Service/V1">
+	<soapenv:Header>
+		<wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:BinarySecurityToken wsu:Id="SecurityToken-e280294f-20fa-4486-873d-eec5c6007a52" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="wsst:LTPA" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsst="http://www.ibm.com/websphere/appserver/tokentype/5.0.2">503wMaLkJ8L3kCvUcyZyvFkmt3Mx7gcWGpxRiwpR6wCShXsjZ3hoeEznRMWXEEbKZfNhjiKfIGc5Efe3zT0XSIYO2yOEdHnG1N4rimlggXd4dYt5kafixe/dF2AjzlA1Vrh/dPVPocL4vNjxLstYDoHAksqMeprga3a7KTfvvcsfj+ZGmzoEo5tWT5cvwx7GUuCjGBdv0qPDwcvgOjpzI8xagsFUE9eLGtOf9VY9EA1gihENc8+tj3c9DL8/lPe7rmIXLLKXhJD2btqsX45MbUqENjJ60UN11tQ3tQzMPR1bN+/OHMtZXUkccbptXsZhZisu+QVLzBoumT349kcPjZpw0WpRmLih0wO2zpw4ckw=</wsse:BinarySecurityToken>
+		</wsse:Security>
+		<p:consumerContext xsi:type="p:BranchContextType" xmlns:p="http://isbank.com/Technical/EA/Header/Schema/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<lang>tr</lang>
+			<consumerCode>ID</consumerCode>
+			<channelCode>branch</channelCode>
+			<customerContext>   
+				<customer>
+					<customerNumber>601</customerNumber>
+					<citizenId>13171212356</citizenId>
+					<name>SEMİHA</name>
+					<surname>GÜÇASY</surname>
+					<taxId>4120127573</taxId>
+				</customer>
+			</customerContext>
+			<ipAddress>10.20.12.182</ipAddress>
+			<workstationName>1095X002</workstationName>
+			<organizationUnitCode>1095</organizationUnitCode>
+		</p:consumerContext>
+	</soapenv:Header>
+	<soapenv:Body>
+		<v1:IncomeNotification>
+			<v1:user>064</v1:user>
+			<v1:incomeNotificationType>FD</v1:incomeNotificationType>
+			<v1:customerTaxId>3434</v1:customerTaxId>
+			<v1:FirmsFxIncomeList>
+				<v1:year>2018</v1:year>
+				<v1:usdAmount>5000</v1:usdAmount>
+			</v1:FirmsFxIncomeList>
+			<v1:FirmsFxIncomeList>
+				<v1:year>2017</v1:year>
+				<v1:usdAmount>4000</v1:usdAmount>
+			</v1:FirmsFxIncomeList>
+			<v1:FirmsFxIncomeList>
+				<v1:year>2016</v1:year>
+				<v1:usdAmount>3000</v1:usdAmount>
+			</v1:FirmsFxIncomeList>
+		</v1:IncomeNotification>
+	</soapenv:Body>
+</soapenv:Envelope>

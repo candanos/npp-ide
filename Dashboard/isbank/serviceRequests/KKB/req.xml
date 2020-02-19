@@ -1,0 +1,47 @@
+﻿<!-- #endpoint#http://eacrossproductservices.gm.isbank.com.tr/loan-fx-notification-web-v1/LoanFxNotificationServiceV1#endpoint# -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://isbank.com/OpSvcs/ProdSpecificOperations/Loan/LoanFxNotification/Service/V1">
+	<soapenv:Header>
+		<wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:BinarySecurityToken wsu:Id="SecurityToken-e280294f-20fa-4486-873d-eec5c6007a52" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="wsst:LTPA" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsst="http://www.ibm.com/websphere/appserver/tokentype/5.0.2">ux5FT3293KWdbiCvSk06MzK2gEyydi6JSz8mF2k6x80kjpBeNjib6xmReZ6Iw5As/l8mmruwgbCX2wSYOvU3Hmr5c5kIogPvplXjJCdh2O6E5xzFbQu+mRO4OG5DxjjHiuziX3O035otR8WUpdb7/wG281E5PypjeoH6XJx9dv3SG2Bg6PsctyPRRPI9XU6FKCM/sMYaba6sNx4GViCVESDIu1PSaSFzd/LiKFxKiScWx/uUQqy9RbksujuQy84PVQnZHrC7ICgdrcy1AzJtdqx7BydMx2dfcMOBCWJZ//hFWc3qGOGvgxGgzU8CBGyE5k/q7JqRVMk=</wsse:BinarySecurityToken>
+		</wsse:Security>
+		<p:consumerContext xsi:type="p:BranchContextType" xmlns:p="http://isbank.com/Technical/EA/Header/Schema/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<lang>tr</lang>
+			<consumerCode>ID</consumerCode>
+			<channelCode>branch</channelCode>
+			<customerContext>   
+				<customer>
+					<customerNumber>601</customerNumber>
+					<citizenId>13171212356</citizenId>
+					<name>SEMÄ°HA</name>
+					<surname>GÃœÃ‡ASY</surname>
+					<taxId>4120127573</taxId>
+				</customer>
+			</customerContext>
+			<ipAddress>10.20.12.182</ipAddress>
+			<workstationName>1095X002</workstationName>
+			<organizationUnitCode>1095</organizationUnitCode>
+		</p:consumerContext>
+	</soapenv:Header>
+	<soapenv:Body>
+		<v1:NotifyStock>
+			<v1:customerInfo>
+				<v1:customerNumber>167429070</v1:customerNumber>
+				<v1:customerTaxId>1330257801</v1:customerTaxId>
+				<v1:customerTitle>BAKÄ° ELEKTRÄ°K ÃœRETÄ°M LTD.ÅTÄ°.</v1:customerTitle>
+			</v1:customerInfo>
+			<v1:stockLoanInfoList>
+				<v1:stockLoanInfo>
+					<v1:accountKey>
+						<v1:accountId></v1:accountId>
+						<v1:accountNumber>4399DA811095</v1:accountNumber>
+						<v1:accountType>Y</v1:accountType>
+					</v1:accountKey>
+					<v1:currencyCode>840</v1:currencyCode>
+					<v1:loanAmount>22312463.00</v1:loanAmount>
+					<v1:scopeCode>109</v1:scopeCode>
+				</v1:stockLoanInfo>
+			</v1:stockLoanInfoList>
+		</v1:NotifyStock>
+	</soapenv:Body>
+</soapenv:Envelope>
+
