@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" />
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+        <Path name="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper" />
+        <Path name="C:\Cloud\github\euro-fb-models" />
+        <Find name="return" />
+        <Find name="mysqldb" />
+        <Replace name="" />
+        <Replace name="" />
+    </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Cloud\github\cra-monorepo-examples\README.md" />
-        <File filename="C:\Cloud\OneDrive - candanos\Master\Dashboard\zos\getAppDependencies.ps1" />
-        <File filename="C:\Cloud\OneDrive - candanos\Master\Dashboard\database\dbConnections.py" />
-        <File filename="C:\Cloud\OneDrive - candanos\Master\Dashboard\database\verimInquiry.py" />
-        <File filename="C:\Cloud\OneDrive - candanos\Master\Dashboard\database\verimInquiry.ps1" />
-        <File filename="C:\Cloud\OneDrive - candanos\Master\Dashboard\exec-this.bat" />
-        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\Dashboard.xlsx" />
-        <File filename="C:\Users\Candan Yuksel\Desktop\softtech_koli-master\bcvaltab\windowingFunction.sql" />
-        <File filename="C:\Users\Candan Yuksel\Desktop\softtech_koli-master\bcvaltab\runQuery.py" />
+        <File filename="C:\Cloud\github\mutabakat-app\runSqls.py" />
+        <File filename="C:\Cloud\github\mutabakat-app\reportClient.py" />
+        <File filename="C:\Python38\Lib\site-packages\pymysql\connections.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\database\verimInquiry.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\python\pipInstall.bat" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\database\mysqld_start.bat" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\database\sqlRunner.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\database\dbConnections.py" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\calculatePercentage.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\exec-this.bat" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -20,7 +28,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200225">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200315">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -53,8 +61,9 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="no" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="514" rightWidth="200" topHeight="200" bottomHeight="200">
+        <GUIConfig name="DockingManager" leftWidth="303" rightWidth="200" topHeight="200" bottomHeight="200">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <ActiveTabs cont="0" activeTab="0" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
@@ -66,8 +75,9 @@
         <ProjectPanel id="1" workSpaceFile="" />
         <ProjectPanel id="2" workSpaceFile="" />
     </ProjectPanels>
-    <FileBrowser latestSelectedItem="C:\Cloud\OneDrive - candanos\Master\Dashboard\database\mysqld_start.bat">
-        <root foldername="C:\Cloud\OneDrive - candanos\Master\Dashboard" />
+    <FileBrowser latestSelectedItem="C:\Cloud\github\npp-ide\Dashboard\exec-this.bat">
+        <root foldername="C:\Cloud\github\npp-ide\Dashboard" />
         <root foldername="C:\Cloud\github\euro-fb-models" />
+        <root foldername="C:\Cloud\github\lab" />
     </FileBrowser>
 </NotepadPlus>

@@ -1,4 +1,4 @@
-@REM save command as > "C:\Cloud\OneDrive - candanos\Master\Dashboard\exec-this.bat" "$(CURRENT_DIRECTORY)" $(FILE_NAME)  
+@REM save command as > "C:\Cloud\github\npp-ide\Dashboard\exec-this.bat" "$(CURRENT_DIRECTORY)" $(FILE_NAME)  
 @echo off
 @set dashboard=C:\Cloud\github\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
@@ -32,9 +32,6 @@ IF %typ%==sh call %gitPath%"\git-bash.exe"  %2
 @REM ServiceRequests
 IF %prefix%==request %powerShPath%"\powershell.exe" "%dashboard%\network\SendRequest.ps1" -filePath %1 -requestFl %2 -type %typ%
 @REM Sql Queries
-IF %typ%==sql ( IF %prefix%==verim ( %powerShPath%"\powershell.exe" "%dashboard%\database\verimInquiry.ps1" %1 %2 ) )
-IF %typ%==sql ( IF %prefix%==borclure ( %powerShPath%"\powershell.exe" "%gitlabPrj%\imsdecom\mutabakat\borclure\sqlRunner.ps1" %1 %2 ) )
-IF %typ%==sql ( IF %prefix%==pp ( %powerShPath%"\powershell.exe"  "%gitlabPrj%\imsdecom\mutabakat\payment_plan\sqlRunner.ps1" %1 %2 ) )
-IF %typ%==sql ( IF %prefix%==fybs ( %powerShPath%"\powershell.exe"  "%gitlabPrj%\imsdecom\mutabakat\fybs\sqlRunner.ps1" %1 %2 ) )
+IF %typ%==sql %pythonPath%"\python.exe"  "%dashboard%\database\sqlRunner.py" %1 %2
 pause
 exit
