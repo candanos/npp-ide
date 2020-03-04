@@ -4,6 +4,8 @@ import cx_Oracle
 import mysql
 from mysql import connector
 from mysql.connector import Error
+import jaydebeapi
+
 def mysqlConn():
     try:
         connection = mysql.connector.connect(host='localhost',
@@ -26,13 +28,26 @@ def mysqlConn():
             # connection.close()
             # print("MySQL connection is closed")      
 
+def db2Conn():
+    os.environ['classpath'] = r'C:\database\db2jcc_license_cisuz.jar'
+    jar = r'C:\database\db2jcc4.jar'
+    jclassname = 'com.ibm.db2.jcc.DB2Driver'
+    url = 'jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC'
+    host = 'dv0bdb2.isbank'
+    
+    username = 'cy59857'
+    password = 'o1o1o1o1'
+
+    connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jar)
+    return connection
+    
 def getConnection(typ):        
     if(typ == 'eufb'):
         print('db type = mysql')
         conn = mysqlConn()
         return conn
     if(typ == 'db2'):
-        conn == db2Conn()
+        conn = db2Conn()
         return conn     
 
 

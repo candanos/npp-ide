@@ -23,16 +23,26 @@ sqlStr = getSqlFromFile.setFile(sqlFile)
 print(sqlStr)
 curs.execute(sqlStr)
 
+
+# result = curs.fetchall()
+
 lst = []
 cols = []
 for row in curs.description:
 	cols.append(row[0])
 lst.append(cols)
 
-for row in curs:
-    print(row)
-    lst.append(row)
-	
+if(typ=='db2'):
+    result = curs.fetchall()
+    for row in result:
+        print(row)
+        lst.append(row)
+else:   
+    for row in curs:
+        print(row)
+        lst.append(row)
+
+
 print(len(lst))
 csv.register_dialect('semicol', delimiter=';', quoting=csv.QUOTE_NONE, escapechar='\\')
 
