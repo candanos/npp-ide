@@ -18,7 +18,6 @@
         <Replace name="Candan Yuksel" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\extractFromAFile.py" />
         <File filename="C:\Cloud\github\cobol-programs-repository-app\program types.xlsx" />
         <File filename="C:\Cloud\github\npp-ide\Dashboard\push-the-dashboard.sh" />
         <File filename="C:\Cloud\github\npp-ide\Dashboard\exec-this.bat" />
@@ -28,6 +27,7 @@
         <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\driver.py" />
         <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\createMatchRecord.py" />
         <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\analytic-scripts\analyze_tables.sql" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\python\pipInstall.bat" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
