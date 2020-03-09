@@ -1,6 +1,9 @@
 #!/bin/bash 
 git diff HEAD^ HEAD
 
+#compare master and origin  
+git diff master origin/master
+
 #As of Git 1.8.5, @ is an alias for HEAD, so you can use:
 
 git diff @~..@
