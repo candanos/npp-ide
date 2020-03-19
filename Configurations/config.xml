@@ -5,6 +5,8 @@
         <Path name="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper" />
         <Path name="C:\Cloud\github\euro-fb-models" />
         <Filter name="*.*" />
+        <Find name="SBSWIFT" />
+        <Find name="SBIHIT" />
         <Find name="DKREESIP" />
         <Find name="ATMSQL" />
         <Find name="ACMOVE" />
@@ -13,21 +15,19 @@
         <Find name="ACREL" />
         <Find name="ACTERM" />
         <Find name="3N" />
-        <Find name="COBOL" />
-        <Find name="PSGENDVZ" />
         <Replace name="Candan Yuksel" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\program types.xlsx" />
-        <File filename="C:\Cloud\github\npp-ide\Dashboard\push-the-dashboard.sh" />
-        <File filename="C:\Cloud\github\npp-ide\Dashboard\exec-this.bat" />
-        <File filename="C:\Users\Candan Yuksel\Desktop\NotepadPlusPlus-master\userDefineLang.xml" />
-        <File filename="C:\Cloud\github\npp-ide\Dashboard\opsys\sortFile.py" />
-        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\analytic-scripts\ddd.py" />
-        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\driver.py" />
-        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\createMatchRecord.py" />
-        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\analytic-scripts\analyze_tables.sql" />
-        <File filename="C:\Cloud\github\npp-ide\Dashboard\python\pipInstall.bat" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\main.py" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_kredi.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_adk.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\metadata\members_of_dvz.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\outputs\memberCountsOfDriverSets.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\scdegiskQueries.py" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_hgs_ogs_akilli_kart.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dis_ticaret.txt" />
+        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dvz.txt" />
+        <File filename="C:\Users\Candan Yuksel\Desktop\imsdecom\bcvaltab_\windowingFunction.csv" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -37,7 +37,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200315">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200402">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -70,7 +70,7 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="358" rightWidth="200" topHeight="200" bottomHeight="176">
+        <GUIConfig name="DockingManager" leftWidth="533" rightWidth="200" topHeight="200" bottomHeight="235">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <ActiveTabs cont="0" activeTab="0" />
