@@ -1,4 +1,4 @@
-filePath = r'C:\Cloud\github\cobol-programs-repository-app\lists\inputs\all_online_members.txt'
+filePath = r'C:\Users\Candan Yuksel\Desktop\formattedFile.csv'
 file = open(filePath, "r")
 lineList = list(dict.fromkeys(file.read().split('\n')))
 lineList.sort()
