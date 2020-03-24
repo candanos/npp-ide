@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="1" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\Cloud\github\cobol-programs-repository-app\scripts" />
         <Path name="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper" />
         <Path name="C:\Cloud\github\euro-fb-models" />
         <Filter name="*.*" />
+        <Find name="\r\n" />
+        <Find name="&#x000D;&#x000A;" />
+        <Find name="Date" />
         <Find name="SBSWIFT" />
         <Find name="SBIHIT" />
         <Find name="DKREESIP" />
@@ -12,22 +15,20 @@
         <Find name="ACMOVE" />
         <Find name="ACBLNC" />
         <Find name="ACINF" />
-        <Find name="ACREL" />
-        <Find name="ACTERM" />
-        <Find name="3N" />
+        <Replace name="\n" />
         <Replace name="Candan Yuksel" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\main.py" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_kredi.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_adk.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\metadata\members_of_dvz.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\outputs\memberCountsOfDriverSets.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\scdegiskQueries.py" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_hgs_ogs_akilli_kart.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dis_ticaret.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dvz.txt" />
-        <File filename="C:\Users\Candan Yuksel\Desktop\imsdecom\bcvaltab_\windowingFunction.csv" />
+        <File filename="C:\Users\Candan Yuksel\Desktop\formattedFile.csv" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\analytic-scripts\resultRates.py" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\converOddsToProbs.py" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\str2File.py" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\analytic-scripts\pointCalculator.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\opsys\sortFile.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\python\write2File.py" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\python\readFile.py" />
+        <File filename="C:\Cloud\github\euro-fb-models\footballStatsData\format-scripts\formatDataFile.py" />
+        <File filename="C:\Users\Candan Yuksel\Desktop\mergedFile.csv" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -37,6 +38,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
+        <GUIConfig name="FindWindowPosition" left="519" top="284" right="1401" bottom="815" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200402">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
@@ -70,13 +72,13 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="533" rightWidth="200" topHeight="200" bottomHeight="235">
+        <GUIConfig name="DockingManager" leftWidth="375" rightWidth="200" topHeight="200" bottomHeight="241">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <ActiveTabs cont="0" activeTab="0" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
-            <ActiveTabs cont="3" activeTab="-1" />
+            <ActiveTabs cont="3" activeTab="0" />
         </GUIConfig>
     </GUIConfigs>
     <ProjectPanels>
@@ -84,7 +86,7 @@
         <ProjectPanel id="1" workSpaceFile="" />
         <ProjectPanel id="2" workSpaceFile="" />
     </ProjectPanels>
-    <FileBrowser latestSelectedItem="C:\Cloud\github\npp-ide\Dashboard">
+    <FileBrowser latestSelectedItem="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper\entities\converOddsToProbs.py">
         <root foldername="C:\Cloud\github\npp-ide\Dashboard" />
         <root foldername="C:\Cloud\github\cobol-programs-repository-app" />
         <root foldername="C:\Cloud\github\euro-fb-models" />
