@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="1" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+        <Path name="C:\Cloud\github\npp-ide\Dashboard" />
+        <Path name="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs" />
+        <Path name="C:\Cloud\github\cobol-programs-repository-app\scripts\metadata" />
         <Path name="C:\Cloud\github\cobol-programs-repository-app\scripts" />
-        <Path name="C:\Cloud\github\euro-fb-models\footballStatsData\transfermarkt-scrapper" />
-        <Path name="C:\Cloud\github\euro-fb-models" />
+        <Path name="C:\Cloud\github\cobol-programs-repository-app\lists" />
+        <Path name="C:\Cloud\github\cobol-programs-repository-app" />
+        <Path name="C:\Users\CY59857\Desktop\mutabakat-app-master" />
+        <Filter name="*.py" />
         <Filter name="*.*" />
-        <Find name="SBSWIFT" />
-        <Find name="SBIHIT" />
-        <Find name="DKREESIP" />
-        <Find name="ATMSQL" />
-        <Find name="ACMOVE" />
-        <Find name="ACBLNC" />
-        <Find name="ACINF" />
-        <Find name="ACREL" />
-        <Find name="ACTERM" />
-        <Find name="3N" />
-        <Replace name="Candan Yuksel" />
+        <Find name="enco" />
+        <Find name="encode" />
+        <Find name="ATMONBIN" />
+        <Find name="SONTRKON" />
+        <Find name="ONBEHALF" />
+        <Find name="converto" />
+        <Find name="COPY" />
+        <Find name="payments_swift" />
+        <Find name="MUHADOSY" />
+        <Find name="MUHAPROG" />
+        <Replace name=", " />
+        <Replace name="\n" />
+        <Replace name="interfaces_of_kredi_kartlari" />
+        <Replace name="\r\n" />
+        <Replace name="," />
+        <Replace name="&apos;PSCEKDRV&apos;,&apos;PSCEKTKS&apos;,&apos;PSCEKXML&apos;,&apos;PSCEKYAS&apos;,&apos;PSCEKYON&apos;,&apos;PSDTAKAS&apos;,&apos;PSGEN1R&apos;,&apos;PSGEN31R&apos;,&apos;PSSENDRV&apos;,&apos;PSSNETON&apos;,&apos;PSTAKODE&apos;,&apos;PSYNETON&apos;" />
+        <Replace name="&apos;PSATMGRP&apos;,&apos;PSBLKINQ&apos;,&apos;PSBLKMNG&apos;,&apos;PSGENACH&apos;,&apos;PSGENMOM&apos;,&apos;PSGENOVR&apos;,&apos;PSINTMVD&apos;,&apos;PSKRKASA&apos;,&apos;PSMEVINQ&apos;,&apos;PSMFSMEV&apos;,&apos;PSMOMKKR&apos;,&apos;PSMVDTRX&apos;,&apos;PSMVHESP&apos;,&apos;PSORMMUK&apos;,&apos;PSORMNIX&apos;,&apos;PSORMON &apos;,&apos;PSOVRSRV&apos;,&apos;PSOVRSRW&apos;,&apos;PSPROVZY&apos;,&apos;PSYBSEKR&apos;" />
+        <Replace name="&apos;PSAKILCF&apos;,&apos;PSAKLCON&apos;,&apos;PSAKLDEL&apos;,&apos;PSAKLDRV&apos;,&apos;PSAKLIMC&apos;,&apos;PSAKLPOS&apos;,&apos;PSAKLREV&apos;,&apos;PSAKLSBE&apos;,&apos;PSAKL20R&apos;,&apos;PSAUTXTR&apos;,&apos;PSFRONTR&apos;,&apos;PSGEN20P&apos;,&apos;PSINTAKL&apos;,&apos;PSINTCMA&apos;,&apos;PSINTCMP&apos;,&apos;PSINTIKK&apos;,&apos;PSKIOAKL&apos;,&apos;PSKOCBNK&apos;,&apos;PSKRAKL1&apos;,&apos;PSKRCMP1&apos;,&apos;PSKRDAKL&apos;,&apos;PSKRDATM&apos;,&apos;PSKRDFKF&apos;,&apos;PSKREDKR&apos;,&apos;PSKRELEC&apos;,&apos;PSKREMV1&apos;,&apos;PSKREMV2&apos;,&apos;PSKRFRON&apos;,&apos;PSKRIDEA&apos;,&apos;PSKRKART&apos;,&apos;PSKRKKR1&apos;,&apos;PSKRSUBE&apos;,&apos;PSPOSFRO&apos;,&apos;PSSAFPOS&apos;,&apos;PSSWITCH&apos;,&apos;PSTAISLM&apos;,&apos;PSTHSAKL&apos;,&apos;PSVSMIPC&apos;" />
+        <Replace name="&apos;PSAS4BAT&apos;,&apos;PSAS4MRV&apos;,&apos;PSDOKSNO&apos;,&apos;PSDPROVZ&apos;,&apos;PSGENDIS&apos;,&apos;PSGENDTH&apos;,&apos;PSGENEEM&apos;,&apos;PSGENIHT&apos;,&apos;PSGENKTP&apos;,&apos;PSGENKUR&apos;,&apos;PSGENNAP&apos;,&apos;PSGENSWF&apos;,&apos;PSGMBHON&apos;,&apos;PSMRVAS4&apos;,&apos;PSNAPONL&apos;,&apos;PSSWMRVA&apos;,&apos;PSSWSQNO&apos;" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\main.py" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_kredi.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_adk.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\metadata\members_of_dvz.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\outputs\memberCountsOfDriverSets.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\scdegiskQueries.py" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_hgs_ogs_akilli_kart.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dis_ticaret.txt" />
-        <File filename="C:\Cloud\github\cobol-programs-repository-app\scripts\inputs\drivers_of_dvz.txt" />
-        <File filename="C:\Users\Candan Yuksel\Desktop\imsdecom\bcvaltab_\windowingFunction.csv" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\git\comparing.sh" />
+        <File filename="C:\Cloud\github\mutabakat-app\gitignore.txt" />
+        <File filename="C:\Users\CY59857\Desktop\mutabakat-app\mutabakat-app.py" />
+        <File filename="C:\Cloud\github\mutabakat-app\.gitignore" />
+        <File filename="C:\Cloud\github\npp-ide\.gitignore" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\git\.gitignore" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\zos\db2_driversOfTheProgram.sql" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\git\CloneFromGithub.bat" />
+        <File filename="C:\Cloud\github\npp-ide\Dashboard\git\untrackingFilesOnceTracked.txt" />
+        <File filename="C:\Cloud\github\mutabakat-app\mutabakat-app.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -37,7 +50,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200402">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200326">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -62,17 +75,18 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\themes\TwoDark.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\CY59857\AppData\Roaming\Notepad++\themes\TwoDark.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" stopFillingFindField="no" newStyleSaveDlg="yes" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="533" rightWidth="200" topHeight="200" bottomHeight="235">
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="DockingManager" leftWidth="334" rightWidth="200" topHeight="200" bottomHeight="134">
+            <FloatingWindow cont="4" x="861" y="791" width="1257" height="960" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="yes" />
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="4" isVisible="yes" />
             <ActiveTabs cont="0" activeTab="0" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
@@ -84,9 +98,10 @@
         <ProjectPanel id="1" workSpaceFile="" />
         <ProjectPanel id="2" workSpaceFile="" />
     </ProjectPanels>
-    <FileBrowser latestSelectedItem="C:\Cloud\github\npp-ide\Dashboard">
+    <FileBrowser latestSelectedItem="C:\Cloud\github\mutabakat-app\mutabakat-app.py">
         <root foldername="C:\Cloud\github\npp-ide\Dashboard" />
         <root foldername="C:\Cloud\github\cobol-programs-repository-app" />
         <root foldername="C:\Cloud\github\euro-fb-models" />
+        <root foldername="C:\Cloud\github\mutabakat-app" />
     </FileBrowser>
 </NotepadPlus>
