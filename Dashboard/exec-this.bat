@@ -22,7 +22,7 @@ IF %typ%==ps1 %powerShPath%"\powershell.exe" -File %2
 @REM poms
 IF %typ%==xml ( IF %name%==pom ( call "%dashboard%\java\pom.bat" %1 %2 ))
 @REM java builds
-IF %typ%==java "%dashboard%\java\JavaCompile.bat" %1 %2
+IF %typ%==java %powerShPath%"\powershell.exe" -File "%dashboard%\java\JavaCompile.ps1" %1 %2
 @REM js
 IF %typ%==js %nodePath%"\node" %2
 @REM py
