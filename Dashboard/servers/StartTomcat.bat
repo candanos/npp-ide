@@ -1,5 +1,4 @@
-cd C:\JAVA\servers\tomcat-9\bin
-set JRE_HOME="C:\JAVA\jdk1.8.0_181"
-set JRE_HOME="C:\JAVA\jdk1.8.0_181\jre"
+cd C:\JAVA\servers\apache-tomcat-9.0.36\bin
+set JRE_HOME="C:\JAVA\jdk-14.0.1"
 call startup
 pause

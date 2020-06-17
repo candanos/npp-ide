@@ -1,4 +1,4 @@
-cd C:\CodeRepos\gitlab
+cd C:\Cloud\github
 @echo -DgroupId=com.company -DartifactId=project -Dversion= -Dpackage=com.company.project
 @echo "project                                     "          
 @echo "|-- pom.xml                                 "

@@ -4,7 +4,7 @@
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
 @set pythonPath=C:\Python
-@set nodePath=C:\nodejs"
+@set nodePath=C:\nodejs
 @set batchPath=C:\WINDOWS\System32
 @set powerShPath="C:\Windows\System32\WindowsPowerShell\v1.0"
 @set vbsPath="C:\WINDOWS\System32"
@@ -28,7 +28,7 @@ IF %typ%==js %nodePath%"\node" %2
 @REM py
 IF %typ%==py %pythonPath%"\python.exe" %2
 @REM IF %typ%==sh
-IF %typ%==sh call %gitPath%"\git-bash.exe"  %2     
+IF %typ%==sh call "%gitPath%""\git-bash.exe"  %2     
 @REM ServiceRequests
 IF %prefix%==request %powerShPath%"\powershell.exe" "%dashboard%\network\SendRequest.ps1" -filePath %1 -requestFl %2 -type %typ%
 @REM Sql Queries

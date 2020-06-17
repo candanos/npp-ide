@@ -12,9 +12,10 @@ sqlFilePath = sys.argv[1]
 sqlFileName = sys.argv[2]
 mydate = datetime.datetime.now().strftime('%H%M%S')
 resultFolder = Path("C:/Users/Candan Yuksel/Desktop/")
+resultFolder = os.getcwd()
 resultFl='result_' + sqlFileName + '_' + mydate + '.csv' 
 sqlFile = sqlFilePath + '/' + sqlFileName
-resultFl = resultFolder / resultFl
+resultFl = resultFolder + '/' +  resultFl
 typ = sqlFileName.split("_")[0]
 
 conn = dbConnections.getConnection(typ)

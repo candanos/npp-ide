@@ -1,7 +1,10 @@
 @echo off
-
+pip install gitpython
+REM pip install ebcdic
+REM pip install pywin32
+REM pip install datacompy
 REM pip uninstall JPype1
-pip install jaydebeapi
+REM pip install jaydebeapi
 REM pip install mysql-connector-python
 REM pip install --upgrade pip
 REM pip install cx_oracle

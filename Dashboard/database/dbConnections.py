@@ -36,7 +36,7 @@ def db2Conn():
     host = 'dv0bdb2.isbank'
     
     username = 'cy59857'
-    password = 'o1o1o1o1'
+    password = 'o2o2o2o2'
 
     connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jar)
     return connection
