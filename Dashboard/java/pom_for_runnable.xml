@@ -1,26 +1,22 @@
-<!-- This is a pom for a standalone jar with its dependencies. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.isbank</groupId>
-	<artifactId>zos-test-driver</artifactId>
+	<groupId> com.isbank</groupId>
+	<artifactId>zos-batch-submitter-bat</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>zos-test-driver</name>
+	<name>zos-batch-submitter-bat</name>
 	<url>http://maven.apache.org</url>
-	
-	<!-- <properties> 
-		<jdk.version>1.7</jdk.version>
-		<jodatime.version>2.5</jodatime.version>
-		<junit.version>4.11</junit.version>
-	</properties> -->
-	
 	<dependencies>
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.xml.ws</groupId> -->
+		<!-- <artifactId>jaxws-rt</artifactId> -->
+		<!-- <version>2.1.3</version> -->
+		<!-- </dependency> -->
 		<dependency>
-			<groupId>candanos.isbank</groupId>
-			<artifactId>ibmjzos</artifactId>
+			<groupId>com.ibm</groupId>
+			<artifactId>ibmjzos</artifactId> 
 			<version>1.0.0</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -28,62 +24,41 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>1.0.0</version>
-			<scope>compile</scope>
-		</dependency>
 	</dependencies>
 	<build>
-		<!-- <finalName>TestJar</finalName>  -->
 		<plugins>
-
-			<!-- download source code in Eclipse, best practice -->
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
-				</configuration>
-			</plugin> -->
-
-			<!-- Set a compiler level -->
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.6.1</version>
 				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
-			</plugin> -->
-
-			<!-- Maven Assembly Plugin -->
+			</plugin>	
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.4.1</version>
-				<configuration>				
-					<descriptorRefs> <!-- get all project dependencies -->
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs> 		
-					<archive>
-					  <manifest> <!-- MainClass in mainfest make a executable jar -->	
-						<mainClass>zos.drivers.App</mainClass>
-					  </manifest>
-					</archive>
-				</configuration>
+				<version>3.3.0</version>
 				<executions>
-				  <execution>
-					<id>make-assembly</id>                                   
-					<phase>package</phase> <!-- bind to the packaging phase -->
-					<goals>
-						<goal>single</goal>
-					</goals>
-				  </execution>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<manifest>
+									<mainClass>
+                        com.isbank.JobSubmitter
+									</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>

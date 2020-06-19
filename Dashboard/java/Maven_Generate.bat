@@ -21,10 +21,11 @@ cd C:\Cloud\github
 @REM IF %x%==quickstart C:\JAVA\apache-maven-3.6.0\bin\mvn -s C:\JAVA\apache-maven-3.6.0\conf\settings.xml archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
 @REM IF %x%==j2ee-simple C:\JAVA\apache-maven-3.6.0\bin\mvn -s C:\JAVA\apache-maven-3.6.0\conf\settings.xml archetype:generate -DarchetypeArtifactId=maven-archetype-j2ee-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=true 
 @REM IF %x%==webapp C:\JAVA\apache-maven-3.6.0\bin\mvn -s C:\JAVA\apache-maven-3.6.0\conf\settings.xml archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
-IF %x%==q mvn -s "C:\Users\CY59857\.m2\settings_isbank.xml" archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
+@REM IF %x%==q mvn -s "C:\Users\CY59857\.m2\settings_isbank.xml" archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
 IF %x%==j mvn archetype:generate -DarchetypeArtifactId=maven-archetype-j2ee-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=true 
 IF %x%==w mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
 IF %x%==s mvn -s "C:\Users\CY59857\.m2\settings_isbank.xml" archetype:generate -DarchetypeArtifactId=maven-archetype-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=false
+IF %x%==q mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
 @REM Archetype ArtifactIds 	Description
 @REM maven-archetype-archetype 	An archetype to generate a sample archetype project.
 @REM maven-archetype-j2ee-simple 	An archetype to generate a simplifed sample J2EE application.
@@ -37,3 +38,4 @@ IF %x%==s mvn -s "C:\Users\CY59857\.m2\settings_isbank.xml" archetype:generate -
 @REM maven-archetype-site 	An archetype to generate a sample Maven site which demonstrates some of the supported document types like APT, XDoc, and FML and demonstrates how to i18n your site.
 @REM maven-archetype-site-simple 	An archetype to generate a sample Maven site.
 @REM maven-archetype-webapp 	An archetype to generate a sample Maven Webapp project.
+pause

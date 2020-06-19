@@ -12,5 +12,9 @@ REM @SET /P x=[mvntype]
 @REM IF %x%==isbank call "C:\apache-maven-3.3.9\bin\mvn" clean install -DskipTests
 REM @IF %x%==isbank call "C:\apache-maven-3.3.9\bin\mvn" clean install
 REM @IF %x%==public call "C:\apache-maven-3.3.9\bin\mvn" -o -s "C:\apache-maven-3.3.9\conf\settings.xml" clean install
-call "C:\apache-maven-3.3.9\bin\mvn" -s "C:\Users\CY59857\.m2\settings_isbank.xml" clean install
+REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -s "C:\Users\CY59857\.m2\settings_isbank.xml" clean install
+@set JAVA_HOME = C:\JAVA\jdk1.8.0_241
+REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" compile assembly:single
+call "C:\JAVA\apache-maven-3.6.3\bin\mvn" compile
+
 pause

@@ -14,13 +14,15 @@ for /F "tokens=2 delims=." %%T IN ("%a%") DO set typ=%%T
 for /F "tokens=1 delims=_" %%P IN ("%a%") DO set prefix=%%P 
 cd /d %1
 @REM bat files
-IF %typ%==bat %batchPath%\cmd.exe /c %2
+IF %typ%==bat %powerShPath%"\powershell.exe" -File "%dashboard%\bat\batRunner.ps1" %1 %2
 @REM vbs files
 IF %typ%==vbs %vbsPath%"\cscript.exe" %2
 @REM ps1 files
 IF %typ%==ps1 %powerShPath%"\powershell.exe" -File %2
 @REM poms
 IF %typ%==xml ( IF %name%==pom ( call "%dashboard%\java\pom.bat" %1 %2 ))
+@REM java runner
+IF %typ%==xml ( IF %name%==javamain ( %powerShPath%"\powershell.exe" -File "%dashboard%\java\JavaRunner.ps1" %1 %2 ))
 @REM java builds
 IF %typ%==java %powerShPath%"\powershell.exe" -File "%dashboard%\java\JavaCompile.ps1" %1 %2
 @REM js
