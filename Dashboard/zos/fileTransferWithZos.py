@@ -17,8 +17,8 @@ def getDataSetFromZos():
    # all-members | am Download all members from a pds
    # data-set | ds    Download content from a z/OS data set
    # uss-file | uf    Download content from a USS file
-    sourcePath = r'/u/BT/CY59857/.ssh/id_rsa.pub'
-    targetPath = r'C:/Users/CY59857/Desktop/uss_id_rsa.pub'
+    sourcePath = r'/u/xlrint1/.profile'
+    targetPath = r'C:/Users/CY59857/Desktop/xlrint.profile'
     subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
     
 def sendFileToZos():
@@ -28,10 +28,11 @@ def sendFileToZos():
    # file-to-data-set | ftds  Upload the contents of a file to a z/OS data set
    # file-to-uss | ftu        Upload content to a USS file from local file
    # stdin-to-data-set | stds Upload the content of a stdin to a z/OS data set
-    sourcePath =r'C:/Users/CY59857/Desktop/cy59857_id_rsa.pub'
-    targetPath = r'/u/xlrint1/.ssh/cy59857_id_rsa.pub'
+    sourcePath =r'C:/Users/CY59857/Desktop/EbcdicRepos/varlik-yonetimi-app/COBOL'
+    targetPath = r'/u/BT/CY59857/.profile'
+    targetPath = r'SBTEKNIK.SCORETFS.COBOL'
    
-    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'ftu', sourcePath,  targetPath]))
+    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'dtp', sourcePath,  targetPath, '--binary']))
    
 if __name__ == '__main__':
     main()

@@ -5,8 +5,8 @@
 # ssh -tt -o "BatchMode yes" cy59857@sman.isbank  <<HERE
 # cp "//'$mvs'" $uss                  
 # HERE
-ssh -tt -o "BatchMode yes" cy59857@sman.isbank  <<HERE
-cp "//'SB1TIMES.PROD.COBOL(DDEPGUNC)'" /u/BT/CY59857/DDEPGUNC.cbl 
+ssh -tt -o "BatchMode yes" xlrint1@sman.isbank  <<HERE
+cob2 -c -I/u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL:/u/ttg/ebcdicRepos/isbank-cobol-framework/COPY -v /u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL/TARIHPGM.cbl 
 HERE
 read -p "Press [Enter] key to go on." 
 

@@ -10,16 +10,21 @@ param (
 
 # $env:Path = "C:\JAVA\jdk-14.0.1\bin;" + $env:Path
 $env:Path = "C:\JAVA\jdk1.8.0_241\bin;" + $env:Path
-$repopath = "C:\JAVA\repositories\javax.jws-3.1.1.jar;C:\JAVA\repositories\jaxws-api-2.3.1.jar;C:\JAVA\repositories\ibmjzos.jar" 
 
-$sourcepath = $filePath
 Set-Location $filePath #prjPath/src/package
 Set-Location ..  #prjPath/src/
 Set-Location ..	 #prjPath
-
 $prjPathInfo = Get-Location
 $prjPath = $prjPathInfo.ToString() 
-$classpath = $prjPath + "\target;" + $repopath 
+$classpath = $prjPath + "\target"
+
+Get-ChildItem  "C:\JAVA\repositories" | 
+Foreach-Object {
+	$classpath = $classpath + ";" + $_.FullName
+}
+
+
+$sourcepath = $filePath
 $targetpath = $prjPath + "\target"
 
 Write-Host("sourcepath: " + $sourcepath)

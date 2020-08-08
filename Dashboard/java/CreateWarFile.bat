@@ -1,4 +1,4 @@
-cd C:\Labs\Java\zos\zos-test-driver
+cd C:/database/db2jcc4
 @REM jar -cf ebookshop.war *
-jar -cf zos-test-driver.jar *
+jar -cf dd2jcc4.jar *
 pause

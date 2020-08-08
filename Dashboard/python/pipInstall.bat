@@ -1,5 +1,7 @@
 @echo off
-pip install gitpython
+pip install zeep
+pause
+REM pip install gitpython
 REM pip install ebcdic
 REM pip install pywin32
 REM pip install datacompy
