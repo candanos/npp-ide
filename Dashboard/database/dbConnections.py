@@ -29,16 +29,17 @@ def mysqlConn():
             # print("MySQL connection is closed")      
 
 def db2Conn():
-    os.environ['classpath'] = r'C:\database\db2jcc_license_cisuz.jar'
-    jar = r'C:\database\db2jcc4.jar'
+    jar1 = r'C:\database\db2jcc4.jar'
+    jar2 = r'C:\database\db2jcc_license_cisuz.jar'
     jclassname = 'com.ibm.db2.jcc.DB2Driver'
     url = 'jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC'
-    host = 'dv0bdb2.isbank'
-    
+    # host = 'dv0bdb2.isbank'
+    os.environ["CLASSPATH"] = os.environ["CLASSPATH"] + ";" + jar1 + ";" + jar2
+    print(os.environ["CLASSPATH"]) 
     username = 'cy59857'
-    password = 'o2o2o2o2'
+    password = 'o7o7o7o7'
 
-    connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jar)
+    connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jars=[jar1,jar2])
     return connection
     
 def getConnection(typ):        

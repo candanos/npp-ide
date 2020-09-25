@@ -3,7 +3,7 @@
 @set dashboard=C:\Cloud\github\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
-@set pythonPath=C:\Python
+@set pythonPath=C:\Python36
 @set nodePath=C:\nodejs
 @set batchPath=C:\WINDOWS\System32
 @set powerShPath="C:\Windows\System32\WindowsPowerShell\v1.0"
@@ -34,6 +34,6 @@ IF %typ%==sh call "%gitPath%""\git-bash.exe"  %2
 @REM ServiceRequests
 IF %prefix%==request %powerShPath%"\powershell.exe" "%dashboard%\network\SendRequest.ps1" -filePath %1 -requestFl %2 -type %typ%
 @REM Sql Queries
-IF %typ%==sql %pythonPath%"\python.exe"  "%dashboard%\database\sqlRunner.py" %1 %2
+IF %typ%==sql  %pythonPath%"\python.exe"  "%dashboard%\database\sqlRunner.py" %1 %2 
 pause
 exit

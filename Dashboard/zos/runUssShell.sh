@@ -5,8 +5,19 @@
 # ssh -tt -o "BatchMode yes" cy59857@sman.isbank  <<HERE
 # cp "//'$mvs'" $uss                  
 # HERE
+
+# ssh -tt -o "BatchMode yes" xlrint1@sman.isbank  <<HERE
+# cob2 -c -I/u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL:/u/ttg/ebcdicRepos/isbank-cobol-framework/COPY -v /u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL/TARIHPGM.cbl 
+# HERE
+
+
+options='LIB,SSR,SIZE(MAX),BUF(32760),XREF(SHORT),NOC(E),NOSEQ,F(W),RENT,TERM,ARITH(EXTEND),OPT(FULL),SQL,CODEPAGE(1026)'
+dir='/u/ttg/compileSets/mainframe-all-apps/prd/C0001'
+members='ALCEKOZT.cbl'
+# sh /u/ttg/cob2Compiler.sh "$members" "$dir" "$options"
 ssh -tt -o "BatchMode yes" xlrint1@sman.isbank  <<HERE
-cob2 -c -I/u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL:/u/ttg/ebcdicRepos/isbank-cobol-framework/COPY -v /u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL/TARIHPGM.cbl 
+rm -rf /u/ttg/buildSets/mainframe-all-apps/prd/C0003/log
+exit
 HERE
 read -p "Press [Enter] key to go on." 
 

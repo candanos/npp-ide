@@ -6,7 +6,7 @@
 # cp "//'$mvs'" $uss                  
 # HERE
 ssh -tt -o "BatchMode yes" xlrint1@sman.isbank  <<HERE
-cp "//'SBTEKNIK.TEST.COBOL(XLRBLA01)'" /u/ttg/ebcdicRepos/varlik-yonetimi-app/COBOL/XLRBLA01.cbl 
+cp "//'SBCOMMON.PROD.COPY(CIKSUBPG)'" /u/ttg/cob2Test/CIKSUBPG 
 HERE
 read -p "Press [Enter] key to go on." 
 

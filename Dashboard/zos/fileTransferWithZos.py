@@ -17,8 +17,10 @@ def getDataSetFromZos():
    # all-members | am Download all members from a pds
    # data-set | ds    Download content from a z/OS data set
    # uss-file | uf    Download content from a USS file
-    sourcePath = r'/u/xlrint1/.profile'
-    targetPath = r'C:/Users/CY59857/Desktop/xlrint.profile'
+    sourcePath = r'SBCOMMON.PROD.DCL(DCLACBTC)'
+    sourcePath = r'/u/ttg/cob2Test/ACBATCDP.lst'
+    sourcePath = r'/u/ttg/compileSets/mainframe-all-apps/prd/C0001/log/ALCEKOZT_CompileError.log'
+    targetPath = r'C:/Users/CY59857/Desktop/ALCEKOZT_CompileError.log'
     subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
     
 def sendFileToZos():
@@ -28,11 +30,14 @@ def sendFileToZos():
    # file-to-data-set | ftds  Upload the contents of a file to a z/OS data set
    # file-to-uss | ftu        Upload content to a USS file from local file
    # stdin-to-data-set | stds Upload the content of a stdin to a z/OS data set
-    sourcePath =r'C:/Users/CY59857/Desktop/EbcdicRepos/varlik-yonetimi-app/COBOL'
-    targetPath = r'/u/BT/CY59857/.profile'
+    sourcePath =r'C:\Users\CY59857\Desktop\String_extraction.sh'
+    sourcePath =r'C:\Cloud\github\bebop\cob2Compiler.sh'
     targetPath = r'SBTEKNIK.SCORETFS.COBOL'
+    targetPath = r'/u/ttg/cob2Compiler.sh'
    
-    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'dtp', sourcePath,  targetPath, '--binary']))
+    # subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'ftu', sourcePath,  targetPath, '--binary']))
+    
+    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'ftu', sourcePath,  targetPath]))
    
 if __name__ == '__main__':
     main()
