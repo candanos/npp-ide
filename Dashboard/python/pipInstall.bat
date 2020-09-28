@@ -1,5 +1,5 @@
 @echo off
-pip install zeep
+REM pip install zeep
 pause
 REM pip install gitpython
 REM pip install ebcdic

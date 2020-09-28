@@ -6,7 +6,8 @@
 # cp "//'$mvs'" $uss                  
 # HERE
 ssh -tt -o "BatchMode yes" xlrint1@sman.isbank  <<HERE
-cob2 -c -I/u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL:/u/ttg/ebcdicRepos/isbank-cobol-framework/COPY -v /u/ttg/ebcdicRepos/isbank-cobol-framework/COBOL/TARIHPGM.cbl 
+sh cob2Compiler.sh
+exit
 HERE
 read -p "Press [Enter] key to go on." 
 

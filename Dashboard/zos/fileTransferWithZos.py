@@ -9,8 +9,8 @@ import subprocess
    # list | ls     List the details for data sets and the members in the data sets
    # upload | ul   Upload the contents of a file to z/OS data sets
 def main():
-    # getDataSetFromZos()
-    sendFileToZos()
+    getDataSetFromZos()
+    # sendFileToZos()
     
 def getDataSetFromZos():
    # zowe zos-files download
@@ -18,8 +18,9 @@ def getDataSetFromZos():
    # data-set | ds    Download content from a z/OS data set
    # uss-file | uf    Download content from a USS file
     sourcePath = r'/u/xlrint1/.profile'
-    targetPath = r'C:/Users/CY59857/Desktop/xlrint.profile'
-    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
+    sourcePath = r'/u/ttg/log4j-application.log'
+    targetPath = r'C:/Users/Candan Yuksel/Desktop/log4j-application.log'
+    subprocess.call(([r'C:\Users\Candan Yuksel\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
     
 def sendFileToZos():
    # zowe zos-files upload
@@ -28,11 +29,11 @@ def sendFileToZos():
    # file-to-data-set | ftds  Upload the contents of a file to a z/OS data set
    # file-to-uss | ftu        Upload content to a USS file from local file
    # stdin-to-data-set | stds Upload the content of a stdin to a z/OS data set
-    sourcePath =r'C:/Users/CY59857/Desktop/EbcdicRepos/varlik-yonetimi-app/COBOL'
-    targetPath = r'/u/BT/CY59857/.profile'
+    sourcePath =r'C:\Cloud\github\bebop\cob2Compiler.sh'
     targetPath = r'SBTEKNIK.SCORETFS.COBOL'
+    targetPath = r'/u/ttg/cob2Compiler.sh'
    
-    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'dtp', sourcePath,  targetPath, '--binary']))
+    subprocess.call(([r'C:\Users\Candan Yuksel\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'upload', 'ftu', sourcePath,  targetPath]))
    
 if __name__ == '__main__':
     main()
