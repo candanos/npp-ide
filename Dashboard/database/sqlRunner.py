@@ -11,7 +11,7 @@ from pathlib import Path
 sqlFilePath = sys.argv[1]
 sqlFileName = sys.argv[2]
 mydate = datetime.datetime.now().strftime('%H%M%S')
-resultFolder = Path("C:/Users/Candan Yuksel/Desktop/")
+resultFolder = Path("C:/Users/CY59857/Desktop/")
 resultFolder = os.getcwd()
 resultFl='result_' + sqlFileName + '_' + mydate + '.csv' 
 sqlFile = sqlFilePath + '/' + sqlFileName
@@ -46,7 +46,7 @@ else:
 
 print(len(lst))
 csv.register_dialect('semicol', delimiter=';', quoting=csv.QUOTE_NONE, escapechar='\\')
-
+print(resultFl)
 with open(resultFl, 'w', newline='') as f:
     writer = csv.writer(f, 'semicol')
     writer.writerows(lst)
