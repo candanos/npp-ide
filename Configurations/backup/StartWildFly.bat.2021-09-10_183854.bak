@@ -1,0 +1,3 @@
+cd C:\JAVA\servers\wildfly-19.0.0.Final\bin
+call standalone
+pause

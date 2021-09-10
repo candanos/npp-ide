@@ -1,4 +1,6 @@
 #!/bin/bash 
+git diff dev:COPY/PPINSRPR.cpy int:COPY/PPINSRPR.cpy
+
 git diff HEAD^ HEAD
 
 #compare master and origin  

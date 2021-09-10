@@ -1,0 +1,16 @@
+#!/bin/bash
+# member=$1
+# base=$2
+member="user/dir/subdir/file.c"
+mbr=${##*/}
+ext=${mbr##*.}
+echo $ext
+
+read -p "Press [Enter] key to go on." 
+
+
+# start="//'"
+# end="'"
+# targetPath=$start$memberPath$end
+# cp -v -X -S d=.$ext $sourcePath $targetPath 1>> $log 2>> $log
+# exit $?

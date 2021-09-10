@@ -1,0 +1,31 @@
+#!/bin/sh
+member=$1
+coll=$2
+enc=$3
+base=$4
+
+log="$base/log/$mbr""Bind.log"
+mbr=${member%.*}
+
+
+db2 -s CONNECT TO DV0B USER xlrint1 USING xebadm23 1>$log 2>>$log
+RC=$?
+if test $RC -gt 0
+then exit $RC
+fi
+
+
+db2 BIND $dbrmFile -collection $coll PACKAGE($coll) MEMBER($dbrm) ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) ENCODING($enc) EXPLAIN(YES) VALIDATE(BIND) 1>$log 2>>$log
+RC=$?
+if test $RC -gt 0
+then exit $RC
+fi
+
+db2 DISCONNECT 1>$log 2>>$log
+RC=$?
+if test $RC -gt 0
+then exit $RC
+fi
+
+# db2 +c -s -f db2Binder.sql
+exit $?

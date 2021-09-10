@@ -1,0 +1,17 @@
+//PAYMUHPR   JOB ,'C-PREPxPROD',MSGLEVEL=(0,0),MSGCLASS=Z,PRTY=9, 
+// USER=CY59857                                                   
+//****************************************                        
+//* AUTOSENT'IN KULLANDIgI COMPARE JOB'I *                        
+//****************************************                        
+//*                                                               
+//*STEPN EXEC PGM=IEFBR14,PARM='SE=SYSTESE'                       
+//*                                                               
+//SUPERC  EXEC PGM=ISRSUPC,PARM=(DELTAL,LINECMP,DPCBCMT,REFMOVR)  
+//********         NOPRTCC)                                       
+//OLDDD DD DSN=SBODEME.PROD.COPY(PAYMUHPR),DISP=SHR               
+//NEWDD DD DSN=SBODEME.PREPROD.COPY(PAYMUHPR),DISP=SHR            
+//OUTFORM OUTPUT FORMS=STD,DEST=LOCAL                             
+//OUTDD DD OUTPUT=(*.OUTFORM),SYSOUT=X                            
+//SYSIN DD *                                                      
+CMPCOLM 07:072                                                    
+/*                                                                

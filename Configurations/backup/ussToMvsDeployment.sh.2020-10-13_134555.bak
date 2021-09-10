@@ -1,0 +1,10 @@
+#!/bin/bash
+member=$1
+base=$2
+mbr=${member%.*}
+
+start="//'"
+end="'"
+targetPath=$start$memberPath$end
+cp -v -X -S d=.$ext $sourcePath $targetPath 1>> $log 2>> $log
+exit $?

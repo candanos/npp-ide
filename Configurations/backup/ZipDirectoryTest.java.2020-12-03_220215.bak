@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.isbank.bebop.navlun.container;
+
+import java.io.File;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+/**
+ * @author Candan Yuksel
+ *
+ */
+public class ZipDirectoryTest {
+
+	@Test
+	public void test() {
+		String sourceDir = "/u/ttg/buildSets/mainframe-all-apps/prd/C0002";
+		String targetDir = sourceDir + ".zip";
+
+		ZipDirectory.zip(sourceDir, targetDir);
+		File f = new File(targetDir);
+		boolean condition = (f.exists()) ? true : false;
+		Assert.assertTrue(condition);
+	}
+
+}

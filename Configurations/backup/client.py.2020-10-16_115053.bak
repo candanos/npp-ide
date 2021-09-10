@@ -1,0 +1,22 @@
+import requests
+#
+baseURI=r'http://localhost:8080/bebop-rest/onTheDarkSide/' 
+baseURI=r'http://10.200.14.1:39080/bebop-rest/onTheDarkSide/'
+
+compileParams=r'compile/mainframe-all-apps/prd/C0004/YHKEYBUL.cbl,PPACRLSP.cbl,PPACRLSA.cbl'
+#
+updateParams=r'update/mainframe-all-apps/prd'
+#
+deployParams=r'deploy/mainframe-all-apps/prd/C0004'
+#
+params={ "compile": compileParams , "update": updateParams , "deploy": deployParams }
+option="deploy"
+response = requests.get(baseURI + params.get(option))
+print(response.status_code)
+print(response.text)
+
+
+
+# if resp.status_code != 200:
+    # This means something went wrong.
+    # raise ApiError('GET /bebop-rest/onTheDarkside/ {}'.format(resp.status_code))

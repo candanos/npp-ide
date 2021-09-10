@@ -1,0 +1,4 @@
+cd C:\JAVA\servers\glassfish6\glassfish\bin
+set JRE_HOME="C:\Java\jdk1.8.0_261\jre"
+call asadmin start-domain
+pause

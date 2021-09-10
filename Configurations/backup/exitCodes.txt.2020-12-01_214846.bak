@@ -1,0 +1,9 @@
+Jcl Jobs:
+
+99:  Job has been submitted but couldn't be found. It could be deleted then. (Should be implemented in java.) 
+955: Filtered Step FLUSHed.
+999: Abend, filtered step has never been created. (Currently rexx return 1 but it should be changed.)
+
+Shell processes:
+0: Successful.
+1: Error.

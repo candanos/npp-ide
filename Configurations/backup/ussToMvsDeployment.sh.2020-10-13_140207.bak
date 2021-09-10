@@ -1,0 +1,25 @@
+#!/bin/bash
+# ussPath=$1
+# mvsPath=$2
+ussPath="user/dir/subdir/zeep.c"
+fileNameWithExt=${ussPath##*/}
+ext=${fileNameWithExt##*.}
+name=${fileNameWithExt%%.*}
+echo $name
+echo $ext
+
+mvsPath="SBTEKNIK.PROD.LOADMLIB(A4CHKFRM)"
+start="//'"
+end="'"
+targetPath=$start$mvsPath$end
+echo $targetPath
+
+
+log="$base/log/$name""Deploy.log"
+
+cp -v -X -S d=.$ext $ussPath $targetPath 1>> $log 2>> $log
+echo $?
+
+read -p "Press [Enter] key to go on." 
+exit $?
+

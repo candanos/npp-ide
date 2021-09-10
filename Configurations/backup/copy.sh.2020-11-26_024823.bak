@@ -1,0 +1,18 @@
+#!/bin/sh
+ussPath=$1
+mvsPath=$2
+base=$3
+
+fileNameWithExt=${ussPath##*/}
+name=${fileNameWithExt%%.*}
+ext=${fileNameWithExt##*.}
+
+start="//'"
+end="'"
+targetPath=$start$mvsPath$end
+
+log="$base/log/$name""_LoadModuleDeploy.log"
+cp -v -X -S d=.$ext $ussPath $targetPath 1>$log 2>>$log
+rc=$?
+echo "Return Code: "$rc >>$log
+exit rc

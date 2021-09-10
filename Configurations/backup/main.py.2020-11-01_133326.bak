@@ -1,0 +1,29 @@
+import sys 
+import os
+import datetime
+import requests
+
+def main():
+    getMemberList()
+    getBuildId()
+    res = compileClient(buildId, compileList)
+    print(res)
+def getMemberList():    
+    dirpath = os.getcwd()
+    memberListFile = dirpath + "/membersFile.txt"
+    onlFile = open(memberListFile, "r")
+    onlMemberList = list(dict.fromkeys(onlFile.read().split('\n')))
+    commonMembersDict = dict.fromkeys(onlMemberList)
+    commonMembersList = list(commonMembersDict)
+    commonsFile = open(configParms.commonMembersPath, "a+")
+    for member in commonMembersList:
+        commonsFile.write(member + '\n')
+
+def compileClient(buildId, compileList):
+    baseURI=r'http://10.200.14.1:29080/bebop-rest/onTheDarkSide/'
+    compileParams=r'compile/mainframe-all-apps/uat' + '/' + buildId + '/' + compileList
+    response = requests.get(baseURI + compileParams)
+    return response.text
+
+if __name__ == '__main__': 
+    main()

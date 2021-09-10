@@ -1,0 +1,16 @@
+//XLRINT12   JOB ,'C-LMINDEOD',MSGLEVEL=(0,0),MSGCLASS=X,PRTY=15                                                 
+//****************************************                      
+//* AUTOSENT'IN KULLANDIGI COMPARE JOB'I *                      
+//****************************************                      
+//*                                                             
+//*STEPN EXEC PGM=IEFBR14,PARM='SE=SYSTESE'                     
+//*                                                             
+//SUPERC  EXEC PGM=ISRSUPC,PARM=(DELTAL,LINECMP,DPCBCMT,REFMOVR)
+//********         NOPRTCC)                                     
+//OLDDD DD DSN=SBTEKNIK.TEMP.CNTL(LMINDEOD),DISP=SHR            
+//NEWDD DD DSN=SBKREDI.PROD.CNTL(LMINDEOD),DISP=SHR             
+//OUTFORM OUTPUT FORMS=CMPR,DEST=KEEPCMPR                       
+//OUTDD DD OUTPUT=(*.OUTFORM),SYSOUT=X                          
+//SYSIN DD *                                                    
+CMPCOLM 07:072                                                  
+/*                                                              

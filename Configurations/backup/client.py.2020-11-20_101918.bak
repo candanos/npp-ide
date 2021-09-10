@@ -1,0 +1,15 @@
+import requests
+#
+baseURI=r'http://10.200.14.1:29080/navlun-generator/onTheDarkSide/'
+baseURI=r'http://localhost:8080/navlun-generator/onTheDarkSide/' 
+#
+parms=r'generate/navlun/compile/mainframe-all-apps/uat/P0848.2/OKKGB.cbl,ITNAHSP.cbl,TOPLISLI.cbl,EHCZIPTL.cbl,XMLHSFYT.cbl,ENTRXTAB.cbl,FEERATEP.cbl,FNTHSOKU.cbl,OYATBDVM.cbl,IKKHAVVR.cbl,ILKEKOVR.cbl,INTXAUAC.cbl,ISIGORMI.cbl,IVHESAKT.cbl,KKBZERMI.cbl,FDSORTAK.cbl,MUSTKARS.cbl,NPLBLKPG.cbl,OALTINSA.cbl,OEFKARTB.cbl,OHYGER.cbl,PHDEKOIN.cbl,BTSSONUP.cbl,PSGENACH.cbl,IEFTTAL.cbl,IEFTTSIZ.cbl,IFATTLM.cbl,SBYTTRAN.cbl,INTYATEX.cbl,SBHHTRAN.cbl,INVDRIVR.cbl,IOVHZR.cbl,KAMPBILG.cbl,TKRODEPL.cbl,KMHPRDBS.cbl,KPTTLODE.cbl,KPTYPLIS.cbl,AS4KONTD.cbl,NFCISLOG.cbl,OTYPLI.cbl,HISSEYA1.cbl,HVHGTRAN.cbl,PKTXMLSB.cbl,ICINIT91.cbl,PSKKONLN.cbl,IJCLYT.cbl,SKLTPERS.cbl,STOKFIL3.cbl,TEFTCYTL.cbl,IXAUGOS.cbl,ODTRNAIA.cbl,OTNAHSP.cbl,ALOYATVR.cbl,IANHAYPG.cbl,ILKERDNM.cbl,IMUSTKST.cbl,SAMPSSRT.cbl,INSBGSTR.cbl,ISCHBILD.cbl,SFYPRPXL.cbl,SGKOTTA2.cbl,SWMUHBAT.cbl,BEHARXML.cbl,NAPRSTRT.cbl,ATMRFXML.cbl,OEOSEBAK.cbl,OGSYUKLE.cbl,OKISGUN.cbl,OKKBZVDK.cbl,OUMASRAF.cbl,OUSBGSTR.cbl,IBAGISAK.cbl,PSGENMUH.cbl,ITEFDKST.cbl,SANLINBS.cbl,SB8XTRAN.cbl,CEKSORMH.cbl'
+#
+response = requests.get(baseURI + parms)
+print(response.status_code)
+print(response.text)
+
+
+# if resp.status_code != 200:
+    # This means something went wrong.
+    # raise ApiError('GET /bebop-rest/onTheDarkside/ {}'.format(resp.status_code))

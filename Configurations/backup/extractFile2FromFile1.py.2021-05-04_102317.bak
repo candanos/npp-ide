@@ -1,0 +1,28 @@
+def main():
+    filePath0 = r'C:\Cloud\github\main-repo\cobol-programs-repository-app\scripts\01-createRepositoryMetadata\inputs\all_online_members.txt'
+    filePath1 = r'C:\Cloud\github\main-repo\cobol-programs-repository-app\scripts\01-createRepositoryMetadata\inputs\all_online_members.txt'
+    
+    lastFile = r'C:\Users\Candan Yuksel\Desktop\mergedFile.csv'
+    allLines = []
+    for file in filePath:
+        print(file)
+        with open(file) as f: lineList = f.readlines()
+        for line in lineList:
+            allLines.append(line)
+    
+    file = open(lastFile, "w")
+    for line in allLines:
+        file.write(line)
+    file.close()
+    
+    # file = open(filePath, "r")
+    # lineList = list(dict.fromkeys(file.read().split('\n')))
+    # lineList.sort()
+    # file.close()
+    # file = open(filePath, "w")
+    # for line in lineList:
+        # file.write(line + '\n')
+    # file.close()
+
+if __name__ == '__main__': 
+    main()    

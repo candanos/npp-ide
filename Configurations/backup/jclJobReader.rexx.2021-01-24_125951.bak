@@ -1,0 +1,78 @@
+/* Rexx */
+ADDRESS TSO
+Arg Jname Jid srchWord
+
+FilterVal = Jname'('Jid')'
+/*         */
+cnt=1
+do cnt=1 To 100
+   Drop St.
+   X1=OutTrap('St.')
+   Status FilterVal
+   X1=OutTrap('OFF')  
+   JOBSTAT=Strip(St.1)
+   if Rc=0 Then Do 
+     Stat3=Word(St.1,3)
+     Stat4=Word(St.1,4)
+     Select
+     When Stat3='ON'        Then Leave
+     When Stat4='ON'        Then Leave
+     When Stat3='EXECUTING' Then NOP
+     When Stat4='EXECUTING' Then NOP
+     When Stat3='WAITING'   Then NOP
+     When Stat4='WAITING'   Then NOP
+     OtherWise Exit 91
+     End
+   End
+   Else Do 
+      Exit 91
+   End
+   cnt=cnt+1
+   BEKLE=MPFWAIT(0001) 
+End
+/*          */
+BEKLE=MPFWAIT(0001)
+Drop JNAME.
+Drop line.
+Drop isfddname.
+JFilter='JOBID'
+PROFILE NOPREFIX
+RC = Isfcalls(ON)
+ADDRESS SDSF
+isfprefix = '**'
+isfowner = '**'
+isffilter = "'"JFilter"'"  " EQ '"Jid"'"
+"ISFEXEC H(delayed)"
+Say isffilter
+Res = 92
+Do ix=1 To JNAME.0
+   "ISFACT H TOKEN('"TOKEN.ix"') PARM(NP ?)"
+   Do rg = 1 To isfrows2
+      Say "Rexx output:" DDNAME.rg
+      If DDNAME.rg='JESMSGLG' Then Do
+        "ISFACT H TOKEN('"TOKEN.rg"') PARM(NP SA)"
+        If Rc=0 Then Do
+            Do kx=1 To isfddname.0
+               ADDRESS MVS
+              "EXECIO * DISKR" isfddname.kx "(STEM line. FINIS"
+               Say "Rexx output:" line.0 " lines"
+               Say "Rexx output:" "srchWord is " srchWord 
+               Do dd=1 To line.0
+                  F=Find(line.dd,srchWord)
+                  If(F>0) Then Do
+                     Say Say "Rexx output:" line.dd
+                     Res = Word(line.dd,(F+1))
+                  End
+               End
+            End
+        End
+      End
+   End
+End
+If DATATYPE(Res)="NUM" Then Do
+   Exit Res 
+End
+Else Do
+   Exit 93
+End
+   

@@ -1,0 +1,4 @@
+#!/bin/bash
+#Shell parameter expansion
+
+#  ${parameter%%pattern} stands for the expansion of parameter without the longest rightmost string that matches pattern.

@@ -1,0 +1,15 @@
+import requests
+#
+baseURI=r'http://10.200.14.1:29080/navlun-generator/onTheDarkSide/'
+baseURI=r'http://localhost:8080/navlun-generator/onTheDarkSide/' 
+#
+parms=r'generate/navlun/compile/mainframe-all-apps/uat/P0848.3/SWOZETDY.cbl,EFTGELEN.cbl,LIMSQLMS.cbl,UIYIDSOR.cbl,WUMUHPRG.cbl,XMLRPOGS.cbl,EXTRE001.cbl,OCEPTEL.cbl,OCEKDETY.cbl,GONDERME.cbl,ODTRDCTB.cbl,OLOTAS.cbl,OMUSGOS.cbl,ICEKWLCM.cbl,OUTPEPEN.cbl,INSTBLOK.cbl,IREPOYAP.cbl,CHIPAYIR.cbl,VDBKLHSB.cbl,XMLAFNGS.cbl,CPOPCEX5.cbl,MUHADOS1.cbl,MUSHRXML.cbl,OHZDVSAT.cbl,OSFYEDLS.cbl,REFRECD2.cbl,ICSOZT.cbl,ICCHANGE.cbl,IHGSSAT.cbl,INAKDE.cbl,INTSFKRK.cbl,SWSBESLE.cbl,KKRSODMI.cbl,OFDSORTK.cbl,OLFONSAT.cbl,OSCHEFTG.cbl,OSMEKHES.cbl,IATMKEY.cbl,DEKONBUL.cbl,SKLTHIS1.cbl,SKLTYARD.cbl,IEOSHZIS.cbl,SKLTBORD.cbl,SKLTISBT.cbl,SWCHK103.cbl,SWFINDR2.cbl,SWSHOWMT.cbl,SWTAKASB.cbl,VADEMOTR.cbl,GERCLIST.cbl,OASPOS.cbl,ODTRDKFG.cbl,OEOSEVNT.cbl,OGSAGYUK.cbl,OREFNMAN.cbl,OTLMTALD.cbl,OTMGOS.cbl,ICEPTEL.cbl,HSENDIZI.cbl,INTKKRBO.cbl,DEKONBAS.cbl,SKLTSINV.cbl,TRXINPAK.cbl,BATTFSOD.cbl,XMLSONUC.cbl,KPTTLLIS.cbl,CPOPCEX3.cbl,FTABOINT.cbl,OISLTKP.cbl,OFAIZVAD.cbl,OGSSATIS.cbl,IAONOFF.cbl,OXAUGOS.cbl,BZCEKGRS.cbl,PSIMSUTL.cbl,IKKRIS.cbl,IKRMOD.cbl,AJANDABL.cbl,INFOLIST.cbl,SW535SAB.cbl,TEMDTVDB.cbl,THYODEUC.cbl,YATBLOKE.cbl,CPOPCMH2.cbl,ACKRMLIS.cbl,'
+#
+response = requests.get(baseURI + parms)
+print(response.status_code)
+print(response.text)
+
+
+# if resp.status_code != 200:
+    # This means something went wrong.
+    # raise ApiError('GET /bebop-rest/onTheDarkside/ {}'.format(resp.status_code))

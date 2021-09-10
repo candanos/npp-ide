@@ -1,0 +1,2 @@
+cd C:\JAVA\servers\glassfish5\glassfish\bin
+call asadmin stop-domain

@@ -1,0 +1,46 @@
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+from pathlib import Path
+from os.path import split
+
+
+baseURI=r'http://10.200.14.1:29080/navlun-app/onTheDarkSide/upload'
+baseURI=r'http://localhost:8080/navlun-app/onTheDarkSide/upload' 
+
+
+file_ids = ''
+# headers={'Accept': '*/*', 'Accept-Encoding': 'zip, deflate','Content-Type': 'multipart/form-data'}
+
+
+files = {'file': ('theFile', open('C:/u/ttg/B20201112.2.zip', 'rb'))}
+
+multipart_formdata = encode_multipart_formdata({"foo": "bar", "name": "jd"})
+
+resp = requests.post(baseURI, files=files)
+print(resp.text)
+print ("status code " + str(resp.status_code))
+
+if resp.status_code == 201:
+    print ("Success")
+    data = json.loads(resp.text)
+    file_ids = data['file_ids']
+    print (file_ids)
+else:
+    print ("Failure")
+
+def encode_multipart_formdata(fields):
+    boundary = binascii.hexlify(os.urandom(16)).decode('ascii')
+
+    body = (
+        "".join("--%s\r\n"
+                "Content-Disposition: form-data; name=\"%s\"\r\n"
+                "\r\n"
+                "%s\r\n" % (boundary, field, value)
+                for field, value in fields.items()) +
+        "--%s--\r\n" % boundary
+    )
+
+    content_type = "multipart/form-data; boundary=%s" % boundary
+
+    return body, content_type

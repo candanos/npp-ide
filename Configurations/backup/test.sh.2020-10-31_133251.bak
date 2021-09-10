@@ -1,0 +1,68 @@
+#!/bin/sh
+member='ODTRDKDG.cbl'
+base='/c/Users/Candan Yuksel/Desktop'
+f_sql=1
+mbr=${member%.*}
+echo $mbr
+log="$base"'/log/'"$mbr""_Compile.log"
+echo $log
+echo $mbr >$log
+read -p "Press [Enter] key to go on." 
+
+c_options='-qLIB,SSR,SIZE(MAX),BUF(32760),XREF(SHORT),NOC(E),NOSEQ,F(W),RENT,TERM,ARITH(EXTEND),OPT(1),CODEPAGE(1026),ARITH(EXTEND),NOINITCHECK,NONUMCHECK,ARCH(11),DISPSIGN(COMPAT),ZONEDATA(NOPFD),NUMPROC(NOPFD),VLR(STANDARD)' 
+b_options='-bCALL=NO,LIST=SUMMARY,DYNAM=NO,MSGLEVEL=0'
+sql_options="SQL(HOST(IBMCOB),APOST,APOSTSQL,DEC(31),SQL(DB2),VERSION(AUTO))"
+
+if test $f_sql -gt 0
+then c_options=$c_options$sql_options
+fi
+echo $c_options
+
+log="$base/log/$mbr""_Compile.log"
+
+cd "$base/source" 
+pwd > $log 
+cob2 -v -dbrmlib $c_options $b_options $member 1>> $log 2>> $log
+echo $? > $log
+
+cobRC=$?
+if test $cobRC -gt 0
+then exit $cobRC
+else rc=$cobRC
+fi
+
+mv "$base/source/$mbr.o" "$base/mlib/$mbr.mlib" 1>> $log 2>> $log
+mvRC=$?
+if test $mvRC -gt 0
+then exit $mvRC
+else rc=$mvRC
+fi
+
+FILE="$base/source/$mbr.dbrm"
+if [[ -f "$FILE" ]]; then
+    mv "$FILE" "$base/dbrm/$mbr.dbrm" 1>> $log 2>> $log
+    mvRC=$?
+    if test $mvRC -gt 0
+    then exit $mvRC
+    else rc=$mvRC
+    fi	
+fi
+
+rm "$base/source/$mbr.lst" 1>> $log 2>> $log
+mvRC=$?
+if test $mvRC -gt 0
+then exit $mvRC
+else rc=$mvRC
+fi
+
+rm "$base/source/$mbr.o" 1>> $log 2>> $log
+mvRC=$?
+if test $mvRC -gt 0
+then exit $mvRC
+else rc=$mvRC
+fi
+
+exit rc
+
+
+

@@ -1,0 +1,20 @@
+{	
+	"compile-dependencies": [
+	{
+		"name" : "isbank-cobol-framework",
+		"version" : "1.0.0"		
+	},
+	{
+		"name" : "loans-common-api",
+		"version" : "1.0.0"		
+	}
+	],
+	"compile-pack-properties":{
+		"ArchiveType": "zip",
+		"ConvertedFilesState": "KEEP", 
+		"EncodingConversionSourceCharset": "utf8",
+		"EncodingConversionTargetCharset": "cp1026",
+		"FileExtensionCase": "LOWER",
+		"FileNameCase": "UPPER"
+	}
+}	

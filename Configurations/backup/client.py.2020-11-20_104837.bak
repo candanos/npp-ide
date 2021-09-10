@@ -1,0 +1,15 @@
+import requests
+#
+baseURI=r'http://10.200.14.1:29080/navlun-generator/onTheDarkSide/'
+baseURI=r'http://localhost:8080/navlun-generator/onTheDarkSide/' 
+#
+parms=r'generate/navlun/compile/mainframe-all-apps/uat/P0848.8/OKOMIS.cbl,ALYACHGS.cbl,OKREBAS.cbl,OLIMARTX.cbl,HSISLLST.cbl,IFBUKVRM.cbl,IKYALS.cbl,DEKARSIV.cbl,PSTURKCL.cbl,BATDTHAC.cbl,SWFONDOK.cbl,TKTUTHES.cbl,KMHPRDBZ.cbl,KREDRISK.cbl,CPOPCEX6.cbl,OAJANDA.cbl,GUVBILGI.cbl,HAVALEDK.cbl,OKKHESLS.cbl,OTEFDKST.cbl,OTOFAIZ9.cbl,INTKHVMI.cbl,SKLTAKL1.cbl,AS4KONTU.cbl,SWAYDIMI.cbl,ASGINTUR.cbl,IOVRLART.cbl,IPREPBV.cbl,ITMPSIFR.cbl,MAASDSIP.cbl'
+#
+response = requests.get(baseURI + parms)
+print(response.status_code)
+print(response.text)
+
+
+# if resp.status_code != 200:
+    # This means something went wrong.
+    # raise ApiError('GET /bebop-rest/onTheDarkside/ {}'.format(resp.status_code))

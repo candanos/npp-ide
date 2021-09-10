@@ -1,0 +1,111 @@
+	BLOKHESP.cbl-12
+	CGRHRUPD.cbl-12
+	DAPERMDP.cbl-12
+	DAPERMIP.cbl-12
+	DEKONSUB.cbl-8
+	EFTAROKU.cbl-12
+	EFTHVMSG.cbl-12
+	EFTHVSMS.cbl-12
+	ETALIN2P.cbl-12
+	ETALIN3P.cbl-12
+	FEEMQMDY.cbl-8
+	FEERATEP.cbl-12
+	HAVGIRIS.cbl-8
+	IBSENDSC.cbl-12
+	IBTXKONT.cbl-12
+	KMMDB2MQ.cbl-8
+	KOMACRDB.cbl-12
+	KOMISPGM.cbl-12
+	KOMKARAR.cbl-12
+	KOMWRTMQ.cbl-8
+	KRDKOMAL.cbl-8
+	Line 102: DEKONSUB.cbl-8
+	Line 117: DEKONSUB.cbl-8
+	Line 12: DEKONSUB.cbl-8
+	Line 132: DEKONSUB.cbl-8
+	Line 147: DEKONSUB.cbl-8
+	Line 162: DEKONSUB.cbl-8
+	Line 177: DEKONSUB.cbl-8
+	Line 192: DEKONSUB.cbl-8
+	Line 1: Search ".cbl-8"  (128 hits in 1 file of 1 searched)
+	Line 203: FEEMQMDY.cbl-8
+	Line 218: FEEMQMDY.cbl-8
+	Line 233: FEEMQMDY.cbl-8
+	Line 248: FEEMQMDY.cbl-8
+	Line 263: FEEMQMDY.cbl-8
+	Line 278: FEEMQMDY.cbl-8
+	Line 27: DEKONSUB.cbl-8
+	Line 293: FEEMQMDY.cbl-8
+	Line 308: FEEMQMDY.cbl-8
+	Line 323: FEEMQMDY.cbl-8
+	Line 338: FEEMQMDY.cbl-8
+	Line 353: FEEMQMDY.cbl-8
+	Line 368: FEEMQMDY.cbl-8
+	Line 387: HAVGIRIS.cbl-8
+	Line 402: HAVGIRIS.cbl-8
+	Line 417: HAVGIRIS.cbl-8
+	Line 42: DEKONSUB.cbl-8
+	Line 432: HAVGIRIS.cbl-8
+	Line 447: HAVGIRIS.cbl-8
+	Line 462: HAVGIRIS.cbl-8
+	Line 477: HAVGIRIS.cbl-8
+	Line 492: HAVGIRIS.cbl-8
+	Line 507: HAVGIRIS.cbl-8
+	Line 522: HAVGIRIS.cbl-8
+	Line 537: HAVGIRIS.cbl-8
+	Line 552: HAVGIRIS.cbl-8
+	Line 567: HAVGIRIS.cbl-8
+	Line 576: KMMDB2MQ.cbl-8
+	Line 57: DEKONSUB.cbl-8
+	Line 591: KMMDB2MQ.cbl-8
+	Line 606: KMMDB2MQ.cbl-8
+	Line 621: KMMDB2MQ.cbl-8
+	Line 636: KMMDB2MQ.cbl-8
+	Line 651: KMMDB2MQ.cbl-8
+	Line 666: KMMDB2MQ.cbl-8
+	Line 681: KMMDB2MQ.cbl-8
+	Line 696: KMMDB2MQ.cbl-8
+	Line 711: KMMDB2MQ.cbl-8
+	Line 726: KMMDB2MQ.cbl-8
+	Line 72: DEKONSUB.cbl-8
+	Line 741: KMMDB2MQ.cbl-8
+	Line 767: KOMWRTMQ.cbl-8
+	Line 782: KOMWRTMQ.cbl-8
+	Line 797: KOMWRTMQ.cbl-8
+	Line 812: KOMWRTMQ.cbl-8
+	Line 827: KOMWRTMQ.cbl-8
+	Line 842: KOMWRTMQ.cbl-8
+	Line 857: KOMWRTMQ.cbl-8
+	Line 872: KOMWRTMQ.cbl-8
+	Line 87: DEKONSUB.cbl-8
+	Line 887: KOMWRTMQ.cbl-8
+	Line 902: KOMWRTMQ.cbl-8
+	Line 917: KOMWRTMQ.cbl-8
+	Line 932: KOMWRTMQ.cbl-8
+	Line 947: KOMWRTMQ.cbl-8
+	Line 949: KRDKOMAL.cbl-8
+	Line 964: KRDKOMAL.cbl-8
+	Line 979: KRDKOMAL.cbl-8
+	Line 994: KRDKOMAL.cbl-8
+	NTISBSCP.cbl-12
+	OPTMESAJ.cbl-8
+	ORDRCCNP.cbl-12
+	ORDRKNTP.cbl-12
+	ORDRSPCP.cbl-12
+	OVRTLIML.cbl-12
+	SENDERIN.cbl-12
+	SNUNVPGM.cbl-12
+	SQLRVACT.cbl-12
+	SQLRVEXT.cbl-12
+	STKISKNT.cbl-12
+	STKORANB.cbl-12
+	STRINGPG.cbl-12
+	SWUNSTRG.cbl-8
+	TLMTABLO.cbl-12
+	TMMODKON.cbl-12
+	TRXINPUT.cbl-12
+	TRXOUTPT.cbl-12
+	TXHOSTRC.cbl-8
+	VADEMOTR.cbl-12
+	VADEORAN.cbl-12
+	XMLINPUT.cbl-12

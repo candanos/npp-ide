@@ -1,0 +1,16 @@
+def main():
+    getMemberList()
+    client()
+def getMemberList():    
+    dirpath = os.getcwd()
+    memberListFile = dirpath + "/membersFile.txt"
+    onlFile = open(memberListFile, "r")
+    onlMemberList = list(dict.fromkeys(onlFile.read().split('\n')))
+    commonMembersDict = dict.fromkeys(onlMemberList)
+    commonMembersList = list(commonMembersDict)
+    commonsFile = open(configParms.commonMembersPath, "a+")
+    for member in commonMembersList:
+        commonsFile.write(member + '\n')
+        
+if __name__ == '__main__': 
+    main()

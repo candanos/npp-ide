@@ -1,0 +1,4 @@
+#!/bin/bash
+ussPath=$1
+mvsPath=$2
+base=$3

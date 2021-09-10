@@ -1,0 +1,8 @@
+{	
+	"compile-dependencies": [
+	{
+	"name" : "isbank-common-framework",
+	"version" : "1.0.0"		
+	},
+	]
+}	

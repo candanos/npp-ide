@@ -1,0 +1,21 @@
+#!/bin/sh
+ussPath=$1
+coll=$2
+enc=$3
+base=$4
+
+fileNameWithExt=${ussPath##*/}
+name=${fileNameWithExt%%.*}
+ext=${fileNameWithExt##*.}
+mbr=$name
+
+log="$base/log/$mbr""Bind.log"
+
+db2 <<HERE
+CONNECT TO DV0B USER xlrint1 USING xebadm23 1>$log 2>>$log
+BIND $ussPath -collection $coll PACKAGE($coll) MEMBER($mbr) ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) ENCODING($enc) EXPLAIN(YES) VALIDATE(BIND) 1>>$log 2>>$log
+DISCONNECT 1>>$log 2>>$log
+TERMINATE
+HERE
+RC=$?
+exit $RC

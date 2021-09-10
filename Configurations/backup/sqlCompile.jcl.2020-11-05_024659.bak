@@ -1,0 +1,26 @@
+//CY598571 JOB ,ODTRDKBB-1,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,      
+//     CLASS=A,MSGLEVEL=(1,1),PRTY=15,                               
+// USER=CY59857                                                      
+//PC       EXEC PGM=DSNHPC,PARM=(HOST(IBMCOB),APOST,APOSTSQL,        
+//         'DEC(31)','SQL(DB2)','VERSION(AUTO)'),REGION=4096K        
+//SET1  SET  BS='/u/ttg/buildSets'                                   
+//SET2  SET  RP='/mainframe-all-apps/uat/B0004/source'               
+//SET3  SET  MB='/DB2ACCNS.cbl'                                      
+//SET4  SET  DB='/mainframe-all-apps/uat/B0004/dbrm'                 
+//SET5  SET  DF='/DB2ACCNS.dbrm'                                     
+//SYSIN   DD PATH='&BS&RP&MB',                                       
+//            PATHOPTS=ORDONLY,FILEDATA=TEXT,RECFM=F                 
+//SYSLIB   DD PATH='&BS&RP',                                         
+//            PATHOPTS=ORDONLY,FILEDATA=TEXT,RECFM=F                 
+//STEPLIB  DD DISP=SHR,DSN=DB2ASYS.SDSNEXIT                          
+//         DD DISP=SHR,DSN=DB2ASYS.SDSNLOAD                                      
+//DBRMLIB  DD PATH='&BS&DB&DF',                                
+//            PATHOPTS=(OWRONLY,OCREAT,OTRUNC),                
+//            PATHMODE=(SIRUSR,SIWUSR)                         
+//SYSCIN   DD DSN=&DSNHOUT,DISP=(NEW,PASS),UNIT=SYSDA,         
+//            SPACE=(800,(200,200))                            
+//SYSPRINT DD SYSOUT=*                                         
+//SYSTERM  DD SYSOUT=*                                         
+//SYSUDUMP DD SYSOUT=*                                         
+//SYSUT1   DD SPACE=(800,(200,200),,,ROUND),UNIT=SYSDA         
+//SYSUT2   DD SPACE=(800,(200,200),,,ROUND),UNIT=SYSDA                  

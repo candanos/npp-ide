@@ -1,0 +1,5 @@
+#!/bin/bash
+ussPath=$1
+mvsPath=$2
+base=$3
+db2 +c -s -f db2Binder.sql

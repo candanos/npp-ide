@@ -3,7 +3,7 @@
 @set dashboard=C:\Cloud\github\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
-@set pythonPath=C:\Python36
+@set pythonPath=C:\Python
 @set nodePath=C:\nodejs
 @set batchPath=C:\WINDOWS\System32
 @set powerShPath="C:\Windows\System32\WindowsPowerShell\v1.0"
@@ -14,7 +14,9 @@ for /F "tokens=2 delims=." %%T IN ("%a%") DO set typ=%%T
 for /F "tokens=1 delims=_" %%P IN ("%a%") DO set prefix=%%P 
 cd /d %1
 @REM bat files
-IF %typ%==bat %powerShPath%"\powershell.exe" -File "%dashboard%\bat\batRunner.ps1" %1 %2
+@REM IF %typ%==bat start %powerShPath%"\powershell.exe" -File "%dashboard%\bat\batRunner.ps1" %1 %2
+IF %typ%==bat start powershell -File "%dashboard%\bat\batRunner.ps1" %1 %2
+@REM IF %typ%==bat %batchPath%"\cmd.exe" "/C "  %2
 @REM vbs files
 IF %typ%==vbs %vbsPath%"\cscript.exe" %2
 @REM ps1 files

@@ -1,0 +1,53 @@
+import os, shutil, sys
+
+sourceRepoDir = r'C:/Users/Candan Yuksel/Desktop/TfsCobolRepository/Remainframe-all-apps/'
+targetRepoDir = r'C:/Users/Candan Yuksel/Desktop/GitCobolRepository/'
+typs = {'COBOL':'.cbl', 'COPY':'.cpy', 'DCL':'.dcl', 'ASM':'.asm'}
+
+dirPath = os.getcwd()
+inputDir = dirPath + "/inputs/"
+outputDir = dirPath + "/outputs/"
+metadataDir = dirPath + "/metadata/"
+sqlPath = dirPath + "/sqls/"
+
+#Kendisine input olarak verilen liste dosyasindaki memberlari baska bir klasore kopyaliyor.
+
+filePath = sys.argv[1]
+gitRepoName = os.path.basename(filePath).split('.')[0]
+
+try:
+    os.mkdir(targetRepoDir + gitRepoName)
+except:
+    pass 
+    
+print(filePath)
+
+errorFilePath = outputDir +  "/error_members.txt"
+logFilePath = outputDir + "/log_members.txt"
+error = open(errorFilePath, "a+")
+log = open(logFilePath, "a+")
+
+
+with open(filePath) as f: members = f. readlines()
+print(str(len(members)))
+for member in members:
+    if(len(member) > 4):
+        mbrArray = member.split(';')
+        mbrName = mbrArray[0].strip()
+        mbrProj = mbrArray[1].strip()
+        mbrType = mbrArray[2].strip().strip('\r')
+        if mbrType in typs: 
+            dest = targetRepoDir + gitRepoName
+            try:
+                os.mkdir(dest)
+            except:    
+                pass
+            
+            try: 
+                src = sourceRepoDir + mbrType + "/" + mbrName + typs.get(mbrType)
+                print(src)
+                shutil.copy(src, dest)
+            except Exception as e:
+                error.write(str(e) + "in " + member)
+            finally:    
+                log.write("member is:" + member)

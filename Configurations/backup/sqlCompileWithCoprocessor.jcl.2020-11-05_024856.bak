@@ -1,0 +1,19 @@
+//CY598571 JOB ,ODTRDKBB-1,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,    
+//     CLASS=A,MSGLEVEL=(1,1),PRTY=15,                             
+// USER=CY59857                                                    
+//COB62  EXEC  PGM=IGYCRCTL,REGION=1500K,COND=(4,LT),PARM='OPTFILE'
+//SET1  SET  BS='/u/ttg/buildSets'                                 
+//SET2  SET  SR='/mainframe-all-apps/uat/B0001/source'             
+//SET3  SET  MB='/DB2ACCNS.cbl'                                    
+//SET4  SET  DB='/mainframe-all-apps/uat/B0001/dbrm'               
+//SET5  SET  DF='/DB2ACCNS.dbrm'                                   
+//SYSOPTF DD DISP=SHR,DSN=SBTEKNIK.V6.COMPILE.OPTIONS              
+//        DD DISP=SHR,DSN=SBTEKNIK.COMPILE.OPTIONS.COPROC          
+//        DD DISP=SHR,DSN=SBTEKNIK.COMPILE.OPTIONS.WITHSQL         
+//STEPLIB DD DISP=SHR,DSN=COBOL.V62.IGY.SIGYCOMP                   
+//        DD DISP=SHR,DSN=COBOL.V62.COMP.ISBANK.LOADPLIB           
+//        DD DISP=SHR,DSN=DB2ASYS.SDSNLOAD                         
+//        DD DISP=SHR,DSN=DB2ASYS.SDSNEXIT                         
+//SYSIN   DD PATH='&BS&SR&MB',                                     
+//            PATHOPTS=ORDONLY,FILEDATA=TEXT,RECFM=F               
+//SYSPUNCH DD DUMMY                                                

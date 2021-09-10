@@ -1,0 +1,20 @@
+import sys 
+import os
+import datetime
+import shutil
+
+fileName = "YHKEYBUL.cpy"
+sourceDir = r'C:/u/ttg/tfsRepos/mainframe-all-apps/COBOL'
+targetDir = r'C:/Cloud/github/bebop-rest/target'
+
+
+def main():    
+    convertFileToEbcdic()
+    
+def convertFileToEbcdic():
+    sourceFile = sourceDir + "/" + fileName
+    with open(sourceFile, 'r', encoding='utf-8') as f: cobolPgm = f.read()
+    f = open(path_in_str.replace(cobolName,cobolName.upper()), 'w', encoding='utf-8', newline="\n")
+
+if __name__ == '__main__': 
+    main()

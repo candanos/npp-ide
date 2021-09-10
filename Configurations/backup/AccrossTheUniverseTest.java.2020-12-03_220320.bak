@@ -1,0 +1,16 @@
+package com.isbank.bebop.commons;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class AccrossTheUniverseTest {
+
+	@Test
+	public void test() {
+
+		boolean condition = (AccrossTheUniverse.class.getClassLoader().getResource("cob2Compiler.sh").getPath()
+				.length() > 10) ? true : false;
+		Assert.assertTrue(condition);
+	}
+
+}

@@ -17,5 +17,8 @@ param (
 	
 $env:Path = "C:\JAVA\apache-maven-3.6.3\bin;" + $env:Path
 Write-Host $env:Path
+Write-Host("Hello")
 $batPath = $filePath + "\" + $fileName
-start-process $batPath
+Write-Host($batPath + " is going to be run.")	
+& $batPath
+pause

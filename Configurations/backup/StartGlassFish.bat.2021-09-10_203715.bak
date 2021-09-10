@@ -1,0 +1,5 @@
+cd C:\JAVA\servers\glassfish4\glassfish\bin
+set JRE_HOME="C:\Java\jdk1.6.0_45\jre"
+set AS_JAVA="C:\Java\jdk1.6.0_45"
+call asadmin start-domain
+pause

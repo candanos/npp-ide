@@ -1,0 +1,8 @@
+@REM 
+@echo off
+
+@REM ***************************
+set toberun=C:\Cloud\github\main-repo\devopz\devopz-ide-cli\target\devopz-ide-cli-1.0.0-jar-with-dependencies.jar "COMPILE" "C:/Users/Candan Yuksel/unitTests/workSpace/rotatif-krediler-hesap-yonetimi-api/src/main/BCHTAHSL.cbl" "DB2" "C:/Users/Candan Yuksel/unitTests/workSpace" 
+echo %toberun%
+java -jar %toberun%
+pause

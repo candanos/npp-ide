@@ -1,0 +1,14 @@
+@REM 
+@echo off
+set fullpath=C:\Cloud\github\main-repo\devopz\devopz-benzoic-client\target\
+set filename=devopz-benzoic-client-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+set jarPath=C:\Cloud\github\main-repo\devopz\devopz-zos-resource-manager\target\devopz-zos-resource-manager-1.0.0.jar
+set className=com.isbank.devopz.zos.resource.manager.operations.ZosResourceProvider
+set methodName=get
+set args=prm1;prm2
+
+set toberun=%fullpath%%filename% UPLOAD_AND_RUN jarName className methodName args
+echo %toberun%
+java -jar %toberun%
+pause

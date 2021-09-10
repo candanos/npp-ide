@@ -1,0 +1,1350 @@
+2020-08-28 10:38:16 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-08-28 10:38:16 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-08-28 10:38:16 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-08-28 10:38:16 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-08-28 10:38:16 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-08-28 10:38:16 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-08-28 10:38:16 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-08-28 10:38:16 INFO  DarkJobsImpl:29 - Enter DarkJobsImpl.getProperties()!
+2020-08-28 10:38:16 INFO  DarkJobsImpl:40 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-08-28 10:38:16 INFO  DarkJobsImpl:41 - Exit DarkJobsImpl.getProperties()!
+2020-08-28 10:40:44 INFO  UpdateMFRepository:22 - Enter UpdateMFRepositories.call!
+2020-08-28 10:40:44 INFO  GitOperations:168 - Enter GitOperations.pullGitRepo
+2020-08-28 10:40:46 INFO  GitOperations:173 - Exit GitOperations.pullGitRepo
+2020-08-28 10:40:46 INFO  UpdateMFRepository:32 - pull is successfull!
+2020-08-28 10:40:46 INFO  GitOperations:115 - Enter  GitOperations.getCommitsOfPullOperation!
+2020-08-28 10:40:46 INFO  GitOperations:116 - pullResult:org.eclipse.jgit.transport.FetchResult@73445b7
+Merge of revisions 6e2d789b22bf74d5d5e2ad77cf714141ba38d74b, 2d70613de1b7e6503e451a9c82fe7e4d34705d6e with base 2d70613de1b7e6503e451a9c82fe7e4d34705d6e using strategy recursive resulted in: Fast-forward. 
+2020-08-28 10:40:46 INFO  GitOperations:119 - merge status:Fast-forward
+2020-08-28 10:40:46 INFO  GitOperations:120 - merged commits:[Lorg.eclipse.jgit.lib.ObjectId;@3fc049a1
+2020-08-28 10:40:46 INFO  GitOperations:121 - mergeResult.getBase().name()2d70613de1b7e6503e451a9c82fe7e4d34705d6e
+2020-08-28 10:40:46 INFO  GitOperations:125 - FAST_FORWARD
+2020-08-28 10:40:46 INFO  GitOperations:138 - Exit  GitOperations.getCommitsOfPullOperation!
+2020-08-28 10:40:46 INFO  UpdateMFRepository:34 - commits of pull operation:2
+2020-08-28 10:40:46 INFO  GitOperations:52 - Enter  GitOperations.getCommitsOfPullOperation!
+2020-08-28 10:40:46 INFO  GitOperations:53 - repoPath>/u/ttg/tfsRepos/cek-senet-app
+2020-08-28 10:40:46 INFO  GitOperations:54 - oldCommitStr>6e2d789b22bf74d5d5e2ad77cf714141ba38d74b
+2020-08-28 10:40:46 INFO  GitOperations:55 - newCommitStr>2d70613de1b7e6503e451a9c82fe7e4d34705d6e
+2020-08-28 10:40:46 INFO  GitOperations:63 - repository has been set!
+2020-08-28 10:40:46 INFO  GitOperations:67 - diffFormatter has been set!
+2020-08-28 10:40:46 INFO  GitOperations:72 - oldRevCommit has been set!
+2020-08-28 10:40:46 INFO  GitOperations:74 - newRevCommit has been set!
+2020-08-28 10:40:46 INFO  GitOperations:85 - entries has been set!
+2020-08-28 10:40:46 INFO  GitOperations:88 - typ>MODIFY
+2020-08-28 10:40:46 INFO  GitOperations:93 - entry.getNewPath()>COBOL/AKTIVCEK.cbl
+2020-08-28 10:40:46 INFO  GitOperations:88 - typ>MODIFY
+2020-08-28 10:40:46 INFO  GitOperations:93 - entry.getNewPath()>COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  GitOperations:100 - size of changedFiles>2
+2020-08-28 10:40:46 INFO  GitOperations:103 - filePath>COBOL/AKTIVCEK.cbl
+2020-08-28 10:40:46 INFO  GitOperations:103 - filePath>COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  GitOperations:109 - returning COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  GitOperations:110 - Exit  GitOperations.getCommitsOfPullOperation!
+2020-08-28 10:40:46 INFO  UpdateMFRepository:39 - Exit UpdateMFRepositories.call! ; returning COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  CompileMembers:23 - CompileRepository.call input cek-senet-app;COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  ConvertCompileReqCsvToSourcePaths:16 - Enter ConvertCompileReqCsvToSourcePaths.convert input cek-senet-app;COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  SourcePath:85 - windows 10
+2020-08-28 10:40:46 INFO  SourcePath:87 - This is Windows
+2020-08-28 10:40:46 INFO  SourcePath:29 - SourcePath.getWithNameAndRepo input: path=COBOL/AKTIVCEK.cbl;repository= cek-senet-app
+2020-08-28 10:40:46 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COBOL\AKTIVCEK.cbl
+2020-08-28 10:40:46 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:46 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COBOL\AKTIVCEK.cbl
+2020-08-28 10:40:46 INFO  SourcePath:29 - SourcePath.getWithNameAndRepo input: path=COBOL/ZAMANKNT.cbl;repository= cek-senet-app
+2020-08-28 10:40:46 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COBOL\ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:46 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COBOL\ZAMANKNT.cbl
+2020-08-28 10:40:46 INFO  ConvertCompileReqCsvToSourcePaths:27 - Exit ConvertCompileReqCsvToSourcePaths.convert
+2020-08-28 10:40:46 INFO  FindCompileTimeDependencies:14 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-08-28 10:40:46 INFO  ScdegiskQueries:105 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-08-28 10:40:47 INFO  ScdegiskQueries:114 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:CIKSUBPG
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=CIKSUBPG
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\CIKSUBPG.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\CIKSUBPG.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:DEBUGMOD
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=DEBUGMOD
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\DEBUGMOD.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\DEBUGMOD.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:GIRSUBPG
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=GIRSUBPG
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\GIRSUBPG.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\GIRSUBPG.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:TESTPARM
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TESTPARM
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TESTPARM.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TESTPARM.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:TXOBASLA
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXOBASLA
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TXOBASLA.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TXOBASLA.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:TXOBITIR
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXOBITIR
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TXOBITIR.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TXOBITIR.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:WSCOMMON
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=WSCOMMON
+2020-08-28 10:40:47 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\WSCOMMON.cpy
+2020-08-28 10:40:47 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:47 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\WSCOMMON.cpy
+2020-08-28 10:40:47 INFO  FindCompileTimeDependencies:17 - copy:ISLEMREC
+2020-08-28 10:40:47 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ISLEMREC
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\ISLEMREC.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\ISLEMREC.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:ISLEMSDP
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ISLEMSDP
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\ISLEMSDP.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\ISLEMSDP.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:CEKERROR
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=CEKERROR
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\CEKERROR.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\CEKERROR.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:INXCEKPR
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXCEKPR
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXCEKPR.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXCEKPR.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:INXMLCEK
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXMLCEK
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXMLCEK.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXMLCEK.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:INXMLSTA
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXMLSTA
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXMLSTA.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXMLSTA.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:OUXCEKPR
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXCEKPR
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXCEKPR.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXCEKPR.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:OUXMLCEK
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXMLCEK
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXMLCEK.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXMLCEK.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:OUXMLSTA
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXMLSTA
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXMLSTA.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXMLSTA.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:TXKODXML
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXKODXML
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\TXKODXML.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\TXKODXML.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:17 - copy:ZAMANPAR
+2020-08-28 10:40:48 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ZAMANPAR
+2020-08-28 10:40:48 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\ZAMANPAR.cpy
+2020-08-28 10:40:48 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 10:40:48 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\ZAMANPAR.cpy
+2020-08-28 10:40:48 INFO  FindCompileTimeDependencies:20 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-08-28 10:40:48 INFO  DownloadCompileSet:20 - Enter DownloadCompileSet.ofCobolList.
+2020-08-28 10:40:48 INFO  CreateBuildDirectories:14 - Enter CreateBuildDirectories.ofBuildId.
+2020-08-28 10:40:48 INFO  CreateBuildDirectories:18 - This is Windows
+2020-08-28 10:40:48 INFO  CreateBuildDirectories:40 - Enter CreateBuildDirectories.ofBuildId > output : C://u/ttg/compileSets/REL12345/windows
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\AKTIVCEK.cbl
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ZAMANKNT.cbl
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\CIKSUBPG.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\DEBUGMOD.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\GIRSUBPG.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TESTPARM.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXOBASLA.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXOBITIR.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\WSCOMMON.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ISLEMREC.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ISLEMSDP.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\CEKERROR.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXCEKPR.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXMLCEK.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXMLSTA.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXCEKPR.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXMLCEK.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXMLSTA.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXKODXML.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ZAMANPAR.cpy
+2020-08-28 10:40:48 INFO  DownloadCompileSet:60 - Exit DownloadCompileSet.ofCobolList.
+2020-08-28 10:40:48 INFO  PrepareBuildScript:13 - Enter PrepareBuildScript.cob2!
+2020-08-28 10:40:48 INFO  PrepareBuildScript:14 - Incoming CompileSet!
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - AKTIVCEK.cbl/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - ZAMANKNT.cbl/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - CIKSUBPG.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - DEBUGMOD.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - GIRSUBPG.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - TESTPARM.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - TXOBASLA.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - TXOBITIR.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - WSCOMMON.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - ISLEMREC.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - ISLEMSDP.cpy/isbank-cobol-framework
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - CEKERROR.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - INXCEKPR.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - INXMLCEK.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - INXMLSTA.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - OUXCEKPR.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - OUXMLCEK.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - OUXMLSTA.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - TXKODXML.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:16 - ZAMANPAR.cpy/cek-senet-app
+2020-08-28 10:40:48 INFO  PrepareBuildScript:26 - PrepareBuildScript.cob2 is returning cob2 -c -v -qLIB AKTIVCEK.cbl ZAMANKNT.cbl
+2020-08-28 10:40:48 INFO  PrepareBuildScript:27 - Exit PrepareBuildScript.cob2!
+2020-08-28 10:40:48 INFO  CompileMembers:36 - CompileRepository.call output cob2 -c -v -qLIB AKTIVCEK.cbl ZAMANKNT.cbl
+2020-08-28 11:53:47 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-08-28 11:53:47 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-08-28 11:53:47 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-08-28 11:53:47 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-08-28 11:53:47 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-08-28 11:53:47 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-08-28 11:53:47 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-08-28 11:53:47 INFO  DarkJobsImpl:29 - Enter DarkJobsImpl.getProperties()!
+2020-08-28 11:53:47 INFO  DarkJobsImpl:40 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-08-28 11:53:47 INFO  DarkJobsImpl:41 - Exit DarkJobsImpl.getProperties()!
+2020-08-28 11:57:48 INFO  UpdateMFRepository:22 - Enter UpdateMFRepositories.call!
+2020-08-28 11:57:48 INFO  GitOperations:168 - Enter GitOperations.pullGitRepo
+2020-08-28 11:57:50 INFO  GitOperations:173 - Exit GitOperations.pullGitRepo
+2020-08-28 11:57:50 INFO  UpdateMFRepository:32 - pull is successfull!
+2020-08-28 11:57:50 INFO  GitOperations:115 - Enter  GitOperations.getCommitsOfPullOperation!
+2020-08-28 11:57:50 INFO  GitOperations:116 - pullResult:org.eclipse.jgit.transport.FetchResult@31f0c33a
+Merge of revisions 2d70613de1b7e6503e451a9c82fe7e4d34705d6e, f07a40fc3fb5fbdb7776a3b9f2dddc3240234dfd with base f07a40fc3fb5fbdb7776a3b9f2dddc3240234dfd using strategy recursive resulted in: Fast-forward. 
+2020-08-28 11:57:50 INFO  GitOperations:119 - merge status:Fast-forward
+2020-08-28 11:57:50 INFO  GitOperations:120 - merged commits:[Lorg.eclipse.jgit.lib.ObjectId;@45f9ea21
+2020-08-28 11:57:50 INFO  GitOperations:121 - mergeResult.getBase().name()f07a40fc3fb5fbdb7776a3b9f2dddc3240234dfd
+2020-08-28 11:57:50 INFO  GitOperations:125 - FAST_FORWARD
+2020-08-28 11:57:50 INFO  GitOperations:138 - Exit  GitOperations.getCommitsOfPullOperation!
+2020-08-28 11:57:50 INFO  UpdateMFRepository:34 - commits of pull operation:2
+2020-08-28 11:57:50 INFO  GitOperations:52 - Enter  GitOperations.getCommitsOfPullOperation!
+2020-08-28 11:57:50 INFO  GitOperations:53 - repoPath>/u/ttg/tfsRepos/cek-senet-app
+2020-08-28 11:57:50 INFO  GitOperations:54 - oldCommitStr>2d70613de1b7e6503e451a9c82fe7e4d34705d6e
+2020-08-28 11:57:50 INFO  GitOperations:55 - newCommitStr>f07a40fc3fb5fbdb7776a3b9f2dddc3240234dfd
+2020-08-28 11:57:51 INFO  GitOperations:63 - repository has been set!
+2020-08-28 11:57:51 INFO  GitOperations:67 - diffFormatter has been set!
+2020-08-28 11:57:51 INFO  GitOperations:72 - oldRevCommit has been set!
+2020-08-28 11:57:51 INFO  GitOperations:74 - newRevCommit has been set!
+2020-08-28 11:57:51 INFO  GitOperations:85 - entries has been set!
+2020-08-28 11:57:51 INFO  GitOperations:88 - typ>MODIFY
+2020-08-28 11:57:51 INFO  GitOperations:93 - entry.getNewPath()>COBOL/AKTIVCEK.cbl
+2020-08-28 11:57:51 INFO  GitOperations:88 - typ>MODIFY
+2020-08-28 11:57:51 INFO  GitOperations:93 - entry.getNewPath()>COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  GitOperations:100 - size of changedFiles>2
+2020-08-28 11:57:51 INFO  GitOperations:103 - filePath>COBOL/AKTIVCEK.cbl
+2020-08-28 11:57:51 INFO  GitOperations:103 - filePath>COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  GitOperations:109 - returning COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  GitOperations:110 - Exit  GitOperations.getCommitsOfPullOperation!
+2020-08-28 11:57:51 INFO  UpdateMFRepository:39 - Exit UpdateMFRepositories.call! ; returning COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  CompileMembers:23 - CompileRepository.call input cek-senet-app;COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  ConvertCompileReqCsvToSourcePaths:16 - Enter ConvertCompileReqCsvToSourcePaths.convert input cek-senet-app;COBOL/AKTIVCEK.cbl,COBOL/ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  SourcePath:85 - windows 10
+2020-08-28 11:57:51 INFO  SourcePath:87 - This is Windows
+2020-08-28 11:57:51 INFO  SourcePath:29 - SourcePath.getWithNameAndRepo input: path=COBOL/AKTIVCEK.cbl;repository= cek-senet-app
+2020-08-28 11:57:51 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COBOL\AKTIVCEK.cbl
+2020-08-28 11:57:51 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:51 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COBOL\AKTIVCEK.cbl
+2020-08-28 11:57:51 INFO  SourcePath:29 - SourcePath.getWithNameAndRepo input: path=COBOL/ZAMANKNT.cbl;repository= cek-senet-app
+2020-08-28 11:57:51 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COBOL\ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:51 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COBOL\ZAMANKNT.cbl
+2020-08-28 11:57:51 INFO  ConvertCompileReqCsvToSourcePaths:27 - Exit ConvertCompileReqCsvToSourcePaths.convert
+2020-08-28 11:57:51 INFO  FindCompileTimeDependencies:14 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-08-28 11:57:51 INFO  ScdegiskQueries:105 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-08-28 11:57:51 INFO  ScdegiskQueries:114 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-08-28 11:57:51 INFO  FindCompileTimeDependencies:17 - copy:CIKSUBPG
+2020-08-28 11:57:51 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=CIKSUBPG
+2020-08-28 11:57:51 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\CIKSUBPG.cpy
+2020-08-28 11:57:51 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:51 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\CIKSUBPG.cpy
+2020-08-28 11:57:51 INFO  FindCompileTimeDependencies:17 - copy:DEBUGMOD
+2020-08-28 11:57:51 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=DEBUGMOD
+2020-08-28 11:57:51 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\DEBUGMOD.cpy
+2020-08-28 11:57:51 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:51 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\DEBUGMOD.cpy
+2020-08-28 11:57:51 INFO  FindCompileTimeDependencies:17 - copy:GIRSUBPG
+2020-08-28 11:57:51 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=GIRSUBPG
+2020-08-28 11:57:51 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\GIRSUBPG.cpy
+2020-08-28 11:57:51 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:51 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\GIRSUBPG.cpy
+2020-08-28 11:57:51 INFO  FindCompileTimeDependencies:17 - copy:TESTPARM
+2020-08-28 11:57:51 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TESTPARM
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TESTPARM.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TESTPARM.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:TXOBASLA
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXOBASLA
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TXOBASLA.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TXOBASLA.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:TXOBITIR
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXOBITIR
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\TXOBITIR.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\TXOBITIR.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:WSCOMMON
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=WSCOMMON
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\WSCOMMON.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\WSCOMMON.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:ISLEMREC
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ISLEMREC
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\ISLEMREC.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\ISLEMREC.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:ISLEMSDP
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ISLEMSDP
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\isbank-cobol-framework\COPY\ISLEMSDP.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=isbank-cobol-framework\COPY\ISLEMSDP.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:CEKERROR
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=CEKERROR
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\CEKERROR.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\CEKERROR.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:INXCEKPR
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXCEKPR
+2020-08-28 11:57:52 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXCEKPR.cpy
+2020-08-28 11:57:52 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:52 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXCEKPR.cpy
+2020-08-28 11:57:52 INFO  FindCompileTimeDependencies:17 - copy:INXMLCEK
+2020-08-28 11:57:52 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXMLCEK
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXMLCEK.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXMLCEK.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:INXMLSTA
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=INXMLSTA
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\INXMLSTA.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\INXMLSTA.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:OUXCEKPR
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXCEKPR
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXCEKPR.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXCEKPR.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:OUXMLCEK
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXMLCEK
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXMLCEK.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXMLCEK.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:OUXMLSTA
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=OUXMLSTA
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\OUXMLSTA.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\OUXMLSTA.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:TXKODXML
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=TXKODXML
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\TXKODXML.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\TXKODXML.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:17 - copy:ZAMANPAR
+2020-08-28 11:57:53 INFO  SourcePath:23 - SourcePath.getWithNameAndRepo input: path=ZAMANPAR
+2020-08-28 11:57:53 INFO  SourcePath:48 - childStr=C:\u\ttg\tfsRepos\cek-senet-app\COPY\ZAMANPAR.cpy
+2020-08-28 11:57:53 INFO  SourcePath:51 - parentStr=C:/u/ttg/tfsRepos
+2020-08-28 11:57:53 INFO  SourcePath:53 - SourcePath.pathFinder output: path=cek-senet-app\COPY\ZAMANPAR.cpy
+2020-08-28 11:57:53 INFO  FindCompileTimeDependencies:20 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-08-28 11:57:53 INFO  DownloadCompileSet:20 - Enter DownloadCompileSet.ofCobolList.
+2020-08-28 11:57:53 INFO  CreateBuildDirectories:14 - Enter CreateBuildDirectories.ofBuildId.
+2020-08-28 11:57:53 INFO  CreateBuildDirectories:18 - This is Windows
+2020-08-28 11:57:53 INFO  CreateBuildDirectories:40 - Enter CreateBuildDirectories.ofBuildId > output : C://u/ttg/compileSets/REL12345/windows
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\AKTIVCEK.cbl
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ZAMANKNT.cbl
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\CIKSUBPG.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\DEBUGMOD.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\GIRSUBPG.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TESTPARM.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXOBASLA.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXOBITIR.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\WSCOMMON.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ISLEMREC.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ISLEMSDP.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\CEKERROR.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXCEKPR.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXMLCEK.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\INXMLSTA.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXCEKPR.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXMLCEK.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\OUXMLSTA.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\TXKODXML.cpy
+2020-08-28 11:57:53 INFO  DownloadCompileSet:35 - destFileC:\u\ttg\compileSets\REL12345\windows\ZAMANPAR.cpy
+2020-08-28 11:57:54 INFO  DownloadCompileSet:60 - Exit DownloadCompileSet.ofCobolList.
+2020-08-28 11:57:54 INFO  PrepareBuildScript:13 - Enter PrepareBuildScript.cob2!
+2020-08-28 11:57:54 INFO  PrepareBuildScript:14 - Incoming CompileSet!
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - AKTIVCEK.cbl/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - ZAMANKNT.cbl/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - CIKSUBPG.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - DEBUGMOD.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - GIRSUBPG.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - TESTPARM.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - TXOBASLA.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - TXOBITIR.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - WSCOMMON.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - ISLEMREC.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - ISLEMSDP.cpy/isbank-cobol-framework
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - CEKERROR.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - INXCEKPR.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - INXMLCEK.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - INXMLSTA.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - OUXCEKPR.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - OUXMLCEK.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - OUXMLSTA.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - TXKODXML.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:16 - ZAMANPAR.cpy/cek-senet-app
+2020-08-28 11:57:54 INFO  PrepareBuildScript:26 - PrepareBuildScript.cob2 is returning cob2 -c -v -qLIB AKTIVCEK.cbl ZAMANKNT.cbl
+2020-08-28 11:57:54 INFO  PrepareBuildScript:27 - Exit PrepareBuildScript.cob2!
+2020-08-28 11:57:54 INFO  CompileMembers:35 - CompileRepository.call output cob2 -c -v -qLIB AKTIVCEK.cbl ZAMANKNT.cbl
+2020-09-02 16:22:51 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-09-02 16:22:51 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-09-02 16:22:51 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-09-02 16:22:51 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-09-02 16:22:51 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-09-02 16:22:51 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-09-02 16:22:51 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-09-02 16:22:51 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-09-02 16:22:51 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-09-02 16:22:51 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-09-03 10:34:53 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-09-03 10:34:53 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-09-03 10:34:53 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-09-03 10:34:53 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-09-03 10:34:53 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-09-03 10:34:53 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-09-03 10:34:53 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-09-03 10:34:53 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-09-03 10:34:53 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-09-03 10:34:53 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-09-03 10:48:40 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-09-03 10:48:40 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-09-03 10:48:40 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-09-03 10:48:40 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-09-03 10:48:40 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-09-03 10:48:41 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-09-03 10:48:41 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-09-03 10:48:41 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-09-03 10:48:41 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-09-03 10:48:41 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-09-30 18:38:31 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-09-30 18:38:31 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-09-30 18:38:31 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-09-30 18:38:31 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-09-30 18:38:31 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-09-30 18:38:32 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-09-30 18:38:32 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-09-30 18:38:32 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-09-30 18:38:32 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-09-30 18:38:32 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-01 14:17:13 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-01 14:17:13 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-01 14:17:13 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-01 14:17:13 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-01 14:17:13 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-01 14:17:14 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-01 14:17:14 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-01 14:17:14 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-01 14:17:14 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-01 14:17:14 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-01 14:44:30 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-01 14:44:30 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-01 14:44:30 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-01 14:44:30 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-01 14:44:30 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-01 14:44:32 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-01 14:44:32 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-01 14:44:32 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-01 14:44:32 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-01 14:44:32 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-01 14:47:03 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-01 14:47:03 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-01 14:47:03 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-01 14:47:03 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-01 14:47:03 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-01 14:47:04 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-01 14:47:04 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-01 14:47:04 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-01 14:47:04 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-01 14:47:04 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-01 14:54:30 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-01 14:54:30 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-01 14:54:30 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-01 14:54:30 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-01 14:54:30 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-01 14:54:31 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-01 14:54:31 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-01 14:54:31 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-01 14:54:31 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-01 14:54:31 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:11:50 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-02 11:11:50 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-02 11:11:50 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-02 11:11:50 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-02 11:11:50 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-02 11:11:50 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-02 11:11:50 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-02 11:11:50 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-02 11:11:50 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-02 11:11:50 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:14:48 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-02 11:14:48 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-02 11:14:48 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-02 11:14:48 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-02 11:14:48 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-02 11:14:49 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-02 11:14:49 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-02 11:14:49 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-02 11:14:49 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-02 11:14:49 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:15:35 INFO  ScdegiskQueries:60 - Enter ScdegiskQueries.getConnection!
+2020-10-02 11:15:35 INFO  ScdegiskQueries:72 - password:xebadm23
+2020-10-02 11:15:35 INFO  ScdegiskQueries:73 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-02 11:15:35 INFO  ScdegiskQueries:74 - user:xlrint1
+2020-10-02 11:15:35 INFO  ScdegiskQueries:91 - **** Loaded the JDBC driver
+2020-10-02 11:15:35 INFO  ScdegiskQueries:106 - **** Created a JDBC connection to the data source
+2020-10-02 11:15:35 INFO  ScdegiskQueries:107 - Exit ScdegiskQueries.getConnection!
+2020-10-02 11:15:35 INFO  Compile:22 - Enter DarkJobsImpl.getProperties()!
+2020-10-02 11:15:35 INFO  Compile:33 - Operating System:windows 10
+2020-10-02 11:15:35 INFO  Compile:34 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, db2Pass, cob2Initial, sqlGetRepoOfMember, ebcdicRepos, cob2Options, sqlGetCopiesOfMembers, strictRepo, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, scoreTfsPass, searchMode, unicodeRepos]
+2020-10-02 11:15:35 INFO  Compile:35 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:15:35 INFO  Compile:6 - Enter:
+COMPILE
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+Members:ODTRDKDG.cbl,ODTRDCDG.cbl,ADRESPGM.cbl,ODTRDKDG.cbl,ODTRDCDG.cbl,ADRESPGM.cbl,ODTRDKDG.cbl,ODTRDCDG.cbl
+2020-10-02 11:15:35 INFO  FindCompileTimeDependencies:16 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:15:35 INFO  ScdegiskQueries:112 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:15:36 INFO  ScdegiskQueries:121 - [ACEXTRRC, ACRELARC, ADRESPRM, ALACAKLI, BANKSIRA, BCHFZTBL, BCHOZLPR, BCSABITD, BCTRXCPY, BDEFSDEP, BDMUSPAR, BORCLPAR, BORCLURE, BTABLOPM, CALLERPG, CEKFRCPY, CIKSUBPG, CONVERTP, CPYADRES, DATEPARM, DBACCESP, DEBUGMOD, DEBUGOFF, DKFAIZOR, DKFAIZRE, DKFZPARM, DKVALTAB, DOSYAEKI, DOSYAHAR, DOSYAPAR, DOSYAREC, DOVENDPR, DTHINMSG, DTHVDL  , DTHVDS  , DVKURLAR, FAIZPARM, FIRMTEMN, FRATVCPY, FRHESPRM, FTFHSPRM, FTFPARAM, GAFIRMRE, GENELPAR, GIRSUBPG, HESPLANR, ILANIPAR, ILANISPR, INPUTMSG, KAYNKPAR, KEYVALUE, KONTROLR, KREADREC, KREDKDRE, KRVRMNPR, KYPHESPR, LNUEXTPR, LOANDBPR, LOANRLPR, MAVIACHR, MUHABIRR, MUHASPAR, MUSTACCP, MUSTERIR, NAKIDPAR, NAKULPAR, NAREFTAB, NAREFYPR, NAUGNLPR, NAUHESPR, NAUMESAJ, NAUORPAR, NAUUPDPR, ODINDCDG, ODINDKDG, ODKINPUT, ODKOUTPT, ODOUDCDG, ODOUDKDG, OUTMESAJ, OUTPUTMS, PPINSTRC, PPINSTUC, PPINTRPR, PPPYMTRC, REFEHESP, RISKPARM, SPREADRE, SUBBASLA, SUBERECO, SUBPARAM, SUB1BANK, SUB1DRMK, SUB1DVKD, SUB1GDUB, SUB1GNLK, SUB1GUMR, SUB1ISTA, SUB1KPCO, SUB1KUTU, SUB1KYOM, SUB1MHBR, SUB1PLAS, SUB1RAMB, SUB1SAYM, SUB1SICK, SUB1SIRA, SUB1SWTX, SUB1TSOM, SUB1ULKE, SUB1VALT, SUB2BREF, SUB2GTIP, SUB2HESN, SUB2MERV, SUB2REFH, SUB3GUNS, SUB3HESP, SUB3SBYP, SUB3YPTL, SUB4KRED, SUB4KRIH, SUB4MUSV, SUB5GECH, SUB5MLYT, SUB5SBKN, SUB5SRPR, SUB6FZOR, SUB6FZTR, SUB6IPTL, SUB6ISTV, SUB6KRSL, SUB6NAPH, SUB6PROV, SUB6RMPR, SUB6RPGM, SUB6UMUH, SUB6YASM, SUB7DKUR, SUB7GTIP, SUB8GHES, SUB9DISB, TAAHPARM, TAAHUTRE, TARIHPRM, TCRPLTPR, TEMINATR, TESTPARM, TESVIKPR, TKKMESAJ, TXIBASLA, TXIBITIR, TXNINPV5, TXNOUTV5, TXOBASLA, TXOBITIR, ULKERECO, VADELIRE, WSCOMMON, YATFZPAR]
+2020-10-02 11:15:36 INFO  ScdegiskQueries:122 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:15:36 INFO  FindCompileTimeDependencies:22 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:15:36 INFO  DownloadCompileSet:21 - Enter DownloadCompileSet.ofCobolList.
+2020-10-02 11:15:36 INFO  CreateBuildDirectories:17 - Enter CreateBuildDirectories.ofBuildId > input : mainframe-all-apps,prd,C0002
+2020-10-02 11:15:36 INFO  CreateBuildDirectories:21 - This is Windows
+2020-10-02 11:15:36 INFO  CreateBuildDirectories:39 - Exit  CreateBuildDirectories.ofBuildId > output : C://u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-02 11:15:36 INFO  Compile:5 - 
+java.io.FileNotFoundException: Source '\u\ttg\tfsRepos\mainframe-all-apps\COBOL\ODTRDKDG.cbl' does not exist
+
+2020-10-02 11:15:36 INFO  Compile:6 - Exit
+2020-10-02 11:23:14 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-02 11:23:14 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-02 11:23:14 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-02 11:23:14 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-02 11:23:14 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-02 11:23:15 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-02 11:23:15 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-02 11:23:15 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-02 11:23:15 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-02 11:23:15 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:33:24 INFO  ScdegiskQueries:60 - Enter ScdegiskQueries.getConnection!
+2020-10-02 11:33:24 INFO  ScdegiskQueries:72 - password:xebadm23
+2020-10-02 11:33:24 INFO  ScdegiskQueries:73 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-02 11:33:24 INFO  ScdegiskQueries:74 - user:xlrint1
+2020-10-02 11:33:24 INFO  ScdegiskQueries:91 - **** Loaded the JDBC driver
+2020-10-02 11:33:24 INFO  ScdegiskQueries:106 - **** Created a JDBC connection to the data source
+2020-10-02 11:33:24 INFO  ScdegiskQueries:107 - Exit ScdegiskQueries.getConnection!
+2020-10-02 11:33:24 INFO  Compile:22 - Enter DarkJobsImpl.getProperties()!
+2020-10-02 11:33:24 INFO  Compile:33 - Operating System:windows 10
+2020-10-02 11:33:24 INFO  Compile:34 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, db2Pass, cob2Initial, sqlGetRepoOfMember, ebcdicRepos, cob2Options, sqlGetCopiesOfMembers, strictRepo, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, scoreTfsPass, searchMode, unicodeRepos]
+2020-10-02 11:33:24 INFO  Compile:35 - Exit DarkJobsImpl.getProperties()!
+2020-10-02 11:33:24 INFO  Compile:6 - Enter:UPDATE
+Repository:mainframe-all-apps
+Branch:prd
+2020-10-02 11:33:24 INFO  UpdateMFRepository:25 - Enter UpdateMFRepositories.call!
+2020-10-02 11:33:24 INFO  GitOperations:46 - Enter GitOperations.cloneGitRepo
+2020-10-02 11:39:50 INFO  GitOperations:52 - mainframe-all-apps cloned.
+2020-10-02 11:39:50 INFO  GitOperations:57 - currentBranch >>refs/heads/master<<
+2020-10-02 11:39:50 INFO  GitOperations:59 - remoteName >>null<<
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/dev<<Ref[refs/remotes/origin/dev=4c13fc301ba75d9571d41a826ff0a68a9e89680a(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/dev<<Ref[refs/heads/dev=4c13fc301ba75d9571d41a826ff0a68a9e89680a(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/int<<Ref[refs/remotes/origin/int=8e9825e6979abca40834784a93ba4e0fd24a7447(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/int<<Ref[refs/heads/int=8e9825e6979abca40834784a93ba4e0fd24a7447(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/master<<Ref[refs/remotes/origin/master=a34f4257788f031b36dda0d9e50f4878e639fd8d(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/master<<Ref[refs/heads/master=a34f4257788f031b36dda0d9e50f4878e639fd8d(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/prd<<Ref[refs/remotes/origin/prd=da7512b77300ad2c9ee33095da1231db60ad7959(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/prd<<Ref[refs/heads/prd=da7512b77300ad2c9ee33095da1231db60ad7959(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/prp<<Ref[refs/remotes/origin/prp=e38c573f324d47dbeff7d77d1cc6d3ca8f833e9c(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/prp<<Ref[refs/heads/prp=e38c573f324d47dbeff7d77d1cc6d3ca8f833e9c(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:63 - remote branch to copy>>refs/remotes/origin/uat<<Ref[refs/remotes/origin/uat=3bad53330c9a298b01b36e1817a06fd1c509b5e8(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:71 - new branch created>>refs/heads/uat<<Ref[refs/heads/uat=3bad53330c9a298b01b36e1817a06fd1c509b5e8(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:73 - All branches:
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/dev<<Ref[refs/heads/dev=4c13fc301ba75d9571d41a826ff0a68a9e89680a(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/int<<Ref[refs/heads/int=8e9825e6979abca40834784a93ba4e0fd24a7447(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/master<<Ref[refs/heads/master=a34f4257788f031b36dda0d9e50f4878e639fd8d(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/prd<<Ref[refs/heads/prd=da7512b77300ad2c9ee33095da1231db60ad7959(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/prp<<Ref[refs/heads/prp=e38c573f324d47dbeff7d77d1cc6d3ca8f833e9c(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/heads/uat<<Ref[refs/heads/uat=3bad53330c9a298b01b36e1817a06fd1c509b5e8(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/dev<<Ref[refs/remotes/origin/dev=4c13fc301ba75d9571d41a826ff0a68a9e89680a(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/int<<Ref[refs/remotes/origin/int=8e9825e6979abca40834784a93ba4e0fd24a7447(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/master<<Ref[refs/remotes/origin/master=a34f4257788f031b36dda0d9e50f4878e639fd8d(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/prd<<Ref[refs/remotes/origin/prd=da7512b77300ad2c9ee33095da1231db60ad7959(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/prp<<Ref[refs/remotes/origin/prp=e38c573f324d47dbeff7d77d1cc6d3ca8f833e9c(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:76 - branch>>refs/remotes/origin/uat<<Ref[refs/remotes/origin/uat=3bad53330c9a298b01b36e1817a06fd1c509b5e8(-1)]
+2020-10-02 11:39:50 INFO  GitOperations:79 - Exit GitOperations.cloneGitRepo
+2020-10-02 11:39:50 INFO  UpdateMFRepository:55 - Exit UpdateMFRepositories.call! ; returning mainframe-all-apps repository cloned!
+2020-10-02 11:39:50 INFO  Compile:5 - 
+mainframe-all-apps repository cloned!
+
+2020-10-02 11:39:50 INFO  Compile:6 - Exit
+2020-10-02 11:41:40 INFO  Compile:6 - Enter:
+COMPILE
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+Members:ODTRDKDG.cbl,ODTRDCDG.cbl
+2020-10-02 11:41:40 INFO  FindCompileTimeDependencies:16 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:41:40 INFO  ScdegiskQueries:112 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:41:41 INFO  ScdegiskQueries:121 - [ACEXTRRC, ACRELARC, ALACAKLI, BANKSIRA, BCHFZTBL, BCHOZLPR, BCSABITD, BCTRXCPY, BDEFSDEP, BDMUSPAR, BORCLPAR, BORCLURE, BTABLOPM, CALLERPG, CEKFRCPY, CIKSUBPG, CONVERTP, DATEPARM, DBACCESP, DEBUGOFF, DKFAIZOR, DKFAIZRE, DKFZPARM, DKVALTAB, DOSYAEKI, DOSYAHAR, DOSYAPAR, DOSYAREC, DOVENDPR, DTHINMSG, DTHVDL  , DTHVDS  , DVKURLAR, FAIZPARM, FIRMTEMN, FRATVCPY, FRHESPRM, FTFHSPRM, FTFPARAM, GAFIRMRE, GENELPAR, GIRSUBPG, HESPLANR, ILANIPAR, ILANISPR, INPUTMSG, KAYNKPAR, KEYVALUE, KONTROLR, KREADREC, KREDKDRE, KRVRMNPR, KYPHESPR, LNUEXTPR, LOANDBPR, LOANRLPR, MUHABIRR, MUHASPAR, NAKIDPAR, NAKULPAR, NAREFTAB, NAREFYPR, NAUGNLPR, NAUHESPR, NAUMESAJ, NAUORPAR, NAUUPDPR, ODINDCDG, ODINDKDG, ODKINPUT, ODKOUTPT, ODOUDCDG, ODOUDKDG, OUTMESAJ, OUTPUTMS, PPINSTRC, PPINSTUC, PPINTRPR, PPPYMTRC, REFEHESP, RISKPARM, SPREADRE, SUBBASLA, SUBERECO, SUBPARAM, SUB1BANK, SUB1DRMK, SUB1DVKD, SUB1GDUB, SUB1GNLK, SUB1GUMR, SUB1ISTA, SUB1KPCO, SUB1KUTU, SUB1KYOM, SUB1MHBR, SUB1PLAS, SUB1RAMB, SUB1SAYM, SUB1SICK, SUB1SIRA, SUB1SWTX, SUB1TSOM, SUB1ULKE, SUB1VALT, SUB2BREF, SUB2GTIP, SUB2HESN, SUB2MERV, SUB2REFH, SUB3GUNS, SUB3HESP, SUB3SBYP, SUB3YPTL, SUB4KRED, SUB4KRIH, SUB4MUSV, SUB5GECH, SUB5MLYT, SUB5SBKN, SUB5SRPR, SUB6FZOR, SUB6FZTR, SUB6IPTL, SUB6ISTV, SUB6KRSL, SUB6NAPH, SUB6PROV, SUB6RMPR, SUB6RPGM, SUB6UMUH, SUB6YASM, SUB7DKUR, SUB7GTIP, SUB8GHES, SUB9DISB, TAAHPARM, TAAHUTRE, TARIHPRM, TCRPLTPR, TEMINATR, TESTPARM, TESVIKPR, TKKMESAJ, TXIBASLA, TXIBITIR, TXNINPV5, TXNOUTV5, TXOBASLA, TXOBITIR, ULKERECO, VADELIRE, WSCOMMON, YATFZPAR]
+2020-10-02 11:41:41 INFO  ScdegiskQueries:122 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:41:41 INFO  FindCompileTimeDependencies:22 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:41:41 INFO  DownloadCompileSet:21 - Enter DownloadCompileSet.ofCobolList.
+2020-10-02 11:41:41 INFO  CreateBuildDirectories:17 - Enter CreateBuildDirectories.ofBuildId > input : mainframe-all-apps,prd,C0002
+2020-10-02 11:41:41 INFO  CreateBuildDirectories:21 - This is Windows
+2020-10-02 11:41:41 INFO  CreateBuildDirectories:39 - Exit  CreateBuildDirectories.ofBuildId > output : C://u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-02 11:41:43 INFO  DownloadCompileSet:62 - Exit DownloadCompileSet.ofCobolList.
+2020-10-02 11:41:43 INFO  ReadBuildJobs:11 - Enter ReadBuildJobs.call!
+2020-10-02 11:41:43 INFO  ReadBuildJobs:24 - Exit ReadBuildJobs.call!
+2020-10-02 11:41:43 INFO  Compile:5 - 
+ODTRDKDG.cbl-Abended;ODTRDCDG.cbl-Abended
+
+2020-10-02 11:41:43 INFO  Compile:6 - Exit
+2020-10-02 11:42:35 INFO  Compile:6 - Enter:
+COMPILE
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+Members:ODTRDKDG.cbl,ODTRDCDG.cbl
+2020-10-02 11:42:35 INFO  FindCompileTimeDependencies:16 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:42:35 INFO  ScdegiskQueries:112 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:42:35 INFO  ScdegiskQueries:121 - [ACEXTRRC, ACRELARC, ALACAKLI, BANKSIRA, BCHFZTBL, BCHOZLPR, BCSABITD, BCTRXCPY, BDEFSDEP, BDMUSPAR, BORCLPAR, BORCLURE, BTABLOPM, CALLERPG, CEKFRCPY, CIKSUBPG, CONVERTP, DATEPARM, DBACCESP, DEBUGOFF, DKFAIZOR, DKFAIZRE, DKFZPARM, DKVALTAB, DOSYAEKI, DOSYAHAR, DOSYAPAR, DOSYAREC, DOVENDPR, DTHINMSG, DTHVDL  , DTHVDS  , DVKURLAR, FAIZPARM, FIRMTEMN, FRATVCPY, FRHESPRM, FTFHSPRM, FTFPARAM, GAFIRMRE, GENELPAR, GIRSUBPG, HESPLANR, ILANIPAR, ILANISPR, INPUTMSG, KAYNKPAR, KEYVALUE, KONTROLR, KREADREC, KREDKDRE, KRVRMNPR, KYPHESPR, LNUEXTPR, LOANDBPR, LOANRLPR, MUHABIRR, MUHASPAR, NAKIDPAR, NAKULPAR, NAREFTAB, NAREFYPR, NAUGNLPR, NAUHESPR, NAUMESAJ, NAUORPAR, NAUUPDPR, ODINDCDG, ODINDKDG, ODKINPUT, ODKOUTPT, ODOUDCDG, ODOUDKDG, OUTMESAJ, OUTPUTMS, PPINSTRC, PPINSTUC, PPINTRPR, PPPYMTRC, REFEHESP, RISKPARM, SPREADRE, SUBBASLA, SUBERECO, SUBPARAM, SUB1BANK, SUB1DRMK, SUB1DVKD, SUB1GDUB, SUB1GNLK, SUB1GUMR, SUB1ISTA, SUB1KPCO, SUB1KUTU, SUB1KYOM, SUB1MHBR, SUB1PLAS, SUB1RAMB, SUB1SAYM, SUB1SICK, SUB1SIRA, SUB1SWTX, SUB1TSOM, SUB1ULKE, SUB1VALT, SUB2BREF, SUB2GTIP, SUB2HESN, SUB2MERV, SUB2REFH, SUB3GUNS, SUB3HESP, SUB3SBYP, SUB3YPTL, SUB4KRED, SUB4KRIH, SUB4MUSV, SUB5GECH, SUB5MLYT, SUB5SBKN, SUB5SRPR, SUB6FZOR, SUB6FZTR, SUB6IPTL, SUB6ISTV, SUB6KRSL, SUB6NAPH, SUB6PROV, SUB6RMPR, SUB6RPGM, SUB6UMUH, SUB6YASM, SUB7DKUR, SUB7GTIP, SUB8GHES, SUB9DISB, TAAHPARM, TAAHUTRE, TARIHPRM, TCRPLTPR, TEMINATR, TESTPARM, TESVIKPR, TKKMESAJ, TXIBASLA, TXIBITIR, TXNINPV5, TXNOUTV5, TXOBASLA, TXOBITIR, ULKERECO, VADELIRE, WSCOMMON, YATFZPAR]
+2020-10-02 11:42:35 INFO  ScdegiskQueries:122 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:42:35 INFO  FindCompileTimeDependencies:22 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:42:35 INFO  DownloadCompileSet:21 - Enter DownloadCompileSet.ofCobolList.
+2020-10-02 11:42:35 INFO  CreateBuildDirectories:17 - Enter CreateBuildDirectories.ofBuildId > input : mainframe-all-apps,prd,C0002
+2020-10-02 11:42:35 INFO  CreateBuildDirectories:21 - This is Windows
+2020-10-02 11:42:35 INFO  CreateBuildDirectories:39 - Exit  CreateBuildDirectories.ofBuildId > output : C://u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-02 11:42:36 INFO  DownloadCompileSet:62 - Exit DownloadCompileSet.ofCobolList.
+2020-10-02 11:42:36 INFO  ReadBuildJobs:11 - Enter ReadBuildJobs.call!
+2020-10-02 11:42:36 INFO  ReadBuildJobs:24 - Exit ReadBuildJobs.call!
+2020-10-02 11:42:36 INFO  Compile:5 - 
+ODTRDKDG.cbl-Abended;ODTRDCDG.cbl-Abended
+
+2020-10-02 11:42:36 INFO  Compile:6 - Exit
+2020-10-02 11:46:05 INFO  Compile:6 - Enter:
+COMPILE
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+Members:ODTRDKDG.cbl,ODTRDCDG.cbl
+2020-10-02 11:46:05 INFO  FindCompileTimeDependencies:16 - Enter FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:46:05 INFO  ScdegiskQueries:112 - Enter ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:46:07 INFO  ScdegiskQueries:121 - [ACEXTRRC, ACRELARC, ALACAKLI, BANKSIRA, BCHFZTBL, BCHOZLPR, BCSABITD, BCTRXCPY, BDEFSDEP, BDMUSPAR, BORCLPAR, BORCLURE, BTABLOPM, CALLERPG, CEKFRCPY, CIKSUBPG, CONVERTP, DATEPARM, DBACCESP, DEBUGOFF, DKFAIZOR, DKFAIZRE, DKFZPARM, DKVALTAB, DOSYAEKI, DOSYAHAR, DOSYAPAR, DOSYAREC, DOVENDPR, DTHINMSG, DTHVDL  , DTHVDS  , DVKURLAR, FAIZPARM, FIRMTEMN, FRATVCPY, FRHESPRM, FTFHSPRM, FTFPARAM, GAFIRMRE, GENELPAR, GIRSUBPG, HESPLANR, ILANIPAR, ILANISPR, INPUTMSG, KAYNKPAR, KEYVALUE, KONTROLR, KREADREC, KREDKDRE, KRVRMNPR, KYPHESPR, LNUEXTPR, LOANDBPR, LOANRLPR, MUHABIRR, MUHASPAR, NAKIDPAR, NAKULPAR, NAREFTAB, NAREFYPR, NAUGNLPR, NAUHESPR, NAUMESAJ, NAUORPAR, NAUUPDPR, ODINDCDG, ODINDKDG, ODKINPUT, ODKOUTPT, ODOUDCDG, ODOUDKDG, OUTMESAJ, OUTPUTMS, PPINSTRC, PPINSTUC, PPINTRPR, PPPYMTRC, REFEHESP, RISKPARM, SPREADRE, SUBBASLA, SUBERECO, SUBPARAM, SUB1BANK, SUB1DRMK, SUB1DVKD, SUB1GDUB, SUB1GNLK, SUB1GUMR, SUB1ISTA, SUB1KPCO, SUB1KUTU, SUB1KYOM, SUB1MHBR, SUB1PLAS, SUB1RAMB, SUB1SAYM, SUB1SICK, SUB1SIRA, SUB1SWTX, SUB1TSOM, SUB1ULKE, SUB1VALT, SUB2BREF, SUB2GTIP, SUB2HESN, SUB2MERV, SUB2REFH, SUB3GUNS, SUB3HESP, SUB3SBYP, SUB3YPTL, SUB4KRED, SUB4KRIH, SUB4MUSV, SUB5GECH, SUB5MLYT, SUB5SBKN, SUB5SRPR, SUB6FZOR, SUB6FZTR, SUB6IPTL, SUB6ISTV, SUB6KRSL, SUB6NAPH, SUB6PROV, SUB6RMPR, SUB6RPGM, SUB6UMUH, SUB6YASM, SUB7DKUR, SUB7GTIP, SUB8GHES, SUB9DISB, TAAHPARM, TAAHUTRE, TARIHPRM, TCRPLTPR, TEMINATR, TESTPARM, TESVIKPR, TKKMESAJ, TXIBASLA, TXIBITIR, TXNINPV5, TXNOUTV5, TXOBASLA, TXOBITIR, ULKERECO, VADELIRE, WSCOMMON, YATFZPAR]
+2020-10-02 11:46:07 INFO  ScdegiskQueries:122 - Exit ScdegiskQueries.getCopiesOfMembers!
+2020-10-02 11:46:07 INFO  FindCompileTimeDependencies:22 - Exit FindCompileTimeDependencies.ofCobolList!
+2020-10-02 11:46:07 INFO  DownloadCompileSet:21 - Enter DownloadCompileSet.ofCobolList.
+2020-10-02 11:46:07 INFO  CreateBuildDirectories:17 - Enter CreateBuildDirectories.ofBuildId > input : mainframe-all-apps,prd,C0002
+2020-10-02 11:46:07 INFO  CreateBuildDirectories:21 - This is Windows
+2020-10-02 11:46:07 INFO  CreateBuildDirectories:39 - Exit  CreateBuildDirectories.ofBuildId > output : C://u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-02 11:46:08 INFO  DownloadCompileSet:62 - Exit DownloadCompileSet.ofCobolList.
+2020-10-02 11:46:08 INFO  ReadBuildJobs:11 - Enter ReadBuildJobs.call!
+2020-10-02 11:46:08 INFO  ReadBuildJobs:24 - Exit ReadBuildJobs.call!
+2020-10-02 11:46:08 INFO  Compile:5 - 
+ODTRDKDG.cbl-Abended;ODTRDCDG.cbl-Abended
+
+2020-10-02 11:46:08 INFO  Compile:6 - Exit
+2020-10-09 12:29:28 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-09 12:29:28 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-09 12:29:28 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-09 12:29:28 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-09 12:29:28 INFO  ScdegiskQueries:88 - java.lang.ClassNotFoundException: com.ibm.db2.jcc.DB2Driver
+2020-10-09 12:29:28 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-09 12:29:28 INFO  ScdegiskQueries:96 - java.sql.SQLException: No suitable driver found for jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-09 12:33:43 INFO  AccrossTheUniverse:42 - Enter AccrossTheUniverse.getProperties()!
+2020-10-09 12:33:43 INFO  AccrossTheUniverse:54 - Operating System:windows 10
+2020-10-09 12:33:43 INFO  AccrossTheUniverse:55 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, db2Pass, cob2Initial, sqlGetRepoOfMember, ebcdicRepos, cob2Options, sqlGetCopiesOfMembers, strictRepo, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, scoreTfsPass, searchMode, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-09 12:33:43 INFO  AccrossTheUniverse:56 - Exit AccrossTheUniverse.getProperties()!
+2020-10-09 12:34:23 INFO  AccrossTheUniverse:42 - Enter AccrossTheUniverse.getProperties()!
+2020-10-09 12:34:23 INFO  AccrossTheUniverse:54 - Operating System:windows 10
+2020-10-09 12:34:23 INFO  AccrossTheUniverse:55 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, db2Pass, cob2Initial, sqlGetRepoOfMember, ebcdicRepos, cob2Options, sqlGetCopiesOfMembers, strictRepo, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, scoreTfsPass, searchMode, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-09 12:34:23 INFO  AccrossTheUniverse:56 - Exit AccrossTheUniverse.getProperties()!
+2020-10-09 12:34:58 INFO  AccrossTheUniverse:42 - Enter AccrossTheUniverse.getProperties()!
+2020-10-09 12:34:58 INFO  AccrossTheUniverse:54 - Operating System:windows 10
+2020-10-09 12:34:58 INFO  AccrossTheUniverse:55 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, db2Pass, cob2Initial, sqlGetRepoOfMember, ebcdicRepos, cob2Options, sqlGetCopiesOfMembers, strictRepo, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, scoreTfsPass, searchMode, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-09 12:34:58 INFO  AccrossTheUniverse:56 - Exit AccrossTheUniverse.getProperties()!
+2020-10-16 17:28:58 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-16 17:28:58 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-16 17:28:58 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-16 17:28:58 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-16 17:28:58 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-16 17:28:59 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-16 17:28:59 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-16 17:28:59 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-16 17:28:59 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-16 17:28:59 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-26 15:10:07 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-26 15:10:07 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-26 15:10:07 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 15:10:07 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-26 15:10:07 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-26 15:10:08 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-26 15:10:08 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-26 15:10:08 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-26 15:10:08 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-26 15:10:08 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-26 15:10:46 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 15:10:46 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 15:10:46 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 15:10:46 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 15:10:46 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 15:10:46 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 15:10:46 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 15:10:46 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 17:04:51 INFO  ScdegiskQueries:57 - Enter ScdegiskQueries.getConnection!
+2020-10-26 17:04:51 INFO  ScdegiskQueries:69 - password:xebadm23
+2020-10-26 17:04:51 INFO  ScdegiskQueries:70 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 17:04:51 INFO  ScdegiskQueries:71 - user:xlrint1
+2020-10-26 17:04:51 INFO  ScdegiskQueries:84 - **** Loaded the JDBC driver
+2020-10-26 17:04:51 INFO  ScdegiskQueries:99 - **** Created a JDBC connection to the data source
+2020-10-26 17:04:51 INFO  ScdegiskQueries:100 - Exit ScdegiskQueries.getConnection!
+2020-10-26 17:04:51 INFO  DarkJobsImpl:31 - Enter DarkJobsImpl.getProperties()!
+2020-10-26 17:04:51 INFO  DarkJobsImpl:42 - config.properties[db2Pass, unicodeRepos, db2Url, scoreTfsUser, ebcdicRepos, cob2Initial, compileSetDirectory, dsnAllocCmdForLoad, compileOptionsDsn, scoreTfsBaseUrl, sqlGetRepoOfMember, db2User, sqlGetRepositoriesOfCopies, scoreTfsPass, dsnAllocCmdForSrc, buildId, sqlGetCopiesOfMembers]
+2020-10-26 17:04:51 INFO  DarkJobsImpl:43 - Exit DarkJobsImpl.getProperties()!
+2020-10-26 17:05:07 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 17:05:07 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 17:05:07 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 17:05:07 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 17:05:07 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 17:05:07 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 17:05:07 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 17:05:07 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 17:05:07 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 17:05:07 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 17:05:07 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 17:05:07 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 17:05:07 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 17:05:07 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 17:05:07 INFO  ConvertABuildSet:37 - DBRM-null
+2020-10-26 17:05:07 INFO  ConvertABuildSet:37 - MLIB-null
+2020-10-26 17:05:07 INFO  ConvertABuildSet:37 - MLIB-null
+2020-10-26 17:05:07 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 17:05:07 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 17:05:07 INFO  Deploy:33 - java.lang.NullPointerException
+2020-10-26 17:34:54 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 17:34:54 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 17:34:54 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 17:34:54 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 17:34:54 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 17:34:54 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 17:34:54 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 17:34:54 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 17:34:54 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 17:34:54 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 17:34:54 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 17:34:54 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 17:34:54 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 17:34:54 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 17:34:54 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 17:34:54 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 17:34:54 INFO  ConvertABuildSet:37 - MLIB-rossmann.mlib
+2020-10-26 17:34:54 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 17:34:54 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 17:34:54 INFO  Deploy:33 - java.lang.IllegalArgumentException: 'other' is different type of Path
+2020-10-26 17:56:37 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 17:56:37 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 17:56:37 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 17:56:37 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 17:56:37 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 17:56:37 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 17:56:37 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 17:56:37 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 17:56:37 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 17:56:37 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 17:56:37 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 17:56:37 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 17:56:37 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 17:56:37 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 17:56:37 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 17:56:37 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 17:56:37 INFO  ConvertABuildSet:37 - MLIB-rossmann.mlib
+2020-10-26 17:56:37 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 17:56:37 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 17:56:37 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 17:56:37 INFO  Deploy:33 - java.lang.IllegalArgumentException: 'other' is different type of Path
+2020-10-26 18:10:53 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:10:53 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:10:53 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:10:53 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:10:53 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:10:53 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:10:53 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:10:53 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:10:53 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:10:53 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:10:53 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:10:53 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:10:53 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:10:53 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:10:53 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:10:53 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:10:53 INFO  ConvertABuildSet:37 - MLIB-rossmann.mlib
+2020-10-26 18:10:53 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:10:53 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:10:53 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:10:53 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:10:53 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:10:53 INFO  DbrmJclDeploymentJob:70 - Enter setJclsVariables.
+2020-10-26 18:10:53 INFO  DbrmJclDeploymentJob:72 - MBRNAME>PPACRLSA
+2020-10-26 18:10:53 INFO  Deploy:33 - java.lang.IllegalArgumentException: 'other' is different type of Path
+2020-10-26 18:18:37 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:18:51 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:18:51 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:18:51 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:18:51 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:18:51 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:18:51 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:18:51 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:18:51 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:18:51 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:18:51 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:18:51 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:18:51 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:18:51 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:18:51 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:18:51 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:18:51 INFO  ConvertABuildSet:37 - MLIB-rossmann.mlib
+2020-10-26 18:18:51 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:18:51 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:18:51 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:18:51 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:18:51 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:18:51 INFO  DbrmJclDeploymentJob:70 - Enter setJclsVariables.
+2020-10-26 18:18:51 INFO  DbrmJclDeploymentJob:72 - MBRNAME>PPACRLSA
+2020-10-26 18:18:51 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:18:51 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:18:51 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:18:51 INFO  Deploy:33 - java.lang.IllegalArgumentException: 'other' is different type of Path
+2020-10-26 18:29:53 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:29:53 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:29:53 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:29:53 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:29:53 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:29:53 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:29:53 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:29:53 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:29:53 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:29:53 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:29:53 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:29:53 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:29:53 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:29:53 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:29:53 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:29:53 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:29:53 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 18:29:53 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:29:53 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:29:53 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:29:53 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:29:53 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:29:53 INFO  DbrmJclDeploymentJob:70 - Enter setJclsVariables.
+2020-10-26 18:29:53 INFO  DbrmJclDeploymentJob:72 - MBRNAME>PPACRLSA
+2020-10-26 18:29:53 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:29:53 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:29:53 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:29:53 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:29:53 INFO  Deploy:33 - java.nio.file.InvalidPathException: Illegal char <:> at index 4: C:/C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:32:47 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:32:47 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:32:47 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:32:47 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:32:47 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:32:47 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:32:47 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:32:47 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:32:47 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:32:47 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:32:47 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:32:47 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:32:47 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:32:47 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:32:47 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:32:47 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:32:47 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 18:32:47 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:32:47 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:32:47 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:70 - Enter setJclsVariables.
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:72 - MBRNAME>PPACRLSA
+2020-10-26 18:32:47 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:32:47 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:32:47 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:32:47 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:32:47 INFO  PathAnalyzer:27 - Exit getBranchOfABuildSet>prd
+2020-10-26 18:32:47 INFO  SclmOperations:53 - prd
+2020-10-26 18:32:47 INFO  SclmOperations:57 - SBODAK  
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:74 - DBRMSLIB>SBODAK.PROD.V6.DBRMLIB
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:76 - COLL>CCODAK
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:78 - ENV>DVOB
+2020-10-26 18:32:47 INFO  DbrmJclDeploymentJob:81 - Exit setJclsVariables.
+2020-10-26 18:32:47 INFO  JclCreator:11 - Enter JclCreator.fromString!
+2020-10-26 18:32:47 INFO  JclCreator:24 - Exit JclCreator.fromString!!
+2020-10-26 18:32:47 INFO  Deploy:33 - java.lang.NullPointerException
+2020-10-26 18:42:07 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:42:07 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:42:07 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:42:07 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:42:07 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:42:07 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:42:07 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:42:07 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:42:07 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:42:07 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:42:07 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:42:07 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:42:07 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:42:07 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:42:07 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:42:07 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:42:07 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 18:42:07 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:42:07 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:42:07 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:42 - Enter readAsString.
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:66 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1                                                        
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)                       
+
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:67 - Exit readAsString.
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:72 - Enter setJclsVariables.
+2020-10-26 18:42:07 INFO  DbrmJclDeploymentJob:74 - MBRNAME>PPACRLSA
+2020-10-26 18:42:07 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:42:07 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:42:07 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:42:07 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:42:07 INFO  PathAnalyzer:27 - Exit getBranchOfABuildSet>prd
+2020-10-26 18:42:07 INFO  SclmOperations:53 - prd
+2020-10-26 18:42:08 INFO  SclmOperations:57 - SBODAK  
+2020-10-26 18:42:08 INFO  DbrmJclDeploymentJob:76 - DBRMSLIB>SBODAK.PROD.V6.DBRMLIB
+2020-10-26 18:42:08 INFO  DbrmJclDeploymentJob:78 - COLL>CCODAK
+2020-10-26 18:42:08 INFO  DbrmJclDeploymentJob:80 - ENV>DVOB
+2020-10-26 18:42:08 INFO  DbrmJclDeploymentJob:83 - Exit setJclsVariables.
+2020-10-26 18:42:08 INFO  JclCreator:11 - Enter JclCreator.fromString!
+2020-10-26 18:42:08 INFO  JclCreator:24 - Exit JclCreator.fromString!!
+2020-10-26 18:42:08 INFO  Deploy:33 - java.lang.NullPointerException
+2020-10-26 18:53:35 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:53:35 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:53:35 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:53:35 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:53:35 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:53:35 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:53:35 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:53:35 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:53:35 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:53:35 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:53:35 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:53:35 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:53:35 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:53:35 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:53:35 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:53:35 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:53:35 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 18:53:35 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:53:35 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:53:35 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:42 - Enter readAsString.
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:66 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1                                                        
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)                       
+
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:67 - Exit readAsString.
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:72 - Enter setJclsVariables.
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:74 - MBRNAME>PPACRLSA
+2020-10-26 18:53:35 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:53:35 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:53:35 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:53:35 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:53:35 INFO  PathAnalyzer:27 - Exit getBranchOfABuildSet>prd
+2020-10-26 18:53:35 INFO  SclmOperations:53 - prd
+2020-10-26 18:53:35 INFO  SclmOperations:57 - SBODAK  
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:76 - DBRMSLIB>SBODAK.PROD.V6.DBRMLIB
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:78 - COLL>CCODAK
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:80 - ENV>DVOB
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:83 - Exit setJclsVariables.
+2020-10-26 18:53:35 INFO  JclCreator:11 - Enter JclCreator.fromString!
+2020-10-26 18:53:35 INFO  JclCreator:24 - Exit JclCreator.fromString!!
+2020-10-26 18:53:35 INFO  DbrmJclDeploymentJob:34 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,
+// USER=XLRINT1
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//*
+//SYSTSIN  DD *
+  DSN SYSTEM(##ENV##)
+  BIND PACKAGE(##COLL##) -
+  MEMBER(##MBRNAME##) -
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+2020-10-26 18:59:24 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 18:59:25 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 18:59:25 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 18:59:25 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 18:59:25 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 18:59:25 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 18:59:25 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 18:59:25 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 18:59:25 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 18:59:25 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 18:59:25 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 18:59:25 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 18:59:25 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 18:59:25 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 18:59:25 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 18:59:25 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 18:59:25 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 18:59:25 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 18:59:25 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 18:59:25 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:42 - Enter readAsString.
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:66 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1                                                        
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)                       
+
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:67 - Exit readAsString.
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:72 - Enter setJclsVariables.
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:74 - MBRNAME>PPACRLSA
+2020-10-26 18:59:25 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 18:59:25 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 18:59:25 INFO  SclmOperations:51 - dbrm
+2020-10-26 18:59:25 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 18:59:25 INFO  PathAnalyzer:27 - Exit getBranchOfABuildSet>prd
+2020-10-26 18:59:25 INFO  SclmOperations:53 - prd
+2020-10-26 18:59:25 INFO  SclmOperations:57 - SBODAK  
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:76 - DBRMSLIB>SBODAK.PROD.V6.DBRMLIB
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:78 - COLL>CCODAK
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:80 - ENV>DVOB
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:83 - Exit setJclsVariables.
+2020-10-26 18:59:25 INFO  DbrmJclDeploymentJob:34 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,
+// USER=XLRINT1
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//*
+//SYSTSIN  DD *
+  DSN SYSTEM(##ENV##)
+  BIND PACKAGE(##COLL##) -
+  MEMBER(##MBRNAME##) -
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+2020-10-26 19:02:12 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 19:02:12 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 19:02:12 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 19:02:12 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 19:02:12 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 19:02:12 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 19:02:13 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-26 19:02:13 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-26 19:02:13 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-26 19:02:13 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-26 19:02:13 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-26 19:02:13 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-26 19:02:13 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-26 19:02:13 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-26 19:02:13 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-26 19:02:13 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-26 19:02:13 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-26 19:02:13 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-26 19:02:13 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-26 19:02:13 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:26 - Enter create
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:30 - jobname is PPACRLSA
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:42 - Enter readAsString.
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:66 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1                                                        
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)                       
+
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:67 - Exit readAsString.
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:72 - Enter setJclsVariables.
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:74 - MBRNAME>PPACRLSA
+2020-10-26 19:02:13 INFO  SclmOperations:47 - Enter getSclmLibOfAFilePath
+2020-10-26 19:02:13 INFO  SclmOperations:49 - PPACRLSA
+2020-10-26 19:02:13 INFO  SclmOperations:51 - dbrm
+2020-10-26 19:02:13 INFO  PathAnalyzer:20 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-26 19:02:13 INFO  PathAnalyzer:27 - Exit getBranchOfABuildSet>prd
+2020-10-26 19:02:13 INFO  SclmOperations:53 - prd
+2020-10-26 19:02:13 INFO  SclmOperations:57 - SBODAK  
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:76 - DBRMSLIB>SBODAK.PROD.V6.DBRMLIB
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:78 - COLL>CCODAK
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:80 - ENV>DVOB
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:83 - Exit setJclsVariables.
+2020-10-26 19:02:13 INFO  DbrmJclDeploymentJob:34 - //PPACRLSA JOB ,PPACRLSA-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,
+// USER=XLRINT1
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=SBODAK.PROD.V6.DBRMLIB,DISP=SHR
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//*
+//SYSTSIN  DD *
+  DSN SYSTEM(DVOB)
+  BIND PACKAGE(CCODAK) -
+  MEMBER(PPACRLSA) -
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+2020-10-26 21:57:37 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-26 21:57:37 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-26 21:57:37 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-26 21:57:37 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-26 21:57:37 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-26 21:57:37 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-26 21:57:37 INFO  ScdegiskQueries:96 - com.ibm.db2.jcc.am.SqlNonTransientConnectionException: [jcc][t4][10380][11951][4.19.49] Required property "dv0bdb2.isbank" is unknown host. ERRORCODE=-4222, SQLSTATE=08001
+2020-10-27 13:18:56 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-27 13:18:56 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-27 13:18:56 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-27 13:18:56 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-27 13:18:56 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-27 13:18:56 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-27 13:18:57 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-27 13:18:57 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-27 13:18:57 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-27 13:18:57 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-27 13:18:57 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-27 13:18:57 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-27 13:18:57 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-27 13:18:57 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-27 13:18:57 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-27 13:18:57 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-27 13:18:57 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-27 13:18:57 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-27 13:18:57 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-27 13:18:57 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:29 - Enter create
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:33 - jobname is PPACRLSA
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:48 - Enter readAsString.
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:72 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1   
+//*
+////COPYFILE EXEC PGM=IKJEFT01                         
+//SYSTSPRT DD SYSOUT=*                               
+//SYSTSIN DD *                                       
+  OGET '##DIR1##/-                           
+##DIR2##/##FILENAME##' -   
+  '##DBRMSLIB##(##MBRNAME##)' BINARY          
+/*                                                     
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+//*
+
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:73 - Exit readAsString.
+2020-10-27 13:18:57 INFO  DbrmJclDeploymentJob:78 - Enter setJclsVariables.
+2020-10-27 13:18:57 INFO  Deploy:33 - java.lang.IllegalArgumentException: 'other' is different type of Path
+2020-10-27 13:28:29 INFO  Deploy:23 - 
+DEPLOY
+Repository:mainframe-all-apps
+Branch:prd
+Id:C0002
+2020-10-27 13:28:29 INFO  ScdegiskQueries:59 - Enter ScdegiskQueries.getConnection!
+2020-10-27 13:28:29 INFO  ScdegiskQueries:71 - password:xebadm23
+2020-10-27 13:28:29 INFO  ScdegiskQueries:72 - url:jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
+2020-10-27 13:28:29 INFO  ScdegiskQueries:73 - user:xlrint1
+2020-10-27 13:28:29 INFO  ScdegiskQueries:90 - **** Loaded the JDBC driver
+2020-10-27 13:28:30 INFO  ScdegiskQueries:105 - **** Created a JDBC connection to the data source
+2020-10-27 13:28:30 INFO  ScdegiskQueries:106 - Exit ScdegiskQueries.getConnection!
+2020-10-27 13:28:30 INFO  AccrossTheUniverse:57 - Enter AccrossTheUniverse.getProperties()!
+2020-10-27 13:28:30 INFO  AccrossTheUniverse:69 - Operating System:windows 10
+2020-10-27 13:28:30 INFO  AccrossTheUniverse:70 - config.properties:[sqlGetRepositoriesOfCopies, scoreTfsBaseUrl, db2User, activeDbrmDeploymentJobType, db2Pass, activeMlibDeploymentJobType, sqlGetRepoOfMember, ebcdicRepos, sqlGetCopiesOfMembers, strictRepo, sqlGetDclsOfMembers, dsnAllocCmdForSrc, dsnAllocCmdForLoad, db2Url, buildSetDirectory, scoreTfsUser, searchMode, scoreTfsPass, getMvsPathOfLoadmlib, getMvsPathsOfMembers, unicodeRepos]
+2020-10-27 13:28:30 INFO  AccrossTheUniverse:71 - Exit AccrossTheUniverse.getProperties()!
+2020-10-27 13:28:30 INFO  ConvertABuildSet:22 - 
+toDeploymentUnits
+BuildSet:/u/ttg/buildSets/mainframe-all-apps/prd/C0002
+2020-10-27 13:28:30 INFO  ConvertABuildSet:26 - This is Windows
+2020-10-27 13:28:30 INFO  ConvertABuildSet:37 - DBRM-PPACRLSA.dbrm
+2020-10-27 13:28:30 INFO  ConvertABuildSet:37 - MLIB-PPACRLSA.mlib
+2020-10-27 13:28:30 INFO  ConvertABuildSet:37 - MLIB-ROSSMANN.mlib
+2020-10-27 13:28:30 INFO  ConvertABuildSet:41 - DeploymentUnits have been created.
+2020-10-27 13:28:30 INFO  RunDeploymentJobs:26 - Enter usingDeploymentSources
+2020-10-27 13:28:30 INFO  DbrmDeploymentJobSubmitter:18 - Enter getDeploymentJob, activeDbrmBinder is JCL
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:29 - Enter create
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:33 - jobname is PPACRLSA
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:48 - Enter readAsString.
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:72 - //##MBRNAME## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                         
+// USER=XLRINT1   
+//*
+////COPYFILE EXEC PGM=IKJEFT01                         
+//SYSTSPRT DD SYSOUT=*                               
+//SYSTSIN DD *                                       
+  OGET '##DIR1##/-                           
+##DIR2##/##FILENAME##' -   
+  '##DBRMSLIB##(##MBRNAME##)' BINARY          
+/*                                                     
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+//*
+
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:73 - Exit readAsString.
+2020-10-27 13:28:30 INFO  DbrmJclDeploymentJob:78 - Enter setJclsVariables.
+2020-10-27 13:28:30 INFO  PathAnalyzer:22 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-27 13:28:30 INFO  PathAnalyzer:25 - Exit getBranchOfABuildSet>prd
+2020-10-27 13:28:30 INFO  SclmOperations:60 - Enter getSclmLibOfAFilePath
+2020-10-27 13:28:30 INFO  SclmOperations:62 - PPACRLSA
+2020-10-27 13:28:30 INFO  SclmOperations:64 - dbrm
+2020-10-27 13:28:30 INFO  PathAnalyzer:22 - Enter getBranchOfABuildSet>C:\u\ttg\buildSets\mainframe-all-apps\prd\C0002\dbrm\PPACRLSA.dbrm
+2020-10-27 13:28:30 INFO  PathAnalyzer:25 - Exit getBranchOfABuildSet>prd
+2020-10-27 13:28:30 INFO  SclmOperations:66 - prd
+2020-10-27 13:28:31 INFO  SclmOperations:70 - SBODAK  
+2020-10-27 13:28:31 INFO  DbrmJclDeploymentJob:92 - Exit setJclsVariables.
+2020-10-27 13:28:31 INFO  Deploy:33 - java.lang.NullPointerException

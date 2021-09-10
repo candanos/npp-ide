@@ -11,7 +11,7 @@ from pathlib import Path
 sqlFilePath = sys.argv[1]
 sqlFileName = sys.argv[2]
 mydate = datetime.datetime.now().strftime('%H%M%S')
-resultFolder = Path("C:/Users/CY59857/Desktop/")
+resultFolder = Path("C:/Users/Candan Yuksel/Desktop/")
 resultFolder = os.getcwd()
 resultFl='result_' + sqlFileName + '_' + mydate + '.csv' 
 sqlFile = sqlFilePath + '/' + sqlFileName
@@ -29,6 +29,7 @@ curs.execute(sqlStr)
 
 lst = []
 cols = []
+lst.append(str(sqlStr))
 for row in curs.description:
 	cols.append(row[0])
 lst.append(cols)

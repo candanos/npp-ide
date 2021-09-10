@@ -1,0 +1,40 @@
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+from pathlib import Path
+from os.path import split
+
+
+baseURI=r'http://10.200.14.1:29080/navlun-app/onTheDarkSide/upload'
+baseURI=r'http://localhost:8080/navlun-app/onTheDarkSide/upload' 
+
+
+# file_ids = ''
+# headers={'Content-Type': 'multipart/form-data'}
+
+
+# files = {'file': ('C:/u/ttg/B20201112.2.zip', open('C:/u/ttg/B20201112.2.zip', 'rb'))}
+
+# resp = requests.post(baseURI, files=files, headers=headers)
+# print(resp.text)
+# print ("status code " + str(resp.status_code))
+
+# if resp.status_code == 201:
+    # print ("Success")
+    # data = json.loads(resp.text)
+    # file_ids = data['file_ids']
+    # print (file_ids)
+# else:
+    # print ("Failure")
+
+
+
+filepath = 'C:/u/ttg/B20201112.2.zip'
+url = baseURI
+
+# auth = ('api_key', 'api_secret')
+payload = {'pk': '123456'}
+files = { 'upload': (split(filepath)[-1], open(filepath,'rb')) }
+
+response = requests.post(url, files = files)
+print(response.text)    

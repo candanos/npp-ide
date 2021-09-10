@@ -1,0 +1,150 @@
+import os
+import sys
+import pathlib
+import subprocess
+import shutil
+import time
+from datetime import datetime
+import pprint
+
+pp = pprint.PrettyPrinter(indent=4)
+dirPath = os.getcwd()
+inputDir = dirPath + "/inputs/"
+outputDir = dirPath + "/outputs/"
+metadataDir = dirPath + "/metadata/"
+sclmProjectsFile = inputDir + "/sclmProjects.txt"
+memberListFile = inputDir + "/memberList.txt"
+typesListFile = inputDir + "/typeList.txt"
+errorFile = open(str(outputDir + "errors.txt"), "w+")
+tfsLog = open(str(outputDir + "tfsSubProc.txt"), "w+")
+
+#createGitSources = dirPath + "/" + 'copyFromSclmRepoIntoGitRepo.py'
+createGitSources = dirPath + "/" + 'copyFromAnotherGitRepo.py'
+
+removeLineNumbers = dirPath + "/" + 'removeLineNumbers.py'
+powershell = r'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+createRemoteRepo = dirPath + '/createTfsRepository.ps1'
+git = r'C:\Program Files\Git\bin\git.exe'
+
+sclmRepoDir = r'C:/Users/Candan Yuksel/Desktop/SclmCobolRepository/'
+gitRepoDir = r'C:/Users/Candan Yuksel/Desktop/GitCobolRepository/'
+tfsRepoDir = r'C:/Users/Candan Yuksel/Desktop/TfsCobolRepository/'
+baseUrl = r'https://TfsServiceScore:2926338Tr%40%40@scoretfs.uatisbank/ISBANK/MAINFRME/_git/'
+baseUrl = r'https://TfsServiceScore:18TSSpwd@scoretfs.isbank/ISBANK/MAINFRME/_git/'
+
+typs = {'COBOL':'.cbl', 'COPY':'.cpy', 'DCL':'.dcl', 'ASM':'.asm'}
+gitAttributesFile = r'C:/Users/CY59857/Desktop/.gitattributes'
+gitIgnoreFile = r'C:/Users/CY59857/Desktop/.gitignore'
+
+
+def main():
+    # createGitSourcesSubProcess()
+    # removeLineNumbersSubProcess()
+    gitCloneAndPushSubProcess()
+    
+def createGitSourcesSubProcess():
+    procs = []
+    all_procs = 'nok'
+    for file in os.listdir(metadataDir):
+        fileName = os.fsdecode(file)
+        filePath = metadataDir + fileName
+        if(fileName.find('interfaces_of') != -1 or fileName.find('members_of') != -1 or fileName.find('framework') != -1):
+            procs.append(subprocess.Popen([r'C:\Python\python.exe', createGitSources, filePath], shell=True, stderr=errorFile))
+        
+    while(all_procs != 'ok'):
+        all_procs = 'ok'    
+        for proc in procs:
+            if (proc.poll() == None):
+                all_procs = 'nok'
+                break        
+                
+    print("all subprocesses ended.")
+
+def removeLineNumbersSubProcess(): 
+    procs = []
+    all_procs = 'nok'
+    for repo in os.listdir(gitRepoDir):
+        repoPath = gitRepoDir + repo
+        procs.append(subprocess.Popen([r'C:\Python\python.exe', removeLineNumbers, repoPath], shell=True, stderr=errorFile))
+    
+    while(all_procs != 'ok'):
+        all_procs = 'ok'    
+        for proc in procs:
+            if (proc.poll() == None):
+                all_procs = 'nok'
+                break        
+                
+    print("all subprocesses ended.")    
+
+def gitCloneAndPushSubProcess():
+    for repo in os.listdir(gitRepoDir):
+        repoName = findTfsName(repo)
+        tfsRepoPath = str(tfsRepoDir + repoName).rstrip()
+        tfsRepoUrl = str(baseUrl + repoName).rstrip()
+        winRepoPath = str(gitRepoDir + repo).rstrip()
+        print(winRepoPath)
+        print(tfsRepoPath)
+        print(tfsRepoUrl)
+        os.chdir(tfsRepoDir)
+        subprocess.check_output([git, 'clone', tfsRepoUrl], stdin=None, stderr=subprocess.STDOUT,shell=False, timeout=None)
+        # if(os.path.exists(tfsRepoPath + '/COBOL')):
+            # shutil.rmtree(tfsRepoPath + '/COBOL')
+        # if(os.path.exists(tfsRepoPath + '/COPY')):
+            # shutil.rmtree(tfsRepoPath + '/COPY')
+        if(os.path.exists(tfsRepoPath + '.gitignore')):
+            shutil.rmtree(tfsRepoPath + '.gitignore')
+        if(os.path.exists(tfsRepoPath + '.gitattributes')):
+            shutil.rmtree(tfsRepoPath + '.gitattributes')
+               
+              
+        for dirName in os.listdir(winRepoPath):
+            src = winRepoPath + '/' + dirName
+            print(src)
+            dest = tfsRepoPath + '/' + dirName
+            print(dest)
+            shutil.copytree(src,dest)
+
+        
+        # dest = tfsRepoPath
+        # shutil.copy(gitIgnoreFile, dest) 
+        
+        os.chdir(tfsRepoPath)
+        try:    
+            subprocess.check_output([git, 'add', '.'], stdin=None, stderr=subprocess.STDOUT,shell=False, timeout=None)
+        except Exception as e:
+            print("1" + str(e))
+        else:    
+            msg = '"initial commit."'
+            try:
+                subprocess.check_output([git, 'commit', '-m', msg ], stdin=None, stderr=subprocess.STDOUT,shell=False, timeout=None)
+            except Exception as e:
+                print("2" + str(e))
+            else:
+                try:
+                    print("push started for " + repoName + " " + datetime.now().strftime("%H:%M:%S"))
+                    subprocess.check_output([git, 'push'], stdin=None, stderr=subprocess.STDOUT,shell=False, timeout=None)    
+                except Exception as e:
+                    print("3" + str(e))
+                else: 
+                    print("push ended for " + repoName + " " + datetime.now().strftime("%H:%M:%S"))    
+        
+
+def findTfsName(repo):
+        repoNameArr = repo.split('_')
+        repoName = ''
+        if(repoNameArr[0] == 'isbank'):
+            repoName = repoNameArr[0] + '-' + repoNameArr[1] + '-' + repoNameArr[2]
+        else:
+            suffix = ''
+            for i in range(3, len(repoNameArr)):
+                if(repoNameArr[0] == 'interfaces'):
+                    suffix = 'api'
+                else:
+                    suffix = 'app'
+                repoName = repoName + '-' + repoNameArr[i]
+            repoName = str(repoName + '-' + suffix).lstrip('-')
+            print(repoName) 
+        return repoName   
+
+if __name__=='__main__':
+    main()

@@ -1,0 +1,11 @@
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20
+//DBRMLIB  DD DSN=##DBRMSLIB##,DISP=SHR                     
+//SYSTSPRT DD SYSOUT=*                                               
+//SYSPRINT DD SYSOUT=*                                               
+//*                                                                  
+//SYSTSIN  DD *                                                      
+  DSN SYSTEM(##ENV##)                                                   
+  BIND PACKAGE(##COLL##) -                                            
+  MEMBER(##MBRNAME##) -                                                 
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -                         
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)                       

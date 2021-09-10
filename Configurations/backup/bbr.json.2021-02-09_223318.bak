@@ -1,0 +1,12 @@
+{	
+	"compile-dependenciesx": [
+	{
+		"name" : "isbank-common-framework",
+		"version" : "1.0.0"		
+	},
+	{
+		"name" : "loans-common-api",
+		"version" : "1.0.0"		
+	}
+	]
+}	

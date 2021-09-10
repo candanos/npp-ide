@@ -1,0 +1,17 @@
+import sys 
+import os
+import datetime
+import shutil
+
+fileName = "YHKEYBUL.cpy"
+def main():    
+    getFileFromRepository()
+    convertFileToEbcdic()
+
+
+def getFileFromRepository():
+
+def convertFileToEbcdic():
+
+if __name__ == '__main__': 
+    main()

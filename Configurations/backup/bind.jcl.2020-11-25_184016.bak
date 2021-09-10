@@ -1,0 +1,33 @@
+//BIND6##RANDOM## JOB ,##MBRNAME##-2,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,        
+// USER=XLRINT1   
+//*
+//OGETDBRM EXEC PGM=IKJEFT01
+//SYSTSPRT DD  DSN=SBTEKNIK.DUAT.V4.LOG(##MBRNAME##),
+//         UNIT=SYSTS,DISP=(NEW,PASS),
+//         SPACE=(TRK,(500,100,0)),
+//         STORCLAS=VIO,VOLUME=(,,,5), 
+//         DCB=(RECFM=FB,LRECL=133,BLKSIZE=133)  
+//SYSTSIN DD *       
+  OGET '/isbank/sbteknik/xlrint/buildSets/-             
+/mainframe-all-apps/uat/DUAT.4/dbrm/##MBRNAME##.dbrm' -   
+  'SBTEKNIK.DUAT.V4.DBRM(##MBRNAME##)' BINARY          
+/*                                              
+//BIND   EXEC  PGM=IKJEFT01,DYNAMNBR=20,COND=(4,LT)
+//DBRMLIB  DD DSN=SBTEKNIK.DUAT.V4.DBRM,DISP=SHR 
+//SYSPRINT DD SYSOUT=*                 
+//SYSTSPRT DD DSN=SBTEKNIK.DUAT.V4.LOG(##MBRNAME##),DISP=(MOD,PASS) 
+//*                                              
+//SYSTSIN  DD *                                  
+  DSN SYSTEM(UA0B)                            
+  BIND PACKAGE(##COLL##) -                       
+  MEMBER(##MBRNAME##) -                          
+  ACT(REP) ISO(CS) OWNER(DB2DBA) ENABLE(*) -     
+  ENCODING(EBCDIC) EXPLAIN(YES) VALIDATE(BIND)
+//*
+//COPYLOGF EXEC PGM=IKJEFT01      
+//SYSTSPRT DD  SYSOUT=X           
+//SYSTSIN DD *                    
+  OPUT 'SBTEKNIK.DUAT.V4.LOG(##MBRNAME##)'  '##BASELIB##/- 
+##SUBLIB##/log/##MBRNAME##_Bind.log'             
+/*

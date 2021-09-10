@@ -1,0 +1,6 @@
+#!/bin/bash
+start="//'"
+end="'"
+targetPath=$start$memberPath$end
+cp -v -X -S d=.$ext $sourcePath $targetPath 1>> $log 2>> $log
+exit $?

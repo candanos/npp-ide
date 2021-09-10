@@ -9,8 +9,8 @@ import subprocess
    # list | ls     List the details for data sets and the members in the data sets
    # upload | ul   Upload the contents of a file to z/OS data sets
 def main():
-    # getDataSetFromZos()
-    sendFileToZos()
+    getDataSetFromZos()
+    # sendFileToZos()
     
 def getDataSetFromZos():
    # zowe zos-files download
@@ -19,9 +19,9 @@ def getDataSetFromZos():
    # uss-file | uf    Download content from a USS file
     sourcePath = r'SBCOMMON.PROD.DCL(DCLACBTC)'
     sourcePath = r'/u/ttg/cob2Test/ACBATCDP.lst'
-    sourcePath = r'/u/ttg/compileSets/mainframe-all-apps/prd/C0001/log/ALCEKOZT_CompileError.log'
-    targetPath = r'C:/Users/CY59857/Desktop/ALCEKOZT_CompileError.log'
-    subprocess.call(([r'C:\Users\CY59857\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
+    sourcePath = r'/u/ttg/buildSets/mainframe-all-apps/prd/C0003/log/PPACRLSA_CompileError.log'
+    targetPath = r'C:/Users/Candan Yuksel/Desktop/PPACRLSA_CompileError.log'
+    subprocess.call(([r'C:\Users\Candan Yuksel\AppData\Roaming\npm\zowe.cmd', 'zos-files', 'download', 'uf', sourcePath, '-f', targetPath]))
     
 def sendFileToZos():
    # zowe zos-files upload

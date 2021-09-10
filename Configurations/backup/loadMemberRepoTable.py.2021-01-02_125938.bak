@@ -1,0 +1,54 @@
+import sys 
+import os
+import datetime
+import jaydebeapi
+import pathlib
+from pathlib import Path
+import configParms 
+
+os.environ['classpath'] = r'C:\database\db2jcc_license_cisuz.jar'
+jar = r'C:\database\db2jcc4.jar'
+jclassname = 'com.ibm.db2.jcc.DB2Driver'
+url = 'jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC'
+host = 'dv0bdb2.isbank'
+username = 'cy59857'
+password = 'o4o4o4o4'
+connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jar)
+curs = connection.cursor()
+mbrName = ''
+mbrRepo = ''
+tfsRepoDir = configParms.metadataDir
+
+delSqlStr = "delete SCDEGISK.MEMBER_REPO where MBR_NAME is not null"
+curs.execute(delSqlStr)
+
+insSqlStr = "insert into SCDEGISK.MEMBER_REPO (MBR_NAME,MBR_REPO) values (" + "'others'" + ',' + "'0')"    
+print(insSqlStr)
+curs.execute(insSqlStr)
+
+for fileName in os.listdir(tfsRepoDir):
+    repoName = ''
+    if fileName.find('interfaces_of') != -1:
+        repoName = fileName.split('_')[3].split('.')[0]
+        repoName = repoName + '-api'  
+    elif fileName.find('members_of') != -1:
+        repoName = fileName.split('_')[3].split('.')[0]
+        repoName = repoName + '-app'
+    elif fileName.find('isbank_cobol_framework') != -1:
+        repoName = "isbank-cobol-framework"
+    
+    if(bool(repoName)):
+        insSqlStr = "insert into SCDEGISK.MEMBER_REPO (MBR_NAME,MBR_REPO) values (" + "'" + repoName + "'" + ',' + "'0')"    
+        print(insSqlStr)
+        curs.execute(insSqlStr)  
+
+    if(bool(repoName)):
+        fullFilePath = tfsRepoDir + '/' + fileName
+        mbrArr = [line.rstrip('\n').rstrip(' ') for line in open(fullFilePath)]
+        for member in mbrArr:
+            if(len(member) > 4):
+                mbrName = member.split(';')[0].rstrip()
+                mbrRepo = repoName
+                print(mbrName + ',' + mbrRepo ) 
+                insSqlStr = "insert into SCDEGISK.MEMBER_REPO (MBR_NAME,MBR_REPO) values (" + "'" + mbrName + "'" + ',' + "'" + mbrRepo + "')"    
+                curs.execute(insSqlStr)    

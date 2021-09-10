@@ -1,0 +1,11 @@
+//###JOBNAME# JOB ,COMPWSHL,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,       
+//     CLASS=A,PRTY=15,MSGLEVEL=(1,1),NOTIFY=,                      
+// USER=XLRINT1                                                     
+//*                                                                 
+//COMPILE1 EXEC PGM=BPXBATCH,REGION=8M                              
+//STDOUT   DD SYSOUT=X                                              
+//STDERR   DD SYSOUT=X                                              
+//STDPARM  DD *                                                     
+SH /u/ttg/cob2Compiler.sh                                           
+'DB2ACCNS.cbl' '/u/ttg/buildSets/mainframe-all-apps/uat/B0004' '1'  
+/*                                                                  

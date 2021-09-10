@@ -1,3 +1,4 @@
-cd C:\JAVA\servers\glassfish5\glassfish\bin
-set JRE_HOME="C:\JAVA\jre1.8.0_241"
+cd C:\JAVA\servers\glassfish4\glassfish\bin
+REM 
+set AS_JAVA="C:\Java\jdk1.7.0_80"
 call asadmin stop-domain

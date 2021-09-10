@@ -1,0 +1,41 @@
+#!/bin/bash
+#Bash supports a surprising number of string manipulation operations.
+
+	# String Extraction:					# 0123456789.....											
+
+echo "method-1"
+stringZ=abcABC123ABCabc						# 0-based indexing.
+echo "stringZ" $stringZ
+echo ${stringZ:0} # abcABC123ABCabc
+echo ${stringZ:1} # bcABC123ABCabc
+echo ${stringZ:7} # 23ABCabc
+echo ${stringZ:7:3} # 23A
+
+echo "method-2"
+stringZ=abcABC123ABCabc
+position=6
+length=5
+echo "stringZ" $stringZ
+echo "position" $position
+echo "length" $length
+echo "result" `expr substr $stringZ $position $length`
+
+#Extracts $substring at beginning of $string, where $substring is a regular expression.
+# All of the above forms give an identical result.
+# expr match "$string" '\($substring\)'
+# expr "$string" : '\($substring\)'
+stringZ=abcABC123ABCabc
+echo stringZ
+echo `expr match "$stringZ" '\(.[b-c]*[A-Z]..[0-9]\)'` # abcABC1
+echo `expr "$stringZ" : '\(.[b-c]*[A-Z]..[0-9]\)'` # abcABC1
+echo `expr "$stringZ" : '\(.......\)'` # abcABC1
+
+#Extracts $substring at end of $string, where $substring is a regular expression.
+#expr "$string" : '.*\($substring\)'
+#expr match "$string" '.*\($substring\)'
+echo `expr match "$stringZ" '.*\([A-C][A-C][A-C][a-c]*\)'` # ABCabc
+echo `expr "$stringZ" : '.*\(......\)'` # ABCabc
+
+
+# read -p "Press [Enter] key to go on." 
+

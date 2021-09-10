@@ -1,0 +1,27 @@
+@REM 
+@echo off
+set fullpath=C:\Cloud\github\main-repo\devopz\devopz-benzoic-client\target\
+set filename=devopz-benzoic-client-1.0-SNAPSHOT-jar-with-dependencies.jar
+set userHome=Candan Yuksel
+set remote=http://10.200.14.1:29080/navlun-app/onTheDarkSide/uploadAndRun
+set remote=http://localhost:8080/navlun-app/onTheDarkSide/uploadAndRun
+
+
+@REM This is for zos-job-manager 
+set jarPath=C:\Cloud\github\main-repo\devopz\devopz-zos-job-util\target\devopz-zos-job-util-1.0.0.jar
+set className=com.isbank.devopz.zos.job.util.operations.JclJobProvider
+set methodName=getJobResults
+set args="C:/Users/%userHome%/unitTests/jclScript.jcl"
+@REM ***************************
+
+@REM This is for zos-resource-manager 
+set jarPath=C:\Cloud\github\main-repo\devopz\devopz-zos-resource-manager\target\devopz-zos-resource-manager-1.0.0.jar
+set className=com.isbank.devopz.zos.resource.manager.operations.ZosResourceProvider
+set methodName=get
+set args=MVS_SOURCE_LIB,SBTEKNIK.DEVOPZ.SOURCE
+@REM ***************************
+
+set toberun=%fullpath%%filename% %operation% %jarPath% %className% %methodName% %args% %remote%
+echo %toberun%
+java -jar %toberun%
+pause

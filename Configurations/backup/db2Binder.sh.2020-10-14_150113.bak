@@ -1,0 +1,5 @@
+#!/bin/bash
+ussPath=$1
+mvsPath=$2
+base=$3
+BIND $dbrmFile  -collection PKG01 ISOLATION(CS) RELEASE(DEALLOCATE) 

@@ -1,0 +1,65 @@
+//COMP6##RANDOM## JOB ,##MBRNAME##-1,MSGCLASS=X,SCHENV=TTGCOMP,REGION=4M,
+//     CLASS=A,MSGLEVEL=(1,1),PRTY=15,      
+// USER=XLRINT1                             
+//COB    EXEC  PGM=IGYCRCTL,REGION=1500K,COND=(4,LT),PARM='OPTFILE'
+//SET1  SET  BL='/isbank/sbteknik/xlrint/buildSets'          
+//SET2  SET  SL='/mainframe-all-apps/uat/C20201201.1/source' 
+//SET3  SET  SF='/##MBRNAME##.cbl'              
+//SET4  SET  DL='/mainframe-all-apps/uat/C20201201.1/dbrm'  
+//SET5  SET  DF='/##MBRNAME##.dbrm'             
+//SET6  SET  LL='/mainframe-all-apps/uat/C20201201.1/mlib'  
+//SET7  SET  LF='/##MBRNAME##.mlib'  
+//SET8  SET  GL='/mainframe-all-apps/uat/C20201201.1/log'   
+//SET9  SET  GF='/##MBRNAME##_Compile.log'                  
+//SYSOPTF DD DISP=SHR,DSN=SBTEKNIK.V6.COMPILE.OPTIONS       
+//        DD DISP=SHR,DSN=SBTEKNIK.COMPILE.OPTIONS.COPROC   
+//        DD DISP=SHR,DSN=SBTEKNIK.COMPILE.OPTIONS.WITHSQL  
+//STEPLIB DD DISP=SHR,DSN=COBOL.V62.IGY.SIGYCOMP            
+//        DD DISP=SHR,DSN=COBOL.V62.COMP.ISBANK.LOADPLIB    
+//        DD DISP=SHR,DSN=DB2ASYS.SDSNLOAD                  
+//        DD DISP=SHR,DSN=DB2ASYS.SDSNEXIT                  
+//SYSIN   DD DISP=SHR,DSN=$$MVSSOURCELIB$$(##MBRNAME##)  
+//SYSLIB   DD DISP=SHR,DSN=$$MVSSOURCELIB$$              
+//SYSPUNCH DD DUMMY                                      
+//SYSMDECK DD UNIT=SYSALLDA,SPACE=(CYL,(1000,100)),VOL=(,,,1)
+//*SYSPRINT DD PATH='&BL&GL&GF',PATHDISP=(KEEP,KEEP),        
+//*            PATHOPTS=(OCREAT,OAPPEND,OTRUNC,OWRONLY),     
+//*            FILEDATA=TEXT,RECFM=F,                        
+//*            PATHMODE=(SIRUSR,SIWUSR)                      
+//SYSPRINT DD SYSOUT=X
+//SYSTERM  DD PATH='&BL&GL&GF',PATHDISP=(KEEP,KEEP),        
+//            PATHOPTS=(OCREAT,OAPPEND,OTRUNC,OWRONLY),     
+//            FILEDATA=TEXT,RECFM=F,                        
+//            PATHMODE=(SIRUSR,SIWUSR)            
+//SYSUT1   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT2   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT3   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT4   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT5   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT6   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT7   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT8   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT9   DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT10  DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT11  DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT12  DD UNIT=SYSTS,SPACE=(CYL,(5,5))               
+//SYSUT13  DD UNIT=SYSTS,SPACE=(CYL,(5,5))              
+//SYSUT14  DD UNIT=SYSTS,SPACE=(CYL,(5,5))              
+//SYSUT15  DD UNIT=SYSTS,SPACE=(CYL,(5,5))              
+//DBRMLIB  DD PATH='&BL&DL&DF',                         
+//             PATHOPTS=(OWRONLY,OCREAT,OTRUNC),       
+//             PATHMODE=(SIRUSR,SIWUSR)                
+//SYSLIN   DD  DSN=&LOADSET,UNIT=SYSTS,DISP=(MOD,PASS),
+//             SPACE=(CYL,(1,1)),DCB=BLKSIZE=3200      
+//LNK  EXEC  PGM=IEWL,PARM='RENT,NCAL,LIST,SIZE=(1400K,800K)', 
+//             COND=(4,LT),REGION=1500K                       
+//SYSLIN   DD  DSN=&LOADSET,DISP=(OLD,DELETE)            
+//SYSLMOD  DD PATH='&BL&LL&LF',                          
+//             PATHOPTS=(OWRONLY,OCREAT,OTRUNC),       
+//             PATHMODE=(SIRUSR,SIWUSR)
+//SYSUT1   DD  UNIT=SYSTS,SPACE=(CYL,(1,1))            
+//SYSPRINT DD PATH='&BL&GL&GF',PATHDISP=(KEEP,KEEP), 
+//            PATHOPTS=(OAPPEND,OWRONLY),            
+//            FILEDATA=TEXT,RECFM=F,                 
+//            PATHMODE=(SIRUSR,SIWUSR)                
+

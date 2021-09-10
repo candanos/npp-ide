@@ -1,0 +1,26 @@
+# If you want to capture the output of the .bat file, you can use:
+
+# $out = C:Pathfile.bat
+
+# If you want to start a process with your .bat file, you can use the PowerShell start-process cmdlet:
+
+# start-process C:Pathfile.bat
+
+# And, if you if you want to control cmd.exe, you can use this:
+
+# start-process "cmd.exe" "/c C:Pathfile.bat"
+
+param (  
+	[string]$filePath = $(throw "-filePath is required."),
+    [string]$fileName = $(throw "-sqlFl is required.")
+	)
+	
+Write-Host("Here I am. ")	
+$env:Path = "C:\JAVA\apache-maven-3.6.3\bin;" + $env:Path
+Write-Host $env:Path
+$batPath = $filePath + "\" + $fileName
+Write-Host($batPath + " is going to be run.")	
+
+start-process "C:\WINDOWS\System32\cmd.exe /K "  $batPath
+# start-process $batPath
+pause

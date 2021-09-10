@@ -1,0 +1,22 @@
+import sys 
+import os
+import datetime
+import shutil
+
+fileName = "YHKEYBUL.cpy"
+source = r'C:/u/ttg/tfsRepos/mainframe-all-apps/COBOL
+target = r'C:/Cloud/github/bebop-rest/target'
+
+
+
+def main():    
+    getFileFromRepository()
+    convertFileToEbcdic()
+
+
+def getFileFromRepository():
+
+def convertFileToEbcdic():
+
+if __name__ == '__main__': 
+    main()

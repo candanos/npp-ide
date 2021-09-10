@@ -1,5 +1,5 @@
 def main():    
-    filePath = r'C:\Cloud\github\cobol-programs-repository-app\scripts\createRepositoryMetadata\inputs\members_of_02_rotatif-krediler-hesap-yonetimi.txt'
+    filePath = r'C:\Cloud\github\main-repo\cobol-programs-repository-app\scripts\01-createRepositoryMetadata\inputs\all_online_members.txt'
     file = open(filePath, "r")
     lineList = list(dict.fromkeys(file.read().split('\n')))
     lineList.sort()

@@ -1,0 +1,40 @@
+import sys 
+import os
+import datetime
+import shutil
+import ebcdic
+import pathlib
+
+fileName = "YHKEYBUL.cbl"
+sourceDir = r'C:/u/ttg/tfsRepos/mainframe-all-apps/COBOL'
+targetDir = r'C:/Cloud/github/bebop-rest/target'
+
+
+def main():    
+    convertFileToEbcdic()
+    
+def convertFileToEbcdic():
+    sourceFile = sourceDir + "/" + fileName
+    targetFile = targetDir + "/" + fileName
+    with open(sourceFile, 'r', encoding='utf-8') as fi: sourceFileinStr = fi.read()
+    f = open(targetFile, 'w', encoding='cp1026', newline="\n")
+    
+    myGen = ispfLineGenerator(sourceFileinStr)
+    line = next(myGen)
+    while(len(line) == 80):
+        newLine = '      ' + str(line[6:72]) + '        ' + '\n'        
+        f.write(newLine)
+        line = next(myGen)
+    
+def ispfLineGenerator(string):
+    i = 0
+    while True:
+        yield string[i:i+80]
+        i=i+80        
+
+
+            
+    f.close()
+
+if __name__ == '__main__': 
+    main()

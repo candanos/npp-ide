@@ -1,0 +1,19 @@
+#!/bin/bash
+# ussPath=$1
+# mvsPath=$2
+ussPath="user/dir/subdir/file.c"
+fileNameWithExt=${ussPath##*/}
+ext=${fileNameWithExt##*.}
+fileName=${fileNameWithExt%%.*}
+echo $fileName
+echo $ext
+
+
+read -p "Press [Enter] key to go on." 
+
+
+# start="//'"
+# end="'"
+# targetPath=$start$memberPath$end
+# cp -v -X -S d=.$ext $sourcePath $targetPath 1>> $log 2>> $log
+# exit $?
