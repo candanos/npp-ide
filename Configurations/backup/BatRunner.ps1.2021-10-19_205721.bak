@@ -26,6 +26,6 @@ Write-Host $env:Path
 Write-Host("Hello")
 $batPath = $filePath + "\" + $fileName
 Write-Host($batPath + " is going to be run.")	
-& $batPath 
-# start-process $batPath -Verb runAs
+# & $batPath 
+start-process $batPath -Verb runas
 pause

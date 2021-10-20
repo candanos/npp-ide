@@ -1,0 +1,77 @@
+Work Experience:
+Software Engineer/Turkiye Is Bankasi/08.2008-05.2011
+• Implemented IBM Rational Developer for System z as an alternative IDE to ISPF
+environment for development teams with IBM consultants.
+• Was responsible of carrying out production environment releases together with system
+engineering team and automation of this process.
+• Developed common COBOL core-banking modules of Isbank which don’t belong to
+any specific business group.
+• Administrated IBM Rational ClearQuest, customized this product according to the
+SDLC processes of Isbank.
+**************
+System Analyst/Turkiye Is Bankasi/05.2011-08.2016
+• Designed and developed the infrastructure of z/OS build/deployment/test automation
+engines that consist of Rexx scripts, ISPF panels, and skeletons.
+• Designed and developed a database on DB2 working as an in-house asset manager
+for z/OS programs. It contains all dependencies between COBOL, Copybook, parent
+programs and subprograms. Developed all tools and utilities for the usability of this
+database for development teams. Developed mechanisms for the database to be up to
+date and maintainable.
+• Took an active role in Isbank’s transition from IMS to DB2. Modified the
+compile/build/release automation engines according to emerging SQL usage of
+COBOL programs. Informed developers about the mechanisms behind the COBOLDB2
+interaction.
+• Worked on the SDLC modernization project aiming deployment of Atlassian products. Implementing integration between z/OS SCLM and Bitbucket Git servers.
+• Created integrations between various products in SDLC product set of Isbank like IBM Maximo, Rational Clearquest, Rational Clearcase, HP ALM
+**************
+System Architect/Turkiye Is Bankasi/08.2016-09.2017
+Tested new mainframe development ways such as using z/OS Git, ssh connections, Jenkins, Ebcdic/Unicode compatibility, Zowe.
+**************
+
+
+
+
+
+
+Software Engineer/Turkiye Is Bankasi/08.2008-09.2017
+• Designed and developed the infrastructure of z/OS build/deployment/test automation
+engines that consist of Rexx scripts, ISPF panels and skeletons.
+• Designed and developed a database on DB2 working as an in-house asset manager
+for z/OS programs. It contains all dependencies between COBOL, Copybook, parent
+programs and sub programs. Developed all tools and utilities for the usability of this
+database for development teams. Developed mechanisms for the database to be up to
+date and maintainable.
+• Took an active role in Isbank’s transition from IMS to DB2. Modified the
+compile/build/release automation engines according to emerging SQL usage of
+COBOL programs. Informed developers about the mechanisms behind the COBOL-DB2
+interaction.
+• Implemented IBM Rational Developer for System z as an alternative IDE to ISPF
+environment for development teams with IBM consultants.
+• Was responsible of carrying out production environment releases together with system
+engineering team and automation of this process.
+• Developed common COBOL core-banking modules of Isbank which don’t belong to
+any specific business group.
+• Administrated IBM Rational ClearQuest, customized this product according to the
+SDLC processes of Isbank.
+*************
+Software Architect/Softtech/09.2017-02.2020
+• Developed internal core banking services in Commercial Loans Product Development
+Team on both z/OS and WAS platforms. Infrastructure is a combination of both the
+mainframe system and Java Web Services.
+• Developed web services providing integration between Isbank’s commercial loans
+processes and legal institutions like the Turkish Republic Central Bank, Risk Center of
+the Banks Association of Turkey. Frameworks and technologies used are Soap Web
+Services, Restful Web Services, Spring Core, Spring Batch.
+• Worked on a database decommissioning project for replacing IMS DB with DB2.
+Developed the system and checking the consistency using complex SQL queries and
+writing analytic python applications
+**************
+System Architect/Turkiye Is Bankasi
+• Designed and created a new development environment for Isbank mainframe
+developers. The system includes plugins and extensions for modern IDEs like Eclipse,
+Vs Code, a restful API service running on z/OS for build/deployment operations and a
+CLI as the client.
+• Moved all COBOL code base from z/OS to a Git repository on Microsoft Azure
+DevOps. That includes a code conversion system, a JGit based application running on
+z/OS, redesigning the COBOL repositories of Isbank according to their dependency
+architecture.

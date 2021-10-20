@@ -10,12 +10,6 @@
 
 # start-process "cmd.exe" "/c C:Pathfile.bat"
 
-# $sn = ($env:COMPUTERNAME -split '-')[0]
-# $batfile = "\\mydomain.com\mdt\Deployments\Production\Applications\Imprivata\Autologin\$snlogin.bat"
-# Write-Host $env:COMPUTERNAME $batfile
-# Start-Process $batfile -Verb RunAs
-
-
 param (  
 	[string]$filePath = $(throw "-filePath is required."),
     [string]$fileName = $(throw "-sqlFl is required.")
@@ -26,6 +20,6 @@ Write-Host $env:Path
 Write-Host("Hello")
 $batPath = $filePath + "\" + $fileName
 Write-Host($batPath + " is going to be run.")	
-& $batPath 
-# start-process $batPath -Verb runAs
+# & $batPath 
+start-process "cmd.exe " &batPath -Verb runas
 pause

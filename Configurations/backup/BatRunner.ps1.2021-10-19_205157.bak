@@ -8,13 +8,7 @@
 
 # And, if you if you want to control cmd.exe, you can use this:
 
-# start-process "cmd.exe" "/c C:Pathfile.bat"
-
-# $sn = ($env:COMPUTERNAME -split '-')[0]
-# $batfile = "\\mydomain.com\mdt\Deployments\Production\Applications\Imprivata\Autologin\$snlogin.bat"
-# Write-Host $env:COMPUTERNAME $batfile
-# Start-Process $batfile -Verb RunAs
-
+start-process "cmd.exe" "/c C:Pathfile.bat"
 
 param (  
 	[string]$filePath = $(throw "-filePath is required."),
@@ -26,6 +20,6 @@ Write-Host $env:Path
 Write-Host("Hello")
 $batPath = $filePath + "\" + $fileName
 Write-Host($batPath + " is going to be run.")	
-& $batPath 
-# start-process $batPath -Verb runAs
+# & $batPath 
+start-process &batPath -Verb runas
 pause

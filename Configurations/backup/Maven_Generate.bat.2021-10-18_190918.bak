@@ -1,4 +1,4 @@
-cd C:\Cloud\github
+cd C:\Cloud\github\problems-java
 @echo -DgroupId=com.company -DartifactId=project -Dversion= -Dpackage=com.company.project
 @echo "project                                     "          
 @echo "|-- pom.xml                                 "
