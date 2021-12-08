@@ -1,0 +1,6 @@
+#!/bin/bash -x
+# delete-task.sh
+# Delete an existing task; remove it from the database.
+curl -v -X DELETE http://localhost:8001/delete/$1
+read -p "Press enter to continue"
+exit

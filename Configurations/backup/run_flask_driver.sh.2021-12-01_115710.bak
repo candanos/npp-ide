@@ -1,0 +1,5 @@
+#!/bin/bash
+
+venv/Scripts/python.exe ../../flask_driver.py
+read -p "Press enter to continue"
+exit

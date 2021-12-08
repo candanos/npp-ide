@@ -1,0 +1,6 @@
+#!/bin/bash
+# get-one-task.sh
+# Retrieve a single task from the database.
+curl -v http://localhost:8001/gettask
+read -p "Press enter to continue"
+exit

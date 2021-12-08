@@ -1,0 +1,7 @@
+#!/bin/bash
+# list-tasks.sh
+# Retrieve a list of all existing tasks.
+# curl -v http://localhost:8001/gettask/$1
+curl -v http://localhost:8001/gettask/$1
+read -p "Press enter to continue"
+exit

@@ -1,0 +1,10 @@
+print("line 1")
+
+def main():
+    print("this is main.")
+
+print("line 2")
+
+if __name__ == '__main__':
+    print("this is name")
+    main()

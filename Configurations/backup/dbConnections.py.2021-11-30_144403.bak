@@ -39,7 +39,7 @@ def db2Conn():
     os.environ["CLASSPATH"] = os.environ["CLASSPATH"] + ";" + jar1 + ";" + jar2
     print(os.environ["CLASSPATH"]) 
     username = 'cy59857'
-    password = 'o4o4o4o4'
+    password = 'o6o6o6o6'
 
     connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jars=[jar1,jar2])
     return connection

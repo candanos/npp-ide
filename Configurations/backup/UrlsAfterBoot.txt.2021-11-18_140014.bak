@@ -1,0 +1,2 @@
+URLs after boot:
+http://localhost:8080/h2-console (spring.datasource.url=jdbc:h2:mem:doktoradb in src/resources/application.properties)

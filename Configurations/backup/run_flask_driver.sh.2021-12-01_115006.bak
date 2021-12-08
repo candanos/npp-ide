@@ -1,0 +1,8 @@
+#!/bin/bash
+# add-task.sh
+# Create a new task; add it to the database.
+
+cd venv\Scripts>
+python ././flask_driver.py
+read -p "Press enter to continue"
+exit
