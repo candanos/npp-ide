@@ -1,9 +1,0 @@
-{
-"BORCBIR":{
-		"bind":{
-			"collection":"CBBCH",
-			"encoding":"EBCDIC"
-		},
-		"load":"SBBCH.TEST.LOADMLIB"
-	}
-}

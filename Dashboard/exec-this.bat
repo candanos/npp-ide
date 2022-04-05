@@ -1,6 +1,6 @@
-@REM save command as > "C:\Cloud\github\npp-ide\Dashboard\exec-this.bat" "$(CURRENT_DIRECTORY)" $(FILE_NAME)  
+@REM save command as > "C:\npp-ide\Dashboard\exec-this.bat" "$(CURRENT_DIRECTORY)" $(FILE_NAME)  
 @echo off
-@set dashboard=C:\Cloud\github\npp-ide\Dashboard
+@set dashboard=C:\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
 @set pythonPath=C:\Python

@@ -1,8 +1,0 @@
-{	
-	ArchiveType: zip,
-	ConvertedFilesState: keep 
-	encodingConversionSourceCharset: utf-8
-	encodingConversionTargetCharset: cp1026;
-	FileExtensionCase fileExtensionCase;
-	FileNameCase fileNameCase;
-}	

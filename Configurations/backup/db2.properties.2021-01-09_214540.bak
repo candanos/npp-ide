@@ -1,6 +1,0 @@
-#bebop Properties
-#
-db2Url=jdbc:db2://dv0bdb2.isbank:446/DV0BPLOC
-db2User=xlrint1
-db2Pass=xebadm23
-#

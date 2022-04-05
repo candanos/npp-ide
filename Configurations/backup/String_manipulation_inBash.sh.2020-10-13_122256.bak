@@ -1,6 +1,0 @@
-#!/bin/bash
-#Shell parameter expansion
-
-# The construct ${parameter%pattern} removes the smallest rightmost part of the parameter expansion that matches pattern.
-
-#  ${parameter%%pattern} stands for the expansion of parameter without the longest rightmost string that matches pattern.

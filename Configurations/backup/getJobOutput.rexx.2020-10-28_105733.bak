@@ -1,9 +1,0 @@
-/* Rexx */
-ADDRESS TSO
-sysJes='SYSTSPRT'
-X1=OutTrap('Jb.')                                      
-ÜOUTPUT ÜFilterValÜ PRINT('ÜSysJesÜ') KEEP HOLDÜ       
-X1=OutTrap('OFF')                                      
-Do i=1 To Jb.0                                         
-   Say VPn 'Jb.'i'='Jb.i                               
-End                                                    

@@ -1,2 +1,0 @@
-java -jar "C:/Users/Candan Yuksel/Desktop/devopz-INT/devopz-jgit-cli-1.0-SNAPSHOT-jar-with-dependencies.jar" "CLONE" "https://github.com/candanos/test" "C:/Users/Candan Yuksel/Desktop/devopz-INT" "candanos" "TH501574ocy"
-pause 

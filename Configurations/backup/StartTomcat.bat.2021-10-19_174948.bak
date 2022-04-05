@@ -1,7 +1,0 @@
-set JRE_HOME="C:\Java\jdk1.8.0_261\jre"
-set JRE_HOME="C:\Java\jdk-9.0.4"
-echo JRE_HOME
-cd "C:\JAVA\servers\apache-tomcat-9.0.37\bin"
-cd "C:\JAVA\servers\apache-tomee-webprofile-9.0.0-M7\bin"
-echo here
-call startup

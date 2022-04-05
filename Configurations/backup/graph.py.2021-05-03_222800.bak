@@ -1,6 +1,0 @@
-def main():
-    print("hello graph")
-    
-
-if __name__ == '__graph__':
-    main()

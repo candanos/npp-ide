@@ -1,7 +1,0 @@
-#!/bin/bash
-ussPath=$1
-mvsPath=$2
-base=$3
-CONNECT TO syszos1.abc.com:5021/ABCLOC1 USER xlrint1 USING xebadm23
-BIND $dbrmFile  -collection PKG01 ISOLATION(CS) RELEASE(DEALLOCATE)
-DISCONNECT 

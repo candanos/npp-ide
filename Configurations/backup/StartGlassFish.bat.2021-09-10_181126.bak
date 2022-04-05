@@ -1,4 +1,0 @@
-cd C:\JAVA\servers\glassfish5\bin
-REM set JRE_HOME="C:\JAVA\jre1.8.0_261"
-call asadmin start-domain
-pause

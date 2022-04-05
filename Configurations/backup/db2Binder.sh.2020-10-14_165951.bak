@@ -1,8 +1,0 @@
-#!/bin/bash
-dbrm=$1
-collection=$2
-base=$3
-encoding=$4
-
-db2 +c -s -f db2Binder.sql
-exit $?

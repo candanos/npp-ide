@@ -1,3 +1,4 @@
 @echo off
-@cd "C:\mysql-8.0.13-winx64\bin"
+cd "C:\database\mysql-8.0.13-winx64\bin"
+pwd
 mysqld --console

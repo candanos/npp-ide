@@ -1,9 +1,0 @@
-Jcl Jobs:
-90: Job couldn't be submitted. (Should be implemented in java.)
-91: Job has been submitted but couldn't be found. It could be deleted then. (Should be implemented in java.) 
-92: Filtered Step FLUSHed. (Currently rexx returns 255 but it should be changed.)
-93: Abend, filtered step even any step in job has never been created. (Currently rexx return 1 but it should be changed.)
-
-Shell processes:
-0: Successful.
-1: Error.

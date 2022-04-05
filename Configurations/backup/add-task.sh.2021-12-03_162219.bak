@@ -1,7 +1,0 @@
-#!/bin/bash
-# add-task.sh
-# Create a new task; add it to the database.
-# curl -v -X POST http://localhost:8001/addtask -d "task_name=$1&description=$2"
-curl -v -X POST http://localhost:8001/addtask -d "NAME=ACCINFUP&mvs_project=SBCOMMONsdaasdass&repo_name=hesap_yonetimi&type=COBOL&is_main=SUB&encoding&EBCDIC&has_sql=YES&amode=&rmode=&appc=&state=&bind_coll=&version_control="
-read -p "Press enter to continue"
-exit

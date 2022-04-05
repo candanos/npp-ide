@@ -1,3 +1,0 @@
-chtag -t -c ISO8859-1 /u/ttg/apache-tomcat-9.0.36/webapps/bebop-rest/WEB-INF/classes/cob2Compiler.sh
-chtag -t -c ISO8859-1 /u/ttg/apache-tomcat-9.0.36/webapps/bebop-rest/WEB-INF/classes/nvsDeployment.sh
-chtag -t -c ISO8859-1 /u/ttg/apache-tomcat-9.0.36/webapps/bebop-rest/WEB-INF/classes/cob2Compiler.sh

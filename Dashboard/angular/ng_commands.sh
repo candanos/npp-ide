@@ -1,8 +1,8 @@
 #!/bin/bash
 # ng commands
-cd C:/Cloud/github/rocksteady
-ng g c footer
-pwd
+# create a new application
+cd "C:/Users/Candan Yuksel/Desktop"
+ng new ecommerce-frontend
 # ng new app-name
 # ng new app-name --style=scss --routing=true
 

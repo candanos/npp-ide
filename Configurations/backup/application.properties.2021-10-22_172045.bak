@@ -1,6 +1,0 @@
-spring.datasource.name=doktoradb
-spring.jpa.show-sql=true
-spring.datasource.url=doktoradb
-#H2 settings
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console

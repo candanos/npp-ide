@@ -1,8 +1,0 @@
-@To Do:
-
-1. get repository from input, change csvParser.
-2. add Class to compile Not backward compatibles. Bu copy i kullananlari da derle ya da derleme demek.
-3. add option to findRepositoryOfMember to look for in the repository directories. Repository vermeden derleme.
-4. remove COBOL, COPY subfolders from repositories. Extensions are enough.
-5. tüm repositorylerin clonelanması.
-6. tüm memberların yeni web servis üzerinden compile edilip yeni yerinde loadmliblerin olusturulmasi.

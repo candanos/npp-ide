@@ -1,4 +1,0 @@
-cd C:\JAVA\servers\glassfish4\glassfish\bin
-REM set JRE_HOME="C:\JAVA\jre1.8.0_241"
-call asadmin deploy "C:\Users\Candan Yuksel\Desktop\cargo-tracker.war"
-pause
