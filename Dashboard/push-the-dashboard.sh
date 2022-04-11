@@ -2,6 +2,6 @@
 pwd
 git status
 git add .
-git commit -m "JavaCompile and JavaRun reorganized and mysql alter scripts added."
+git commit -m "JavaCompile.sh added."
 git push
 read -p "Press [Enter] key to go on."
