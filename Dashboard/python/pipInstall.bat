@@ -1,6 +1,8 @@
 @echo off
+pip install OpenCobolIDE
+REM pip install jsonrpclib
 REM pip install ibm_db
-pip install ebcdic
+REM pip install ebcdic
 REM pip install JPype1==0.6.3
 REM pip uninstall jaydebeapi==1.1.1
 REM pip install zeep

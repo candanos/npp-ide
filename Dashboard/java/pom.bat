@@ -14,6 +14,9 @@ REM @IF %x%==isbank call "C:\apache-maven-3.3.9\bin\mvn" clean install
 REM @IF %x%==public call "C:\apache-maven-3.3.9\bin\mvn" -o -s "C:\apache-maven-3.3.9\conf\settings.xml" clean install
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -s "C:\Users\CY59857\.m2\settings_isbank.xml" clean install
 @set JAVA_HOME = C:\JAVA\jdk1.8.0_261
+set JAVA_HOME=C:\Java\jdk-11.0.11
+setx JAVA_HOME "%JAVA_HOME%" /M
+set Path=%JAVA_HOME%\bin;%Path%
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" compile assembly:single
 call "C:\JAVA\apache-maven-3.6.3\bin\mvn" clean install
 

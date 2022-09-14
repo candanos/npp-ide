@@ -3,7 +3,7 @@
 @set dashboard=C:\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
-@set pythonPath=C:\Python
+@set pythonPath=C:\Python38
 @set nodePath=C:\nodejs
 @set batchPath=C:\WINDOWS\System32
 @set powerShPath="C:\Windows\System32\WindowsPowerShell\v1.0"
