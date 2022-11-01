@@ -28,7 +28,7 @@ IF %typ%==xml ( IF %name%==javamain ( %powerShPath%"\powershell.exe" -File "%das
 @REM java builds
 REM IF %typ%==java %powerShPath%"\powershell.exe" -File "%dashboard%\java\JavaCompile.ps1" %1 %2
 REM IF %typ%==java %pythonPath%"\python.exe" "%dashboard%\java\JavaCompile.py" %1 %2
-IF %typ%==java "%gitPath%""\git-bash.exe" "%dashboard%\java\JavaCompile.sh" %1 %2
+IF %typ%==java "%gitPath%""\git-bash.exe" "%dashboard%\java\java_go.sh" %1 %2
 @REM js
 IF %typ%==js %nodePath%"\node" %2
 @REM py

@@ -1,9 +1,12 @@
 #!/bin/bash
-
+pn=$0
+echo $pn
 javafiledir=$1
 javafile=$2
 # export PATH=/usr/local/mysql/bin:$PATH
 # export CLASSPATH=.:/c/Java/externalJars/ejb.jar
+echo $javafiledir
+echo $javafile
 
 # setting java environment variables
 export JAVA_HOME="/c/Java/jdk-11.0.11"
@@ -24,7 +27,7 @@ echo 'CLASSPATH='$jars
 
 
 cd "$javafiledir"
-basename=${javafile%.*}
+export basename=${javafile%.*}
 
 # echo $classname
 echo "----------"
