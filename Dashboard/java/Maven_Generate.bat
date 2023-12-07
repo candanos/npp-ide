@@ -1,4 +1,5 @@
 cd C:\Cloud\github
+cd "C:\Users\Candan Yuksel\Desktop"
 @echo -DgroupId=com.company -DartifactId=project -Dversion= -Dpackage=com.company.project
 @echo "project                                     "          
 @echo "|-- pom.xml                                 "
@@ -25,7 +26,7 @@ cd C:\Cloud\github
 IF %x%==q mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
 IF %x%==j mvn archetype:generate -DarchetypeArtifactId=maven-archetype-j2ee-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=true 
 IF %x%==w mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0-SNAPSHOT -DinteractiveMode=true
-IF %x%==s mvn -s "C:\Users\CY59857\.m2\settings_isbank.xml" archetype:generate -DarchetypeArtifactId=maven-archetype-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=false
+IF %x%==s mvn archetype:generate -DarchetypeArtifactId=maven-archetype-simple -Dversion=1.0-SNAPSHOT -DinteractiveMode=false
 @REM Archetype ArtifactIds 	Description
 @REM maven-archetype-archetype 	An archetype to generate a sample archetype project.
 @REM maven-archetype-j2ee-simple 	An archetype to generate a simplifed sample J2EE application.

@@ -1,0 +1,1 @@
+we need some path operations conversion snippets

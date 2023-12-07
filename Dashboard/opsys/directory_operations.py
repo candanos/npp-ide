@@ -1,0 +1,1 @@
+# buraya directory walkover ve copy, move operasyonlari yapan snippet.

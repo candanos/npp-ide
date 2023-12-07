@@ -1,0 +1,35 @@
+cookiecutter is a tool for populating a directory structure from a pre-made template.
+
+Typically, it’s just the Python code (in the src/ directory) that forms the installable version of your package 
+
+Currently the most common tools used for package development are poetry, flit, and setuptools. 
+
+pyproject.toml is the project definition file name of poetry tool. it is a fixed name.
+
+intra-package references: 
+you can import your packages other modules using absolute or relative import 
+PEP 8 recommends using absolute imports because they are explicit.
+
+src
+└── package
+    ├── __init__.py
+    ├── moduleA.py
+    ├── moduleB.py
+    └── subpackage
+        ├── __init__.py
+        └── moduleC.py
+        
+moduleB.py: paralel modulu import (INTRA-PACKAGE Reference)        
+from package.moduleA import XXX (absolute) or from .moduleA import XX (relative)
+
+moduleC.py: yukari modulu import
+from package.moduleA import XXX or from ..moduleA import XXX
+
+moduleA.py: asagi modulu import 
+from package.subpackage.moduleC import XXX or from .subpackage.moduleC import XXX
+
+__init__py file:
+When a package is imported, the __init__.py file is executed, and any objects it defines are bound to the package’s namespace. As an example, in Python packaging, it’s convention to define a package’s version in two places:
+In the package’s configuration file, pyproject.toml, 
+In the package’s __init__.py file using the __version__ attribute, so users can quickly check the version of your package they are using, with code like: pycounts.__version__
+
