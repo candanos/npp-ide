@@ -13,3 +13,11 @@ print("extension:" + extension)
 print(pathlib.Path(fullpath).suffix)
 
 # if filename.endswith('.rxt'):
+
+# Edit sys.path in windows
+# each One of three typing works
+# sys.path.append('C:\\github\\kola-cli\\src')
+# sys.path.append(r'C:/github/kola-cli/src')
+sys.path.append(r'C:\github\kola-cli\src')
+
+from api.dto.w2k import w2kDTO

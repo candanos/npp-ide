@@ -1,10 +1,11 @@
 #!/usr/bin/python
 import os
-import cx_Oracle
-import mysql
-from mysql import connector
-from mysql.connector import Error
-import jaydebeapi  
+# import cx_Oracle
+# import mysql
+# from mysql import connector
+# from mysql.connector import Error
+# import jaydebeapi  
+import pyodbc
 
 def mysqlConn():
     try:
@@ -28,7 +29,7 @@ def mysqlConn():
             # connection.close()
             # print("MySQL connection is closed")      
 
-def db2Conn():
+def db2_JDBC_ConnC():
     jar1 = r'C:\database\db2jcc4.jar'
     jar2 = r'C:\database\db2jcc_license_cisuz.jar'
     os.environ["CLASSPATH"] = jar1 + ";" + jar2
@@ -43,6 +44,19 @@ def db2Conn():
 
     connection = jaydebeapi.connect(jclassname, url, {'user': username, 'password': password}, jars=[jar1,jar2])
     return connection
+
+def db2_ODBC_conn():
+    print("our KOLA")
+    connstr = 'DSN=D20Q; UID=A488466;PWD=o1o1o1o1'
+    connstr = 'DSN=D2TP; UID=A488466;PWD=o1o1o1o1'
+    connstr = 'DSN=D20H; UID=A488466;PWD=o1o1o1o1'
+    connection = pyodbc.connect(connstr)
+    print('connected')
+    # cnxn = pyodbc.connect("DSN=BCTHEAT")
+    # cursor = cnxn.cursor()
+    # cursor.execute("select * from acr.Table_one_hh")
+    # row = cursor.fetchall()
+    return connection
     
 def getConnection(typ):        
     if(typ == 'eufb'):
@@ -51,6 +65,10 @@ def getConnection(typ):
         return conn
     if(typ == 'db2'):
         conn = db2Conn()
+        return conn     
+    if(typ == 'kola'):
+        print("it is KOLA")
+        conn = db2_ODBC_conn()
         return conn     
 
 
