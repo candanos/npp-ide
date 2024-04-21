@@ -345,3 +345,12 @@
 2023-11-06 21:55:11  C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\session.xml  789/789 bytes are written.
 2023-11-06 21:55:11  C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\session.xml is closed.
 2023-11-06 21:55:11  WM_DESTROY (isEndSessionStarted == true)
+2023-12-12 23:01:55  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2023-12-12 23:01:55  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2023-12-12 23:01:56  C:\npp-ide\Configurations\config.xml is opened.
+2023-12-12 23:01:56  C:\npp-ide\Configurations\config.xml  11314/11314 bytes are written.
+2023-12-12 23:01:56  C:\npp-ide\Configurations\config.xml is closed.
+2023-12-12 23:01:56  C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\session.xml is opened.
+2023-12-12 23:01:56  C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\session.xml  193/193 bytes are written.
+2023-12-12 23:01:56  C:\Users\Candan Yuksel\AppData\Roaming\Notepad++\session.xml is closed.
+2023-12-12 23:01:56  WM_DESTROY (isEndSessionStarted == true)
