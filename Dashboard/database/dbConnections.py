@@ -48,8 +48,8 @@ def db2_JDBC_ConnC():
 def db2_ODBC_conn():
     print("our KOLA")
     connstr = 'DSN=D20Q; UID=A488466;PWD=o1o1o1o1'
-    connstr = 'DSN=D2TP; UID=A488466;PWD=o1o1o1o1'
     connstr = 'DSN=D20H; UID=A488466;PWD=o1o1o1o1'
+    connstr = 'DSN=D2TP; UID=A488466;PWD=o3o3o3o3'
     connection = pyodbc.connect(connstr)
     print('connected')
     # cnxn = pyodbc.connect("DSN=BCTHEAT")
