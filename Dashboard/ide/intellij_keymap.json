@@ -1,0 +1,23 @@
+{
+    "editing": {
+        "comment out": "ctrl + /",
+        "comment out as block": "ctrl + shift + /"
+    },
+    "java": {
+        "find declaration": "ctrl + B",
+		"find usages": "alt + F7",
+        "implementations": "ctrl + alt + B",
+        "open type declarations, open its class": "ctrl + shift + B"
+    },
+    "navigating": {
+        "F9 (switch tabs)": "alt +left / alt + right",
+        "max up": "ctrl + home",
+		"max down": "ctrl + end"
+    },
+    "searching": {
+        "search everywhere window": "double shift"
+        "F5 (Find next/previous)": "after ctrl + F; use up/down",
+        "find in all files": "ctrl + shift + F",
+        "find usages": "alt + F7",
+    }
+}

@@ -27,29 +27,29 @@ print(sqlStr)
 curs.execute(sqlStr)
 
 
-# lst = []
-# cols = []
-# lst.append(str(sqlStr))
-# for row in curs.description:
-	# cols.append(row[0])
-# print(cols)    
-# lst.append(cols)
+lst = []
+cols = []
+lst.append(str(sqlStr))
 
-# if(typ=='db2'):
-    # result = curs.fetchall()
-    # for row in result:
-        # print(row)
-        # lst.append(row)
-
-# if(typ=='kola'):
-    # result = curs.fetchall()
-    # for row in result:
-        # print(row)
-        # lst.append(row)
-# else:   
-    # for row in curs:
-        # print(row)
-        # lst.append(row)
+if self.cursor.description:
+    cols.append(row[0])
+    print(cols)    
+    lst.append(cols)
+    
+    if(typ=='db2'):
+        result = curs.fetchall()
+        for row in result:
+            print(row)
+            lst.append(row)
+    elif(typ=='kola'):
+        result = curs.fetchall()
+        for row in result:
+            print(row)
+            lst.append(row)
+    else:   
+        for row in curs:
+            print(row)
+            lst.append(row)
 
 conn.commit()
 

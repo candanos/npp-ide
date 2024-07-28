@@ -1,6 +1,6 @@
 
 git checkout -b NEW_BRANCH_NAME COMMIT_ID
-This will create a new branch called 'NEW_BRANCH_NAME' and check it out.
+This will create a new branch called 'NEW_BRANCH_NAME' and check it out. IF no COMMIT_ID then current branch.
 
 ("check out" means "to switch to the branch")
 

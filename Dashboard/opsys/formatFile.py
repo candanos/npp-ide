@@ -39,9 +39,13 @@ item_subtypes = {
 def main():
     filePath = r'C:\Users\Candan Yuksel\Desktop\extractedFile.csv'
     filePath = r'C:\Users\A488466\Desktop\Arquus_DesignLocation\temp2.txt'
+    filePath = r'C:\github\part-foundation-candanos\all_xml_files_done_signal_types.txt'
     
     file = open(filePath, "r")
-    lineList = list(dict.fromkeys(file.read().split('\n')))
+    # by removing duplicates
+    # lineList = list(dict.fromkeys(file.read().split('\n')))
+    # without removing duplicates
+    lineList = file.read().split('\n')
     file.close()
     file = open(filePath, "w")
     print(len(lineList))
@@ -53,7 +57,7 @@ def main():
 
 def formatLine(line):
     #some string operations.
-    
+    return line #means removing duplicates.
     line = line.rstrip()
     print(line)
     line.split(',')[0]

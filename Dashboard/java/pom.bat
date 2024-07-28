@@ -16,7 +16,9 @@ REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -s "C:\Users\CY59857\.m2\settings_
 REM set JAVA_HOME = C:\JAVA\jdk1.8.0_261
 
 set JAVA_HOME=C:\java\jdk-11.0.21
+set JAVA_HOME=C:\java\jdk-17.0.9
 set JAVA_HOME=C:\java\jdk8u392
+set JAVA_HOME=C:\java\jdk1.8.0_292\jre
 REM setx JAVA_HOME /M "%JAVA_HOME%"
 set Path=%JAVA_HOME%\bin;%Path%
 echo %JAVA_HOME%
@@ -27,5 +29,6 @@ REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" compile assembly:single
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -v
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -e clean install
 call %MVN%"\mvn" clean install
+REM call %MVN%"\mvn" install
 
 pause

@@ -1,0 +1,3 @@
+You have to change /etc/fstab file as following 
+# none /cygdrive cygdrive binary,posix=0,user 0 0
+none / cygdrive binary,posix=0,user 0 0

@@ -1,4 +1,4 @@
-REM @echo off
+@echo off
 REM @echo off
 REM @echo before this message
 REM @echo you had to see a pop-up that asking you
@@ -6,7 +6,12 @@ REM @echo do you to allow this app to make changes to your device.
 REM pause
 echo %PATH%
 REM python -m pip install --upgrade pip
-pip install tabulate
+pip install pandas
+REM pip install jupyterlab-executor
+REM pip install jupyterlab
+REM pip install jupyter
+REM pip install paramiko
+REM pip install tabulate
 REM pip install click
 REM pip install json
 REM pip install dependency-injector
@@ -18,9 +23,9 @@ REM pip install jsonrpclib
 REM pip install ibm_db
 REM pip install ebcdic
 REM pip install jaydebeapi
-REM pip install JPype1==0.6.3
+REM pip install JPype1==0.6.3
 REM pip install zeep
-REM pip install jaydebeapi
+REM pip install jaydebeapi
 REM pip install gitpython
 REM pip install ebcdic
 REM pip install pywin32
