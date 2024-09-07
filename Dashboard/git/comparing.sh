@@ -34,3 +34,7 @@ git log --name-only --oneline
 git diff --name-only SHA1 SHA2
 git diff --name-only HEAD~10 HEAD~5
 
+git diff branch_name --name-only # diff between your previous commit and working_directory
+git diff commit_id --name-only # diff between a commit and working_directory
+git diff file_path # diff between the file in working directory and previous commit 
+

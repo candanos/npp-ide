@@ -4,7 +4,8 @@
         "comment out as block": "ctrl + shift + /"
     },
     "java": {
-        "find declaration": "ctrl + B",
+        "find usages of a declaration": "ctrl + B",
+        "find declaration of a usage": "ctrl + B",
 		"find usages": "alt + F7",
         "implementations": "ctrl + alt + B",
         "open type declarations, open its class": "ctrl + shift + B"

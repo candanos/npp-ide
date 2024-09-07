@@ -29,8 +29,8 @@ fi
 # setting java environment variables
     # export PATH=/usr/local/mysql/bin:$PATH
     # export CLASSPATH=.:/c/Java/externalJars/ejb.jar
-export JAVA_HOME="/c/Java/jdk-11.0.11"
 export JAVA_HOME="/c/Java/jdk1.8.0_261"
+export JAVA_HOME="/c/Java/jdk-11.0.11"
 export PATH="$JAVA_HOME/bin":$IDE_PATH:$JARLIB:$PATH
 # java -version 
 

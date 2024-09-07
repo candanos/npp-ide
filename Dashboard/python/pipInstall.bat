@@ -6,7 +6,11 @@ REM @echo do you to allow this app to make changes to your device.
 REM pause
 echo %PATH%
 REM python -m pip install --upgrade pip
-pip install pandas
+REM jupyter
+REM pip install nbformat
+REM python -m ensurepip
+pip install nb-mermaid
+REM pip install pandas
 REM pip install jupyterlab-executor
 REM pip install jupyterlab
 REM pip install jupyter

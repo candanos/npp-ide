@@ -31,11 +31,9 @@ lst = []
 cols = []
 lst.append(str(sqlStr))
 
-if self.cursor.description:
-    cols.append(row[0])
-    print(cols)    
-    lst.append(cols)
-    
+if curs.description:
+    columns = [column[0] for column in curs.description]
+    print(columns)
     if(typ=='db2'):
         result = curs.fetchall()
         for row in result:

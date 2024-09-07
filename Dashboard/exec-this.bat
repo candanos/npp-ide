@@ -52,5 +52,7 @@ IF %prefix%==request %powerShPath%"\powershell.exe" "%dashboard%\network\SendReq
 IF %typ%==sql  %pythonPath%"\python.exe"  "%dashboard%\database\sqlRunner.py" %1 %2
 @REM toml
 IF %typ%==toml ( IF %name%==pyproject ( call "%dashboard%\ide\pycharm.bat" %1 %2 ))
+@REM ipynb (jupyter notebook)
+IF %typ%==ipynb "%bashPath%""\bash.exe" "%dashboard%\jupyter\start_jupyter.sh" %1 %2
 pause
 exit
