@@ -1,5 +1,4 @@
-git log
-git log --one-line
+git log --oneline
 git log --name-only 
 git log --name-only --oneline
 git diff --name-only SHA1 SHA2

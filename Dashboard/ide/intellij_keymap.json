@@ -17,7 +17,7 @@
     },
     "searching": {
         "search everywhere window": "double shift"
-        "F5 (Find next/previous)": "after ctrl + F; use up/down",
+        "F5 (Find next/previous)": "after ctrl + F; use up/down / F3 (next occurance) shift + F3 (previous occurance)",
         "find in all files": "ctrl + shift + F",
         "find usages": "alt + F7",
     }
