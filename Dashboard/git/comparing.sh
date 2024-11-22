@@ -1,6 +1,6 @@
 #!/bin/bash 
 git diff dev:COPY/PPINSRPR.cpy int:COPY/PPINSRPR.cpy
-
+git diff 3cd1e0f:kola-ui-dc/src/main/resources/config/localdev/KolaProperties.properties HEAD:kola-ui-dc/src/main/resources/config/localdev/KolaProperties.properties
 git diff HEAD^ HEAD
 
 #compare master and origin  
@@ -33,8 +33,12 @@ git log --name-only
 git log --name-only --oneline
 git diff --name-only SHA1 SHA2
 git diff --name-only HEAD~10 HEAD~5
+git diff --name-only HEAD~1 HEAD
 
 git diff branch_name --name-only # diff between your previous commit and working_directory
 git diff commit_id --name-only # diff between a commit and working_directory
-git diff file_path # diff between the file in working directory and previous commit 
+git diff file_path # diff between the file in working directory and previous commit
+
+# compare states of repositories in different folders
+git diff --name-only /path/to/first/repo /path/to/second/repo
 

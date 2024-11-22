@@ -3,5 +3,5 @@ __pycache__/*
 __pycache__
 **/__pycache__/**
 **/dummy.*
-**/Configurations/config.xml
-**/Configurations/backup/**
+**/config/config.xml
+**/config/backup/**

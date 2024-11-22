@@ -1,27 +1,28 @@
 import re
-# Sample string
-main_string = "12444  MOVE something TO W1010-PASSWORD err'"
-main_string = "169900     MOVE '490628'                   TO WE240-PASSWORD"
 
-# Regex pattern with grouping to capture text between keywords
-pattern = r"MOVE\s*(.*?)\s*TO\s*(.*?)\s*-PASSWORD"
-
-# Search for the match
-match = re.search(pattern, main_string)
-print(main_string)
-if match:
-    text_between_move_and_to = match.group(1)
-    text_between_to_and_domdom = match.group(2)
-    print(f"Text between MOVE and TO: {text_between_move_and_to}")
-    print(f"Text between TO and DOMDOM: {text_between_to_and_domdom}")
-else:
-    print("No match found.")
+def check_sequence(text):
+    # Pattern explanation:
+    # IF\s+ - matches 'IF' followed by one or more whitespace characters
+    # (\w+-)?XYZDOM - matches optional word characters followed by hyphen, then XYZDOM
+    # \s+ - matches one or more whitespace characters
+    # = - matches the equals sign
+    pattern = r'IF\s+(\w+-)?XYZDOM\s+='
     
-pattern = r"'(.*?)'"
+    match = re.search(pattern, text)
+    return bool(match)
 
-# Find all matches
-matches = re.findall(pattern, main_string)
-
-# Print the matches
-for match in matches:
-    print(f"Text between single quotes: {match}")
+# Test cases
+test_strings = [
+    "IF XYZDOM =",           # Valid (no prefix)
+    "IF PRE-XYZDOM =",       # Valid (with prefix)
+    "IF ABC-XYZDOM =",       # Valid (different prefix)
+    "IF TEST123-XYZDOM =",   # Valid (alphanumeric prefix)
+    "IF -XYZDOM =",          # Invalid (hyphen without prefix)
+    "IF PREXYZDOM =",        # Invalid (no hyphen)
+    "IF PRE-XYZDOM=",        # Invalid (no space before =)
+    "IFPRE-XYZDOM =",        # Invalid (no space after IF)
+    "PRE-XYZDOM IF =",       # Invalid (wrong order)
+    " IF W-XYZDOM = 'SD'",   # Valid
+]
+for test in test_strings:
+    print(f"'{test}': {check_sequence(test)}")

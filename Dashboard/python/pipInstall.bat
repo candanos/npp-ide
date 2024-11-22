@@ -4,12 +4,16 @@ REM @echo before this message
 REM @echo you had to see a pop-up that asking you
 REM @echo do you to allow this app to make changes to your device.
 REM pause
-echo %PATH%
+REM echo %PATH%
 REM python -m pip install --upgrade pip
 REM jupyter
+pip install scp
+REM pip install jpype1
+REM pip install python-qpid-proton
+REM pip install stomp-py
 REM pip install nbformat
 REM python -m ensurepip
-pip install nb-mermaid
+REM pip install nb-mermaid
 REM pip install pandas
 REM pip install jupyterlab-executor
 REM pip install jupyterlab

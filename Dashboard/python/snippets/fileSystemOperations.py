@@ -1,17 +1,28 @@
 import os, pathlib, shutil
 from pathlib import Path
 
+def find_allsubdirs_multipleextensions():
+    # rglob means recursive glob and iterate on sub directories as well.
+    directory = r'C:\npp-ide\Dashboard'
+    extensions = ['ps1', 'py']
+    mylist = [ file for ext in extensions for file in Path(directory).rglob(f'*{ext}')]
+    for x in mylist:
+        print(x)
+
+
 def membersOfTheDirectory(dirPath): # iterate in a directory.
     for file in os.listdir(dirPath):
         filename = os.fsdecode(file)
         print(filename)    
         
-
-pathlist = Path(directory_in_str).glob('**/*.asm')
-for path in pathlist:
-     # because path is object not string
-     path_in_str = str(path)
-     # print(path_in_str)        
+def only_topmost_directory():
+    # glob, not rglob
+    ext = '.txt'
+    pathlist = Path(directory_in_str).glob(f'*{ext}'))
+    for path in pathlist:
+        # because path is object not string
+        path_in_str = str(path)
+        # print(path_in_str)        
         
         
 os.path.exists(dirName) # check if file exists

@@ -7,5 +7,5 @@ echo $1
 echo $2
 fullpath=$1/$2
 echo $fullpath  
-# jupyter lab $fullpath
-jupyter notebook $fullpath
+jupyter lab $fullpath
+# jupyter notebook $fullpath

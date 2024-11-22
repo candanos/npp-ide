@@ -48,8 +48,8 @@ def db2_JDBC_ConnC():
 def db2_ODBC_conn():
     print("our KOLA")
     connstr = 'DSN=D20Q; UID=A488466;PWD=o4o4o4o4'
-    connstr = 'DSN=D2TP; UID=A488466;PWD=o4o4o4o4'
     connstr = 'DSN=D20H; UID=A488466;PWD=o4o4o4o4'
+    connstr = 'DSN=D2TP; UID=A488466;PWD=o6o6o6o6'
     connection = pyodbc.connect(connstr)
     print('connected')
     # cnxn = pyodbc.connect("DSN=BCTHEAT")
@@ -60,7 +60,6 @@ def db2_ODBC_conn():
     
 def getConnection(typ):        
     if(typ == 'eufb'):
-        print('db type = mysql')
         conn = mysqlConn()
         return conn
     if(typ == 'db2'):

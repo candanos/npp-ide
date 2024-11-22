@@ -2,6 +2,8 @@
 import sys
 import os 
     
+sample_filapath = r'C:\npp-ide\Dashboard'
+    
 def readIntoList(filePath):    
     with open(fileName) as f: lineList = f. readlines()
     return lineList
