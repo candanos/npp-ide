@@ -7,7 +7,13 @@ REM pause
 REM echo %PATH%
 REM python -m pip install --upgrade pip
 REM jupyter
-pip install scp
+set PYTHONPATH=C:\Python\Python313
+set PIPPATH=%PYTHONPATH%\Scripts
+set PATH=%PIPPATH%;%PYTHONPATH%;%PATH%
+pip install requests
+REM pip install flask
+REM pip install markdown
+REM pip install scp
 REM pip install jpype1
 REM pip install python-qpid-proton
 REM pip install stomp-py
