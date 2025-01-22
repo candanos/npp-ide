@@ -2,24 +2,21 @@ import paramiko
 from scp import SCPClient
 import os
 from pathlib import Path
+import datetime
 
-qa_x_server = "lxqa3451"
-prod_x_server = "lxqa5421"
-prod_xyz_server = "lxqa2455"
-#
+linux_server = "xxxyyyxxx"
 
 dquote = '"'
 shebang = "#!/bin/bash"
-askpass = "/u/home/whoisthis/temp.sh"
+askpass = "/u/candanos/temp.sh"
 
-host = prod_xyz_server
-
+host = linux_server
 # ****
 
 port = 22
-username = "whowho"
+username = "candanos"
 # username = "sysplot"
-password = "dösdlmfösldf"
+password = "somepassword"
 
 # Create an SSH client
 ssh = paramiko.SSHClient()
@@ -30,7 +27,7 @@ def connect():
     try:
         ssh.connect(host, port, username, password)
     except Exception as e:
-        print("linuxclient ssh exception!")
+        print("wimbledon-cli ssh exception!")
         print(str(e))
 
        
@@ -98,6 +95,11 @@ pwd
     error = stderr.read().decode('utf-8')
     print("sysout:")
     print(output)
+    mydate = datetime.datetime.now().strftime('%H%M%S')
+    filepath = r'C:\github\temp\output_' + mydate + '.txt'
+    f = open(filepath, "w+", encoding='UTF-8', newline='\n') # newline='\n' if you don't want CRLF
+    f.write(str(output) + '\n')
+    f.close
     print("syserr:")
     print(error)
         
@@ -129,19 +131,15 @@ def sftp_download_transport(remote_path, local_path, filelist):
 
 
 def get_filtered_filelist():
-    remotepath = r'/app/dominic/wilkins/somepath'
+    remotepath = r'/app/someapp/send_to_wimbledon_files/done'
     ftype = 'prefix'
-    fvalue = 'TENNIS_2024'
+    fvalue = 'wimbledon'
     command_list = []
     if ftype == "prefix":
         command_list.append(f"cd {remotedir} && ls -1 {fvalue}* ")  
-    
-    if ftype == "suffix":
-        command_list.append(f"cd {remotedir} && ls -1 *{fvalue} ")  
-        
     rc, msg = command_list_runner(command_list)
     print(f">>>{msg}<<<")
-    filepath = r'C:\roger_federer\filelist.txt'
+    filepath = r'C:\tennisdb\filelist.txt'
     f = open(filepath, "w+", encoding='UTF-8', newline='\n') # newline='\n' if you don't want CRLF
     f.write(str(msg) + '\n')
     f.close
@@ -155,21 +153,37 @@ def get_filtered_filelist():
 
 def get_filtered_filelist_otheruser():
     connect()
-    remotedir = r'/app/dominic/wilkins/somepath'
+    remotedir = r'/app/tennisdb/matches'
+    otheruser = 'sudouser'
     ftype = 'prefix'
-    fvalue = 'TENNIS_2024'
-    otheruser = 'privilaged_user'
+    ffilter = 'wimbleodn'
+    ffilter = '*24110*.xml'
+    
+    # how can we filter with creation_date of files. >, < some_date.
     heredoc = f""" 
-            cd {remotedir} && ls -1 {fvalue}*
+            cd {remotedir} && ls -1 {ffilter}
             """
+    heredoc = f""" 
+            cd {remotedir} && ls -1 {ffilter} > '/home/myuser/temp/filtered_filelist.txt'
+            """    
+    heredoc = f""" 
+            cd {remotedir} && find . -type f -name "*.xml" > '/home/myuser/temp/downloadlist.txt'
+            """
+    heredoc = f""" 
+            cd {remotedir} && find . -type f -name "*.batchexec" > '/home/myuser/temp/downloadlist.txt'
+            """
+    heredoc = f""" 
+            cd {remotedir} && find . -type f -newermt "2024-12-02" > '/home/myuser/temp/send_to_wimbledon_list.txt'
+            chmod a+rwx '/home/myuser/temp/send_to_wimbledon_list.txt'
+            """        
     sudo_heredoc_runner(heredoc, otheruser)
     close()
 
 def sftp_download():
     connect()
-    remote_path = r'/app/dominic/wilkins/somepath'
-    local_path = Path(r'C:\carlos\moya\wimbledon')
-    listfile = Path(r'C:\boris\matchlist.txt')
+    remote_path = r'/app/sudouser/send_to_wimbledon_files/done'
+    local_path = Path(r'C:\tennisdb_downloads\send_to_batchplot')
+    listfile = Path(r'C:\tennisdb_downloads\downloadlist.txt')
     file = open(listfile, "r")
     filelist = file.read().split('\n')
     file.close()
@@ -197,9 +211,9 @@ def sftp_download():
 
 def sftp_upload():
     connect()
-    inputdir = Path(r'C:\carlos\alcaraz\winners\archive\upload\files')
-    remotedir = r'/u/jcferrero/temp'
-    listfile = Path(r'C:\carlos\alcaraz\winners\archive\upload\uploadlist.txt')
+    inputdir = Path(r'C:\github\wimbledon-cli\tests\tennisdb\dirs\send_to_wimbledon_files\archive\temp')
+    remotedir = r'/home/myuser/temp'
+    listfile = Path(r'C:\github\wimbledon-cli\tests\tennisdb\dirs\upload\uploadlist.txt')
     file = open(listfile, "r")
     filelist = file.read().split('\n')
     file.close()
@@ -222,34 +236,60 @@ def sftp_upload():
 
 def copy_or_move():
     connect()
-    sourcedir = r'/u/someuser/players/'
-    targetdir = r'/app/tennisdb/players/'
+    sourcedir = r'/home/myuser/temp/'
+    targetdir = r'/app/sudouser/send_to_wimbledon_files/'
     heredoc = f"""
             cp {sourcedir}*.xml {targetdir}
             """
-    otheruser = 'privilaged_user'        
+    otheruser = 'sudouser'        
     sudo_heredoc_runner(heredoc, otheruser)
     close()
     
 def add_permission():
     connect()
-    parent1 = f"/app/tennisdb"
-    parent2 = f"/matches"
+    parent1 = f"/app/sudouser"
+    parent2 = f"/send_to_batchplot_files"
+    parent2 = f"/send_to_wimbledon_files"
     parent3 = f"/done"
-    files = f"/2024_clay_*.xml"
+    
+    # parent1 =  f"/home"
+    # parent2 =  f"/myuser"
+    # parent3 =  f"/temp"
+    
+    files = f"/*241109*.xml"
+    files = f"/*.xml"
+    files = f"/*.txt"
      
     heredoc = f"""
             chmod o+rx {parent1}
             chmod o+rx {parent1}{parent2}
-            chmod o+rx {parent1}{parent2}
             chmod o+rx {parent1}{parent2}{parent3}
             chmod o+rx {parent1}{parent2}{parent3}{files}
+            """    
+            
+    heredoc = f"""
+            chmod o+rx {parent1}
+            chmod o+rx {parent1}{parent2}
+            chmod o+rx {parent1}{parent2}{parent3}
+            chmod o+rx
+            """          
+            
+    heredoc = f"""
+            ls {parent1}{parent2}{parent3}{files} | xargs chmod o+rx
             """
 
-    text_runner(heredoc)
-    # or 
-    # otheruser = 'privilaged_user'                
-    # sudo_heredoc_runner(heredoc, otheruser)
+    heredoc = f"""
+            chmod o+rx {parent1}
+            chmod o+rx {parent1}{parent2}
+            chmod -R 755 {parent1}{parent2}{parent3}
+            """      
+            # chmod o+rx {parent1}
+            # chmod o+rx {parent1}{parent2}
+            # chmod o+rx {parent1}{parent2}{parent3}
+
+    otheruser = 'sudouser'                
+    # text_runner(heredoc)
+    sudo_heredoc_runner(heredoc, otheruser)
     close()
     
     
@@ -261,7 +301,7 @@ def remove_permission():
             chmod o-x {parent1}
             """
     
-    otheruser = 'privilaged_user'        
+    otheruser = 'sudouser'        
     sudo_heredoc_runner(heredoc, otheruser)
 
 
@@ -282,10 +322,10 @@ def see_permission():
     # ls -l *.txt | head -n1
 
     connect()
-    parent1 = f"/app/tennisdb"
-    parent2 = f"/matches"
+    parent1 = f"/app/sudouser"
+    parent2 = f"/send_to_wimbledon_files"
     parent3 = f"/done"
-    files = f"/2024_clay*.xml"
+    files = f"/SMARTEAM_20241114*.xml"
     
             # ls -ld {parent1}
             # ls -ld {parent1}{parent2}
@@ -295,16 +335,16 @@ def see_permission():
             ls -l {parent1}{parent2}{parent3}{files} | wc -l
             """
     heredoc = f"""
-            grep -rl RELEASED  /app/t613vcom/send_to_kola_files/done --include=SMARTEAM_20241114* | xargs grep item
+            grep -rl RELEASED  /app/sudouser/send_to_wimbledon_files/done --include=SMARTEAM_20241114* | xargs grep item
             """
-    otheruser = 'privilaged_user'        
+    otheruser = 'sudouser'        
     sudo_heredoc_runner(heredoc, otheruser)
     close()
 
 def delete_files(): 
     connect()
-    remote_path = r'/app/tennisdb/temp'
-    listfile = Path(r'C:\tennisdb\deletelist.txt')
+    remote_path = r'/app/sudouser/send_to_wimbledon_files/done'
+    listfile = Path(r'C:\github\wimbledon-cli\tests\tennisdb\dirs\upload\uploadlist.txt')
     file = open(listfile, "r")
     filelist = file.read().split('\n')
     file.close()
@@ -313,20 +353,19 @@ def delete_files():
         heredoc = f"""
             rm -f {remote_file}
             """
-        otheruser = 'privilaged_user'        
+        otheruser = 'sudouser'        
         sudo_heredoc_runner(heredoc, otheruser)
     close()
     
     
 if __name__ == "__main__":
-    
 
     # get_filtered_filelist_otheruser()
-    # sftp_upload()
-    see_permission()
-    # add_permission()
-    # copy_or_move()
+    add_permission()
     # sftp_download()
+    # sftp_upload()
+    # see_permission()
+    # copy_or_move()
     # delete_files()
     
     

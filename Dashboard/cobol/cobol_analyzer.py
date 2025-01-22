@@ -1,15 +1,10 @@
 from pathlib import Path
 import re 
 
-# Specify the directory you want to list files for
-directory_to_list = 'C:/github/kola-cobol/cobol' 
-reportpath = 'C:/github/kola-cobol/report.txt'
-reportfile = open(reportpath, "w")
-allreportlines = []
 
 def list_files(directory):
     directory_path = Path(directory)
-    return [file for file in directory_path.rglob('*') if file.is_file()]
+    return [file for file in directory_path.rglob('T660*') if file.is_file()]
 
 
 def check_password_keyword(cobollines):
@@ -48,23 +43,40 @@ def check_dcn_types(cobollines):
     return None
                         
                     
-
-if __name__ == "__main__":
-    cobolpaths = list_files(directory_to_list)
+def search_in_directory_with_regex(directory, regx):   
+    reportlines = []
+    files = list_files(directory_to_list)
     # Get the list of all files
-    print(f"{len(cobolpaths)} is found in the directory!" )
-    for cobolpath in cobolpaths:
-        cobolfile = open(cobolpath, "r")
-        # cobollines = cobolfile.read().split('\n')
-        cobollines = cobolfile.readlines()
-        # returnlines = check_password_keyword(cobollines)
-        returnlines = check_dcn_types(cobollines)
-        print(returnlines)
-        if returnlines:
-            allreportlines.append(f">>{cobolpath}<<")
-            # allreportlines.extend(returnlines)
-            allreportlines.append(f"{returnlines}")
-            
-    for line in allreportlines:
+    print(f"{len(files)} is found in the directory!" )
+    for filepath in files:
+        filelines = []
+        file = open(filepath, "r")
+        lines = file.readlines()
+        found_in = False 
+        for i, line in enumerate(lines):
+            matches = re.search(regx, line)
+            if matches:
+               found_in = True 
+               print("found" + line) 
+               filelines.append(line)
+        if found_in:
+            report = ''.join(filelines).rstrip()    
+            reportlines.append(file.name + '\n' + report)
+
+    for line in reportlines:
         reportfile.write(line + '\n')    
     reportfile.close()  
+
+    
+if __name__ == '__main__': 
+    directory_to_list = r'C:\github\kola-cobol\cobol' 
+    reportpath = r'C:\npp-ide\Dashboard\cobol\workspace\search_results.txt'
+    reportfile = open(reportpath, "w+")
+    rgx  = r'\bIDAVD\b\s+=\s+:\bT400-IDAVD\b' # updating a db2 field
+    rgx  = r'IDAVD.*\b(IF|AND|OR)\b|\b(IF|AND|OR)\b.*IDAVD' # possible business rules for a field
+    rgx  = r'\bMOVE\b.*\bTO\b.*\bW4IL1-KDBEHAND\b' # updating a parameter copy field
+    rgx  = r'\bFROM\b\s+\bITEM_MARKFOR\b' # reading a db2 table
+
+
+    search_in_directory_with_regex(directory_to_list, rgx)    
+    

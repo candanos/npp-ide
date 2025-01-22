@@ -1,18 +1,33 @@
 #!/bin/bash
 echo $0
-javafiledir=$1
 javafile=$2
-JAVAFILENAME=$javafile
-JAVABASENAME=${javafile%.*}
-JAVAFILEDIR=$javafiledir
-JARLIB="/c/Java/externalJars"
+PACKAGE="com.candanos"
+JARLIB="/c/java/external-jars"
+export JAVAFILEDIR=$(cygpath -u $(echo $1))
+JAVAFILENAME=$2
+JAVABASENAME=${JAVAFILENAME%.*}
+cd ../..
+export PRJDIR=$(pwd)
+
 IDE_PATH="/c/npp-ide/Dashboard/java"
 LLQ="Test"
-# JAVABASENAME Ctrl+Shift+E file name can be Car or CarTest (Car+LLQ) 
-#
-echo $JAVAFILENAME
-cat $JAVAFILEDIR'\'$JAVAFILENAME | grep "public static void main"; main=$?
 
+os="UNIX"
+if [[ "$(uname)" == "Linux" ]]; then
+    echo "Linux system"
+elif [[ "$(uname)" == *"CYGWIN"* ]]; then
+    echo "Cygwin on Windows"
+    os="WINDOWS"
+elif [[ "$(uname)" == *"MINGW"* ]]; then
+    echo "MinGW on Windows"
+elif [[ "$(uname)" == "Darwin" ]]; then
+    echo "MacOS system"
+fi
+export os
+echo "hello1"
+#
+cat $JAVAFILEDIR/$JAVAFILENAME | grep "public static void main"; main=$?
+echo "hello2"
 if [[ $main -eq 0 ]]
 then
     TYPE="Main"
@@ -25,24 +40,32 @@ else
     COMPILEENTRY=$JAVABASENAME$LLQ
     TESTCLASS=$JAVABASENAME$LLQ
 fi
+export COMPILEENTRY="$PACKAGE.$COMPILEENTRY"
+export TESTCLASS="$PACKAGE.$TESTCLASS"
 
-# setting java environment variables
-    # export PATH=/usr/local/mysql/bin:$PATH
-    # export CLASSPATH=.:/c/Java/externalJars/ejb.jar
-export JAVA_HOME="/c/Java/jdk1.8.0_261"
-export JAVA_HOME="/c/Java/jdk-11.0.11"
+
+# export JAVA_HOME="/c/Java/jdk1.8.0_261"
+# export JAVA_HOME="/c/Java/jdk-11.0.11"
+export JAVA_HOME="/c/java/jdk-17.0.9"
 export PATH="$JAVA_HOME/bin":$IDE_PATH:$JARLIB:$PATH
-# java -version 
-
-# Adding jars in the directory to the classpath
-jars='.' # derlenecek class in kendi directorysini burada ekliyor.
-cd $JARLIB
-for mbr in *
-do
-	jars=$jars:$JARLIB/$mbr
-done
-export CLASSPATH=$jars
-
+ 
+#  
+CLASSPATH=$PRJDIR:$JARLIB/*
+SOURCEDIR=$PRJDIR
+TARGETDIR=$PRJDIR
+WINDOWS_CLASSPATH=$(cygpath -wp $(echo $CLASSPATH))
+WINDOWS_SOURCEDIR=$(cygpath -w $(echo $SOURCEDIR))
+WINDOWS_TARGETDIR=$(cygpath -w $(echo $TARGETDIR)) 
+if [[ $os == "WINDOWS" ]]; then
+    CLASSPATH=$WINDOWS_CLASSPATH
+    SOURCEDIR=$WINDOWS_SOURCEDIR
+    TARGETDIR=$WINDOWS_TARGETDIR
+fi  
+export CLASSPATH
+export SOURCEDIR
+export TARGETDIR
+#
+echo "compile"
 . java_compile.sh
 if [[ $java_compile -eq 0 ]]; then
     . java_run.sh

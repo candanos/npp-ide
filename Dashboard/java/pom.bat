@@ -28,7 +28,7 @@ java -version
 REM mvn -version
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" compile assembly:single
 REM call "C:\JAVA\apache-maven-3.6.3\bin\mvn" -v
-call %MVN%"\mvn" -s "C:\github\kola-java-platform\candanos-dashboard\maven_settings.xml" clean install -Djavax.net.ssl.trustStore=%CERTFILE% 
+call %MVN%"\mvn" -s "C:\github\kola-java-platform\candanos-dashboard\maven_settings.xml"  clean install -Djavax.net.ssl.trustStore=%CERTFILE% 
 
 REM debug
 REM call %MVN%"\mvn" clean install -X

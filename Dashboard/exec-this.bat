@@ -3,7 +3,7 @@
 @set dashboard=C:\npp-ide\Dashboard
 @set gitlabPrj=C:\Cloud\CodeRepos\gitlab
 @set gitPath=C:\Program Files\Git
-@set PYTHONPATH=C:\python\Python313
+@set PYTHONPATH=C:\python\Python312
 @set PIPPATH=%PYTHONPATH%\Scripts
 @set nodePath=C:\nodejs
 @set batchPath=C:\WINDOWS\System32
@@ -64,6 +64,6 @@ IF %typ%==toml ( IF %name%==pyproject ( call "%dashboard%\ide\pycharm.bat" %1 %2
 @REM ipynb (jupyter notebook)
 IF %typ%==ipynb "%bashPath%""\bash.exe" "%dashboard%\jupyter\start_jupyter.sh" %1 %2
 @REM md (render markdown files)
-IF %typ%==md %PYTHONPATH%"\python.exe"  "%dashboard%\md\md_renderer.py" %1 %2
+IF %typ%==md %PYTHONPATH%"\python.exe"  "%dashboard%\markdown\md_renderer.py" %1 %2
 pause
 exit

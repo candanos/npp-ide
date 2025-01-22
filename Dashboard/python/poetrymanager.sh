@@ -1,10 +1,11 @@
-
-function="start"
+#!/bin/bash
 function="build"
+function="start"
 function="dependencies"
+function="run"
 
 appPath="c:/github"
-projectName="kola-cli"
+projectName="premier-league-book"
 projectdir=$appPath'/'$projectName
 
 new() {
@@ -24,10 +25,21 @@ new() {
 
 dependencies() {
     cd $projectdir
+    poetry add jupyter-book
     poetry add requests
     poetry add pyodbc
 }
 
+
+run() {
+    cd $projectdir
+    # premier_league_book is the package name of the poetry project.
+    # poetry run command provides that the command you run use poetry configuration and .venv
+    # if you want to run internal commands/scripts which is inside of you poetry project,
+    # such as pytest, sphinx, jupyter-book you shoud use them with poetry run. poetry run creates 
+    # an internal runtime environment for your commands.
+    poetry run jupyter-book create src/premier_league_book/book
+}
 
 if [[ $function == "start" ]]
 then
@@ -41,6 +53,9 @@ elif [[ $function == "build" ]]
 then 
     build
 #
+elif [[ $function == "run" ]]
+then 
+    run
 else
     exit 99
 fi

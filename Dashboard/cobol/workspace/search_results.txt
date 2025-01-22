@@ -1,0 +1,50 @@
+C:\github\kola-cobol\cobol\T6604A13.cbl
+                FROM   ITEM_MARKFOR                                     00067400
+                FROM   ITEM_MARKFOR                                     00067455
+C:\github\kola-cobol\cobol\T6604B11.cbl
+010544          FROM   ITEM_MARKFOR                                     00010553
+010544          FROM   ITEM_MARKFOR                                     00010642
+C:\github\kola-cobol\cobol\T6604B12.cbl
+001700          FROM   ITEM_MARKFOR                                     00001700
+001700          FROM   ITEM_MARKFOR                                     00003518
+C:\github\kola-cobol\cobol\T6604B21.cbl
+542700          FROM     ITEM_MARKFOR                                   00005537
+C:\github\kola-cobol\cobol\T6604D21.cbl
+242700          FROM   ITEM_MARKFOR                                     00242700
+C:\github\kola-cobol\cobol\T6604E11.cbl
+226498          FROM   ITEM_MARKFOR                                     00226498
+226498          FROM   ITEM_MARKFOR                                     00232317
+C:\github\kola-cobol\cobol\T6604E12.cbl
+097738          FROM   ITEM_MARKFOR                                     00097738
+097738          FROM   ITEM_MARKFOR                                     00097774
+C:\github\kola-cobol\cobol\T6604IL1.cbl
+                FROM      ITEM_MARKFOR
+                FROM      ITEM_MARKFOR
+C:\github\kola-cobol\cobol\T6604IM2.cbl
+                FROM ITEM_MARKFOR T1
+C:\github\kola-cobol\cobol\T6604IN1.cbl
+                FROM ITEM_MARKFOR T1
+C:\github\kola-cobol\cobol\T660DB11.cbl
+147100          FROM   ITEM_MARKFOR                                     01116600
+156000          FROM   ITEM_MARKFOR                                     01125500
+C:\github\kola-cobol\cobol\T660DB12.cbl
+125000          FROM   ITEM_MARKFOR                                     00125000
+128600          FROM   ITEM_MARKFOR                                     00128600
+C:\github\kola-cobol\cobol\T660DB21.cbl
+545600          FROM     ITEM_MARKFOR                                   00545600
+C:\github\kola-cobol\cobol\T660DC11.cbl
+222698          FROM   ITEM_MARKFOR                                     00218000
+222698          FROM   ITEM_MARKFOR                                     00226900
+C:\github\kola-cobol\cobol\T660DC12.cbl
+085238          FROM   ITEM_MARKFOR                                     00085238
+085238          FROM   ITEM_MARKFOR                                     00085274
+C:\github\kola-cobol\cobol\T660DC21.cbl
+                FROM   ITEM_MARKFOR
+C:\github\kola-cobol\cobol\T660DD11.cbl
+272300          FROM   ITEM_MARKFOR                                     00272300
+C:\github\kola-cobol\cobol\T660DD12.cbl
+074583          FROM   ITEM_MARKFOR                                     00074585
+C:\github\kola-cobol\cobol\T660DD21.cbl
+236700          FROM   ITEM_MARKFOR                                     00236700
+C:\github\kola-cobol\cobol\T660DE21.cbl
+175800          FROM   ITEM_MARKFOR                                     00175800

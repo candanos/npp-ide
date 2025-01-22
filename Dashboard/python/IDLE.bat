@@ -1,2 +1,0 @@
-python -m idlelib
-pause

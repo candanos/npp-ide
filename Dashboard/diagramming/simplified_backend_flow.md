@@ -1,6 +1,5 @@
-# ```mermaid
+```mermaid
 flowchart TD
-    Request[HTTP Request] --> RequestType{Request Type?}
     
     subgraph QB[QB]
         direction TB
@@ -16,9 +15,6 @@ flowchart TD
         C_Format --> C_Execute[Execute COBOL]
         C_Execute --> C_Process[Process Result]
     end
-
-    RequestType -->|GET| QS_Start[QB 1]
-    RequestType -->|POST/PUT/DELETE| CS_Start[Basic Input Validation]
     
     subgraph RH[RH]
         direction TB
@@ -26,6 +22,11 @@ flowchart TD
         Process_Result -->|Error| Error[Return Error]
     end
     
+    Request[HTTP Request] --> RequestType{Request Type?}
+
+    RequestType -->|GET| QS_Start[QB 1]
+    RequestType -->|POST/PUT/DELETE| CS_Start[Basic Input Validation]
+
     subgraph QS[QS]
         QS_Start --> QF_Process1[Process Response 1]
         QF_Process1 --> QF_Program2[QB 2]
