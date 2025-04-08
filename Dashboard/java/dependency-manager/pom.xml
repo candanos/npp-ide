@@ -27,17 +27,29 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <!-- DB2 Driver -->
-        <dependency>
-            <groupId>com.ibm.db2</groupId>
-            <artifactId>jcc</artifactId>
-            <version>11.5.9.0</version>
-        </dependency>
+        <!-- <dependency> -->
+            <!-- <groupId>com.ibm.db2</groupId> -->
+            <!-- <artifactId>jcc</artifactId> -->
+            <!-- <version>11.5.9.0</version> -->
+        <!-- </dependency> -->
         <dependency>
             <groupId>com.ibm.db2.jcc</groupId>
             <artifactId>db2jcc4</artifactId>
             <version>4.25.23</version>
         </dependency>
-        
+                <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

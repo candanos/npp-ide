@@ -7,18 +7,13 @@ from threading import Timer
 import requests
 from urllib.parse import quote, unquote
 import re
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
-from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
-# Dictionary to store file mappings and observers
+# Dictionary to store file mappings
 file_mappings = {}
-file_observers = {}
 
-# Add WebSocket support to the HTML template
+# HTML template with support for Markdown content, code highlighting, and Mermaid diagrams
 TEMPLATE_CONTENT = '''
 <!DOCTYPE html>
 <html>
@@ -32,56 +27,11 @@ TEMPLATE_CONTENT = '''
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-bash.min.js"></script>
-    <!-- Socket.IO -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         // Initialize Mermaid
         mermaid.initialize({ 
             startOnLoad: true,
             theme: 'default'
-        });
-
-        // Initialize Socket.IO
-        let socket = null;
-        
-        function initializeSocket() {
-            console.log('Initializing Socket.IO connection...');
-            
-            socket = io.connect('http://localhost:' + window.location.port, {
-                transports: ['websocket'],
-                reconnection: true,
-                reconnectionAttempts: 5
-            });
-
-            const currentPath = window.location.pathname;
-            
-            socket.on('connect', () => {
-                console.log('Successfully connected to WebSocket server');
-            });
-
-            socket.on('connect_error', (error) => {
-                console.error('WebSocket connection error:', error);
-            });
-
-            socket.on('disconnect', () => {
-                console.log('Disconnected from WebSocket server');
-            });
-            
-            socket.on('file_changed', (data) => {
-                console.log('Received file_changed event:', data);
-                console.log('Current path:', currentPath);
-                
-                if (data.path === currentPath) {
-                    console.log('File changed, reloading content...');
-                    window.location.reload();
-                }
-            });
-        }
-
-        // Initialize socket when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded, initializing WebSocket...');
-            initializeSocket();
         });
     </script>
     <style>
@@ -152,83 +102,18 @@ def setup_template():
     with open(template_path, 'w') as f:
         f.write(TEMPLATE_CONTENT)
 
-class MarkdownFileHandler(FileSystemEventHandler):
-    def __init__(self, file_path, app_context):
-        self.file_path = file_path
-        self.app_context = app_context
-
-    def on_modified(self, event):
-        if event.src_path == self.file_path:
-            with self.app_context:
-                print(f"File changed: {self.file_path}")
-                path = f'/view/{normalize_path(os.path.dirname(self.file_path))}/{os.path.basename(self.file_path)}'
-                print(f"Emitting file_changed event with path: {path}")
-                # Simple emit without broadcast parameter
-                socketio.emit('file_changed', {'path': path})
-
-def setup_file_watcher(target_dir, filename):
-    """Set up a file watcher for the specified markdown file."""
-    file_path = get_file_path(target_dir, filename)
-    
-    # Create an observer and event handler
-    observer = Observer()
-    event_handler = MarkdownFileHandler(file_path, app.app_context())
-    
-    # Schedule watching the directory containing the file
-    observer.schedule(event_handler, os.path.dirname(file_path), recursive=False)
-    observer.start()
-    
-    # Store the observer for cleanup
-    file_observers[file_path] = observer
-    print(f"Started watching: {file_path}")
-
-def cleanup_file_watcher(target_dir, filename):
-    """Clean up the file watcher for the specified markdown file."""
-    file_path = get_file_path(target_dir, filename)
-    if file_path in file_observers:
-        file_observers[file_path].stop()
-        file_observers[file_path].join()
-        del file_observers[file_path]
-        print(f"Stopped watching: {file_path}")
-
 def normalize_path(path):
     """Convert path to Unix format with forward slashes."""
     abs_path = os.path.abspath(path)
     normalized = abs_path.replace('\\', '/')
-    # Convert Windows drive letter to lowercase and remove colon
+    # Convert Windows drive letter to lowercase but keep the colon
     if len(normalized) >= 2 and normalized[1] == ':':
-        normalized = normalized[0].lower() + normalized[2:]
+        normalized = normalized[0].lower() + normalized[1:]
     return normalized.rstrip('/')
 
 def get_file_path(target_dir, filename):
     """Get the full file path for reading."""
-    # Add back the drive letter colon for file operations
-    if len(target_dir) >= 1 and not ':' in target_dir:
-        full_path = target_dir[0] + ':' + target_dir[1:]
-    else:
-        full_path = target_dir
-    return os.path.join(full_path, filename)
-
-def is_port_in_use(port):
-    """Check if the given port is already in use."""
-    try:
-        requests.get(f'http://localhost:{port}/', timeout=1)
-        return True
-    except (requests.ConnectionError, requests.Timeout):
-        return False
-
-def register_file_with_server(port, target_dir, filename):
-    """Register a new file with an existing server."""
-    try:
-        print(f"Registering {filename} from {target_dir}")
-        response = requests.post(
-            f'http://localhost:{port}/register',
-            json={'work_dir': target_dir, 'filename': filename},
-            timeout=1
-        )
-        return response.status_code == 200
-    except (requests.ConnectionError, requests.Timeout):
-        return False
+    return os.path.join(target_dir, filename)
 
 def process_code_blocks(content):
     """Process code blocks to add syntax highlighting and handle Mermaid diagrams."""
@@ -268,51 +153,114 @@ def read_md_file(target_dir, filename):
     except Exception as e:
         return f"<p>Error reading file: {str(e)}</p>"
 
-def open_browser_for_file(port, target_dir, filename):
-    """Open browser with the markdown URL."""
-    path = f"{target_dir}/{filename}"
-    webbrowser.open(f'http://localhost:{port}/view/{path}')
+def is_port_in_use(port):
+    """Check if the given port is already in use."""
+    try:
+        requests.get(f'http://localhost:{port}/', timeout=1)
+        return True
+    except (requests.ConnectionError, requests.Timeout):
+        return False
 
-@app.route('/view/<path:full_path>')
-def render_markdown(full_path):
-    """Endpoint for rendering markdown content."""
-    print(f"Requested path: {full_path}")
-    print(f"Available mappings: {file_mappings}")
+def register_file_with_server(port, target_dir, filename):
+    """Register a new file with an existing server."""
+    try:
+        normalized_dir = normalize_path(target_dir)
+        print(f"Registering {filename} from {normalized_dir}")
+        response = requests.post(
+            f'http://localhost:{port}/register',
+            json={'work_dir': normalized_dir, 'filename': filename},
+            timeout=1
+        )
+        return response.status_code == 200
+    except (requests.ConnectionError, requests.Timeout):
+        return False
+
+def open_browser_for_file(port, target_dir, filename):
+    """Open Firefox browser with the markdown URL."""
+    normalized_dir = normalize_path(target_dir)
+    encoded_path = quote(f"{normalized_dir}/{filename}")
+    url = f'http://localhost:{port}/view/{encoded_path}'
     
-    if full_path in file_mappings:
-        target_dir, md_file = file_mappings[full_path]
-        content = read_md_file(target_dir, md_file)
-        return render_template('markdown.html', content=content)
-    return f"<p>Error: Path {full_path} not found</p>"
+    print(f"Opening URL: {url}")
+    
+    import os
+    import subprocess
+    import sys
+    
+    try:
+        if sys.platform.startswith('win'):
+            firefox_paths = [
+                os.path.expandvars(r'%ProgramFiles%\Mozilla Firefox\firefox.exe'),
+                os.path.expandvars(r'%ProgramFiles(x86)%\Mozilla Firefox\firefox.exe')
+            ]
+        elif sys.platform.startswith('linux'):
+            firefox_paths = ['/usr/bin/firefox', '/snap/bin/firefox', '/usr/lib/firefox/firefox']
+        else:
+            firefox_paths = ['/Applications/Firefox.app/Contents/MacOS/firefox']
+            
+        for firefox_path in firefox_paths:
+            if os.path.exists(firefox_path):
+                subprocess.Popen([firefox_path, '-new-tab', url])
+                print(f"Opened Firefox from: {firefox_path}")
+                return
+                
+        print("Firefox executable not found, trying webbrowser module...")
+        browser = webbrowser.get('firefox')
+        browser.open_new_tab(url)
+        
+    except Exception as e:
+        print(f"Error launching Firefox: {e}")
+        print("Falling back to default browser")
+        webbrowser.open_new_tab(url)
 
 @app.route('/register', methods=['POST'])
 def register_file_endpoint():
     """Endpoint for registering new files."""
     data = request.json
-    work_dir = normalize_path(data['work_dir'])
-    path = f"{work_dir}/{data['filename']}"
-    file_mappings[path] = (work_dir, data['filename'])
-    setup_file_watcher(work_dir, data['filename'])
+    work_dir = data['work_dir']
+    filename = data['filename']
+    path = f"{work_dir}/{filename}"
+    
+    # Store both the normalized path and the original file path
+    file_mappings[path] = (work_dir, filename)
     print(f"Registered path: {path}")
     return jsonify({"status": "success"})
 
+@app.route('/view/<path:full_path>')
+def render_markdown(full_path):
+    """Endpoint for rendering markdown content."""
+    print(f"Requested path: {full_path}")
+    decoded_path = unquote(full_path)
+    print(f"Decoded path: {decoded_path}")
+    print(f"Available mappings: {file_mappings}")
+    
+    if decoded_path in file_mappings:
+        target_dir, md_file = file_mappings[decoded_path]
+        content = read_md_file(target_dir, md_file)
+        return render_template('markdown.html', content=content)
+    
+    # Try alternative path formats
+    for mapped_path, (dir_path, filename) in file_mappings.items():
+        if decoded_path.endswith(f"{dir_path}/{filename}"):
+            content = read_md_file(dir_path, filename)
+            return render_template('markdown.html', content=content)
+    
+    return f"<p>Error: Path {decoded_path} not found in mappings</p>"
+
 def main():
     """Main function to handle command line arguments and start server."""
-    parser = argparse.ArgumentParser(description='Render Markdown files with support for code highlighting, Mermaid diagrams, and live reload')
+    parser = argparse.ArgumentParser(description='Render Markdown files with support for code highlighting and Mermaid diagrams')
     parser.add_argument('target_directory', help='Target directory containing the markdown file')
     parser.add_argument('markdown_filename', help='Name of the markdown file to render')
     parser.add_argument('--port', type=int, default=5000, help='Port to run the server on (default: 5000)')
     
     args = parser.parse_args()
     
-    # Setup template
     setup_template()
     
-    # Normalize target directory path
     target_dir = normalize_path(args.target_directory)
     print(f"Target directory: {target_dir}")
     
-    # Check if server is already running
     server_exists = is_port_in_use(args.port)
     print(f"Server status: {'running' if server_exists else 'not running'}")
     
@@ -325,21 +273,12 @@ def main():
             print("Failed to register file with server")
     else:
         print(f"Starting new server on port {args.port}")
-        # Register first file
         path = f"{target_dir}/{args.markdown_filename}"
         file_mappings[path] = (target_dir, args.markdown_filename)
-        setup_file_watcher(target_dir, args.markdown_filename)
         
-        # Open browser after server starts
         Timer(1.5, lambda: open_browser_for_file(args.port, target_dir, args.markdown_filename)).start()
         
-        # Start server with Socket.IO support
-        socketio.run(app, host='127.0.0.1', debug=False, port=args.port)
+        app.run(host='127.0.0.1', debug=False, port=args.port)
 
 if __name__ == '__main__':
-    try:
-        main()
-    finally:
-        # Clean up all file watchers
-        for target_dir, filename in file_mappings.values():
-            cleanup_file_watcher(target_dir, filename)
+    main()

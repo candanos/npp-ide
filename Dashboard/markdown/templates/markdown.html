@@ -11,56 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-bash.min.js"></script>
-    <!-- Socket.IO -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         // Initialize Mermaid
         mermaid.initialize({ 
             startOnLoad: true,
             theme: 'default'
-        });
-
-        // Initialize Socket.IO
-        let socket = null;
-        
-        function initializeSocket() {
-            console.log('Initializing Socket.IO connection...');
-            
-            socket = io.connect('http://localhost:' + window.location.port, {
-                transports: ['websocket'],
-                reconnection: true,
-                reconnectionAttempts: 5
-            });
-
-            const currentPath = window.location.pathname;
-            
-            socket.on('connect', () => {
-                console.log('Successfully connected to WebSocket server');
-            });
-
-            socket.on('connect_error', (error) => {
-                console.error('WebSocket connection error:', error);
-            });
-
-            socket.on('disconnect', () => {
-                console.log('Disconnected from WebSocket server');
-            });
-            
-            socket.on('file_changed', (data) => {
-                console.log('Received file_changed event:', data);
-                console.log('Current path:', currentPath);
-                
-                if (data.path === currentPath) {
-                    console.log('File changed, reloading content...');
-                    window.location.reload();
-                }
-            });
-        }
-
-        // Initialize socket when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded, initializing WebSocket...');
-            initializeSocket();
         });
     </script>
     <style>

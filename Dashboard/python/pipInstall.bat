@@ -10,8 +10,12 @@ REM jupyter
 set PYTHONPATH=C:\Python\Python312
 set PIPPATH=%PYTHONPATH%\Scripts
 set PATH=%PIPPATH%;%PYTHONPATH%;%PATH%
+pip install copybook
+REM pip install openpyxl
+REM pip install tkinter
+REM pip install pyinstaller
 REM pip install tqdm
-pip install watchdog flask-socketio
+REM pip install watchdog flask-socketio
 REM pip install packaging
 REM pip install pymqi
 REM pip install --upgrade markdown

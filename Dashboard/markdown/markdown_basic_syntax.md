@@ -41,6 +41,10 @@ image: ![2][]
 [2]: ../docs/images/markdown-plus-plus-social-preview.png
 
 
+This is ~~strikethrough~~ text. or if your markdown processor does not support this  
+<del>This is ~~strikethrough~~ text.</del>
+
+
 Blockquoting
 
 Blockquotes
@@ -49,12 +53,19 @@ To create a blockquote, add a > in front of a paragraph.
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
 
-Nested Blockquotes
-Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
+Nested Blockquotes (you need a empty > to step back in nested structure
+> Chapter 1
+>> 1.1 Introduction
+>> 1.2 Background
+>>> 1.2.1 Historical Context
+>>> 1.2.2 Modern Developments
 >
->> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+>> 1.3 New Section
+>
+> Chapter 2
+>> 2.1 Methods
+>>> 2.1.1 Research Design
+>>> 2.1.2 Data Collection
 
 Ordered Lists:
 

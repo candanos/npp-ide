@@ -3,7 +3,7 @@ vpn="java_compile.sh"
 echo "----------- $vpn  start .---------------------------------------"
 cd $JAVAFILEDIR
 rm -fv $COMPILEENTRY*.class
-rm -fv *.class
+# rm -fv *.class
 echo $COMPILEENTRY
 # javac -d " + targetpath + " -sourcepath "  + sourcepath + " -cp  " + classpath + " " + javaFileName
 # javac -verbose -cp $CLASSPATH $JAVAFILENAME 2>&1 | grep "Test.class"
@@ -15,7 +15,9 @@ echo "CLASSPATH:"$CLASSPATH
 # javac -d $targetpath -sourcepath $SOURCEPATH -cp $CLASSPATH $JAVAFILENAME  
 cd $PRJDIR
 pwd
-javac -cp $WINDOWS_CLASSPATH "com/candanos/"$JAVAFILENAME
+# javac -cp $WINDOWS_CLASSPATH -processor lombok.launch.AnnotationProcessorHider\$AnnotationProcessor "com/candanos/"$JAVAFILENAME
+javac -cp $WINDOWS_CLASSPATH "com/candanos/"$JAVAFILENAME 
+# javac -cp $WINDOWS_CLASSPATH -processor lombok.launch.AnnotationProcessor "com/candanos/"$JAVAFILENAME
 
 java_compile=${PIPESTATUS[0]}
 echo "Exit code is: " $java_compile
